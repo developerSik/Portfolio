@@ -1,0 +1,499 @@
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, button, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, input, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, select, small, span, strike, strong, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+    line-height: inherit;
+    color: inherit;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: none;
+    font-weight: 400;
+}
+body, button, input, select, textarea {
+    font-family: 'Pretendard';
+}
+li, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+a, button {
+    outline: none;
+}
+body, button, input, select, textarea {
+    font-family: Pretendard;
+}
+
+#page-container{
+    transform-origin: 50% 0;
+    transition-property: opacity,transform;
+    transition-duration: 80ms;
+    transition-timing-function: ease-out;
+}
+
+.web-header{
+    transition: top .25s;
+    width: 100%;
+}
+
+.web-header .web-header-simple {
+    display: block;
+    position: relative;
+    top: 0;
+    z-index: 9998;
+    background-color: #fff;
+    width: 100%;
+}
+.web-header .header-wrapper .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1440px;
+    height: 100%;
+}
+.web-header .web-header-simple .wadiz-logo {
+    display: inline-block;
+    position: static;
+}
+.web-header .wadiz-logo {
+    margin: 0;
+    line-height: 22px;
+    font-size: 32px;
+}
+
+.web-header .wadiz-logo>a {
+    display: block;
+    padding: 11px 0 13px;
+}
+.web-header .wadiz-logo>a svg {
+    max-width: none;
+}
+.web-header .web-header-simple .header-container .gnb-large {
+    position: absolute;
+    right: 80px;
+    left: auto;
+    color: #495057;
+}
+
+
+.web-header .gnb-large {
+    bottom: 0;
+    z-index: 1;
+    padding: 0;
+    list-style: none;
+    vertical-align: top;
+}
+.web-header .gnb-large li {
+    float: left;
+    width: auto;
+    margin-bottom: 15px;
+}
+.web-header .web-header-simple .header-container .gnb-large .item {
+    margin-left: 16px;
+    padding: 0;
+}
+
+.web-header .gnb-large .item {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #495057;
+}
+.web-header .web-header-simple .header-container .gnb-large .item span {
+    font-size: 15px;
+    font-weight: 400;
+}
+.web-header .gnb-large .item span {
+    display: block;
+}
+
+.web-header .header-wrapper {
+    position: relative;
+    border-bottom: 1px solid #f2f4f6;
+    padding: 0;
+    height: 56px;
+    text-align: left;
+}
+
+.AccountContainer_container__PwFiE {
+    position: relative;
+    margin: 78px auto 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 390px;
+    overflow: hidden;
+}
+
+.AccountTitle_title__2gD-3 {
+    line-height: 48px;
+    letter-spacing: -.6px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.Button_button__3MO4n.Button_lg__D7OVb {
+    padding: 9px 24px;
+    line-height: 1.75;
+    font-size: 16px;
+}
+
+.Button_button__3MO4n.Button_block__3npc4 {
+    width: 100%;
+}
+
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+.SNSButtonList_spacer__38ac5 {
+    margin-top: 12px;
+}
+
+.SNSButtonList_kakaoButton__2lTDs {
+    border-color: #fee500;
+    background-color: #fee500;
+}
+.Button_button__3MO4n {
+    position: relative;
+    transition-property: background-color, border-color, color, opacity;
+    transition-duration: .15s;
+    border: 1px solid #cdd3d8;
+    border-radius: 4px;
+    vertical-align: middle;
+    text-decoration: none;
+    font-weight: 500;
+    box-sizing: border-box!important;
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+    white-space: nowrap;
+    color: #495057;
+
+}
+
+.Button_button__3MO4n span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.SNSButtonList_appleIcon__e42Y0, .SNSButtonList_googleIcon__1DgBx, .SNSButtonList_naverIcon__3TjPM, .SNSButtonList_kakaoIcon__1s6gw {
+    position: absolute;
+    left: 16px;
+    width: 22px;
+    height: 22px;
+}
+
+.withIcon_icon__2KxnX {
+    display: block;
+    transform: scale(1);
+    transition: transform .3s ease-out;
+    fill: currentColor;
+}
+
+.Button_button__3MO4n.Button_lg__D7OVb {
+    padding: 9px 24px;
+    line-height: 1.75;
+    font-size: 16px;
+}
+
+.SNSButtonList_naverButton__1rzZ_ {
+    border-color: #00d337;
+    background-color: #00d337;
+    color: #fff;
+}
+
+.SNSButtonList_circularButtonWrapper__hZCKN {
+    margin-top: 56px;
+}
+
+.SNSButtonList_circularButtonWrapper__hZCKN {
+    display: flex;
+    justify-content: center;
+}
+
+.SNSButtonList_circularButton__2WsLD:first-child {
+    margin-left: 0;
+}
+
+.Button_button__3MO4n.Button_circular__2OlVa {
+    border-radius: 999em;
+}
+
+.SNSButtonList_circularButton__2WsLD {
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 20px
+}
+
+.SNSButtonList_googleButton__1u6eV {
+    border-color: #ced4da;
+    background-color: #fff;
+}
+
+.SignUpIntroApp_divider__24Rgj {
+    margin-top: 55px;
+    background-color: #f2f4f6;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #f2f4f6;
+}
+
+.SignUpIntroApp_signUpIntroEmailContainer__3sN5d {
+    margin-top: 49px;
+}
+
+.SignUpIntroApp_signUpIntro__2v2wv .SignUpIntroApp_simpleSignUpTitle__3aC7M {
+    line-height: 28px;
+    letter-spacing: -.6px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.EmailAuthField_emailAuthField__2E9P2 {
+    padding-bottom: 8px;
+}
+
+.EmailAuthField_emailAuthField__2E9P2 .EmailAuthField_fieldLabel__1jS_Z {
+    line-height: 28px;
+    letter-spacing: -.3px;
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 8px;
+}
+
+.EmailAuthField_emailAuthField__2E9P2 .EmailAuthField_inputFieldContainer__1BgHY {
+    display: flex;
+}
+
+.EmailAuthField_emailAuthField__2E9P2 .EmailAuthField_inputField__y3EHZ {
+    position: relative;
+    width: 100%;
+}
+
+.Input_input__1bbbo.Input_md__1Nsby {
+    height: 48px;
+    min-height: 48px;
+}
+
+
+button:not(:disabled), input:not(:disabled), input:not(:disabled)+label {
+    cursor: pointer;
+}
+
+.Input_input__1bbbo {
+    display: block;
+    transition-property: border-color, background-color, color;
+    transition-duration: .15s;
+    outline: none;
+    border: 1px solid #dde2e6;
+    border-radius: 3px;
+    background-color: #fff;
+    padding-right: 16px;
+    padding-left: 16px;
+    width: 100%;
+    color: #212529;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    line-height: 28px;
+    letter-spacing: -.3px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.Button_button__3MO4n.Button_primary__29fd0.Button_contained__1kfgl {
+    border-color: #00c4c4;
+    background-color: #00c4c4;
+    color: #fff;
+}
+
+.EmailAuthField_emailAuthField__2E9P2 .EmailAuthField_cta__1K3Hz {
+    margin-left: 8px;
+    min-width: 103px;
+}
+
+.Button_button__3MO4n.Button_md__3TvVa {
+    padding: 9px 16px;
+    line-height: 1.45;
+    font-size: 14px;
+}
+
+.Button_button__3MO4n.Button_disabled__2II9A, .Button_button__3MO4n:disabled, .Button_button__3MO4n[disabled] {
+    opacity: .45;
+    cursor: default;
+    pointer-events: none;
+}
+
+.EmailSignUpFormContainer_formField__1vy9Q, .EmailSignUpFormContainer_emailField__3ksue {
+    margin-top: 24px;
+}
+
+.TextField_textField__2k9OA {
+    display: block;
+    position: relative;
+}
+
+.TextField_textField__2k9OA.TextField_md__2Z-6K>label {
+    line-height: 28px;
+    letter-spacing: -.3px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.TextField_textField__2k9OA>label {
+    display: block;
+    padding-bottom: 4px;
+}
+
+.TextField_textField__2k9OA .TextField_field__3gj8N {
+    position: relative;
+}
+
+
+
+.TextField_textField__2k9OA button.TextField_icon__eNiI4 {
+    position: absolute;
+    top: 0;
+    outline: none;
+    border: none;
+    background-color: #0000;
+    cursor: pointer;
+    padding: 0;
+    height: 100%;
+    pointer-events: auto;
+    box-sizing: content-box!important;
+}
+
+.Button_button__3MO4n.Button_iconOnly__1yhFC {
+    line-height: 1;
+}
+
+.TextField_textField__2k9OA.TextField_right__3aUp8.TextField_md__2Z-6K svg {
+    padding-right: 16px;
+    padding-left: 10px;
+}
+
+.TextField_textField__2k9OA button.TextField_icon__eNiI4 svg {
+    fill: #adb5bd;
+}
+
+
+.TextField_textField__2k9OA.TextField_right__3aUp8 .TextField_endIcon__2DGw_, .TextField_textField__2k9OA.TextField_right__3aUp8 .TextField_endText__1t3v1 {
+    right: 0;
+    text-align: left;
+}
+
+.Input_input__1bbbo[readonly], .Input_input__1bbbo[disabled] {
+    border-color: #f2f4f6;
+    background-color: #f9fafb;
+    cursor: default;
+    pointer-events: none;
+}
+
+.Input_input__1bbbo[disabled], .Input_input__1bbbo.Input_disabled__325ag {
+    color: #adb5bd;
+}
+
+.SignUpAllCheckTermsCheckbox_termsAllCheckWrapper__2f6i3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.SignUpAllCheckTermsCheckbox_termsAllCheckWrapper__2f6i3 .SignUpAllCheckTermsCheckbox_termsAllCheck__PauIo {
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.Checkbox_checkbox__10cSJ {
+    position: relative;
+}
+
+.Checkbox_checkbox__10cSJ .Checkbox_input__UIZH_ {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    margin: 0;
+    border: none;
+    background-color: #0000;
+    padding: 0;
+}
+
+.Checkbox_checkbox__10cSJ.Checkbox_md__39fd8 .Checkbox_icon__GLNHN {
+    font-size: 20px;
+}
+
+.Checkbox_checkbox__10cSJ .Checkbox_icon__GLNHN {
+    display: block;
+    position: relative;
+    transition-property: opacity, border-color, background-color;
+    transition-duration: .15s;
+    opacity: 1;
+    z-index: 1;
+    border: 1px solid #cdd3d8;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 1em;
+    height: 1em;
+    box-sizing: border-box;
+}
+.SignUpAllCheckTermsCheckbox_termsAllCheckWrapper__2f6i3 .SignUpAllCheckTermsCheckbox_termsAllCheckLabel__3TxCG .SignUpAllCheckTermsCheckbox_checkboxLabel__28Tow {
+    line-height: 28px;
+    letter-spacing: -.3px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.SignUpAllCheckTermsCheckbox_termsAllCheckWrapper__2f6i3 .SignUpAllCheckTermsCheckbox_termsAllCheckLabel__3TxCG {
+    display: inline-block;
+    width: 80%;
+}
+
+.SignUpAllCheckTermsCheckbox_termsAllCheckWrapper__2f6i3 .SignUpAllCheckTermsCheckbox_termsAllCheckLabel__3TxCG .SignUpAllCheckTermsCheckbox_checkboxDescription__2X16H {
+    line-height: 18px;
+    letter-spacing: 0;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.Button_button__3MO4n.Button_iconOnly__1yhFC>span svg {
+    width: 20px;
+    height: 20px;
+
+}
+
+.SignUpAllCheckTermsCheckbox_termsAllCheckWrapper__2f6i3 .SignUpAllCheckTermsCheckbox_termsMoreButton__wal9S {
+    display: block;
+    margin-top: 4px;
+    border: 0;
+    padding: 2px;
+    line-height: normal;
+    background-color: #0000;
+}
+
+.EmailSignUpFormContainer_signUpSubmitButton__3cZeI {
+    margin-top: 32px;
+}
