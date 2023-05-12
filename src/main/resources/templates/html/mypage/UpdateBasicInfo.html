@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>기본 정보 수정</title>
+    <link rel="stylesheet" href="../../../static/css/mypage/UpdateBasicInfo.css">
+</head>
+<body>
+<div id="page-container">
+
+<div id="accountWrap">
+        <div id="newContainer">
+            <!-- account-wrap -->
+            <div class="account-wrap">
+                <h2>기본 정보 설정</h2>
+                <form id="saveForm">
+                    <div class="email-input-wrap">
+                        <input type="text" name="nickName" class="input-text" maxlength="20" placeholder="닉네임"
+                               value="최보근">
+                        <div class="input-btn-wrap">
+                            <div class="input">
+                                <input type="email" id="userName" name="userName" class="disable input-text"
+                                       placeholder="이메일 계정" value="cbg050430@gmail.com" disabled="">
+                            </div>
+                            <div id="emailChangeBtn" class="emailAuthBtn btn" data-status="change">
+                                <a href="#" onclick="return false;">
+                                    <span>변경</span>
+                                </a>
+                            </div>
+                            <div id="emailCheckBtn" class="emailAuthBtn btn" style="display:none;" data-status="check">
+                                <a href="#" onclick="return false;">
+                                    <span>인증하기</span>
+                                </a>
+                            </div>
+                            <div id="emailRetryBtn" class="emailAuthBtn btn" style="display:none;" data-status="retry">
+                                <a href="#" onclick="return false;">
+                                    <span>재전송</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="emailConfirmArea" class="input-btn-wrap" style="display:none;">
+                            <div class="input">
+                                <input type="text" id="emailAuthCode" class="input-text" placeholder="인증번호">
+                                <input type="hidden" id="emailConfirmId" value="">
+                                <time class="limit_time" style="position:relative;top:-39px;left:85%;text-align:right;">
+                                    <span id="emailMs_timer" style="color:#50e3c2;font-size:13px;"></span>
+                                </time>
+                            </div>
+                            <div id="emailConfirmBtn" class="emailAuthBtn btn" data-status="confirm">
+                                <a href="#" onclick="return false;">
+                                    <span>인증완료</span>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="input-btn-wrap">
+                            <div class="input">
+                                <input id="mobileNumber" name="mobileNumber" type="tel" class="disable input-text"
+                                       placeholder="휴대폰 번호" value="01033006909" disabled="">
+                            </div>
+                            <div id="mobileCheckBtn" class="mobileAuthBtn btn" style="display:none;"
+                                 data-status="check">
+                                <a href="#" onclick="return false;">
+                                    <span>인증하기</span>
+                                </a>
+                            </div>
+                            <div id="mobileChangeBtn" class="mobileAuthBtn btn" data-status="change">
+                                <a href="#" onclick="return false;">
+                                    <span>변경</span>
+                                </a>
+                            </div>
+                            <div id="mobileRetryBtn" class="mobileAuthBtn btn" style="display:none;"
+                                 data-status="retry">
+                                <a href="#" onclick="return false;">
+                                    <span>재전송</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="mobileConfirmArea" class="input-btn-wrap" style="display:none;">
+                            <div class="input">
+                                <input type="text" id="authCode" class="input-text" placeholder="인증번호">
+                                <input type="hidden" id="confirmId" value="">
+                                <time class="limit_time" style="position:relative;top:-39px;left:85%;text-align:right;">
+                                    <span id="smsMs_timer" style="color:#50e3c2;font-size:13px;"></span>
+                                </time>
+                            </div>
+                            <div id="confirmMobileBtn" class="mobileAuthBtn btn" data-status="confirm">
+                                <a href="#" onclick="return false;">
+                                    <span>인증완료</span>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="social-account-wrap">
+                            <h3 class="title">SNS 연동</h3>
+                            <p>카카오를 연동하시면 피드에서 친구의 활동을 확인할 수 있어요</p>
+                            <ul>
+                                <li class="facebook"><a href="#" id="facebookLink" class="unlinked"><i
+                                        class="wadizicon wa-facebook"></i></a></li>
+                                <li class="naver"><a href="#" id="naverLink" class="unlinked"><i
+                                        class="wadizicon wa-naver"></i></a></li>
+                                <li class="kakao "><a href="#" id="kakaoLink"><i class="wadizicon wa-kakao"></i></a>
+                                </li>
+                                <li class="google"><a href="#" id="googleLink" class="unlinked"><i></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="email-input-wrap small">
+                            <div class="btn-wrap">
+                                <button type="button" id="saveBtn" class="wz button primary block btn-block-mint">확인
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" id="validEmailFirstCheck" value="Y">
+                    <input type="hidden" id="validEmail" value="1">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

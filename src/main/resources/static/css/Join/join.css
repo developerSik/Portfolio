@@ -343,7 +343,6 @@ button:not(:disabled), input:not(:disabled), input:not(:disabled)+label {
 
 .Button_button__3MO4n.Button_disabled__2II9A, .Button_button__3MO4n:disabled, .Button_button__3MO4n[disabled] {
     opacity: .45;
-    cursor: default;
     pointer-events: none;
 }
 
@@ -496,4 +495,18 @@ button:not(:disabled), input:not(:disabled), input:not(:disabled)+label {
 
 .EmailSignUpFormContainer_signUpSubmitButton__3cZeI {
     margin-top: 32px;
+}
+
+#ppassword {
+    font-size: 13px;
+    color: #f66;
+}
+
+button {
+    cursor: pointer;
+}
+
+#pemail, #pname {
+    font-size: 13px;
+    color: #f66;
 }
