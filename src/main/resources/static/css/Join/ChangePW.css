@@ -198,3 +198,7 @@ body, button, input, select, textarea {
     -webkit-appearance: none;
 }
 
+#ppassword {
+    font-size: 13px;
+    color: #f66;
+}

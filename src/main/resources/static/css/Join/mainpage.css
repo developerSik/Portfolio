@@ -20,6 +20,9 @@ a, button {
     outline: none;
     -webkit-appearance: none;
 }
+a, input, optgroup, select, textarea {
+    color: inherit;
+}
 
 body {
     overflow-x: hidden;
@@ -45,6 +48,23 @@ button {
 }
 article, main, section {
     display: block;
+}
+strong {
+    font-weight: 700;
+}
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a, em, div {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+address, cite, dfn, em, var {
+    font-weight: inherit;
+    font-style: normal;
 }
 #page-container {
     transform-origin: 50% 0;
@@ -538,3 +558,273 @@ button[class*=Button_button] {
 .Button_button__2FuOU.Button_info__2TXD6.Button_text__2-UCU {
     border-color: rgba(0,0,0,0);
 }
+
+.SchoolLecture_schoolContainer__3x4lG {
+    padding-bottom: 90px;
+    background: #f4f4f4;
+    width: 100%;
+    height: 100%;
+}
+
+.SchoolLectureBar_mainLectureTop__2zPvH {
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #e4e4e4;
+    height: 103px;
+    z-index: 10;
+    border-top: 1px solid #e4e4e4;
+    background: #f4f4f4;
+    width: 100%;
+}
+
+.SchoolLectureBar_mainLectureTop__2zPvH .SchoolLectureBar_mainLectureTitle__2-UO4 {
+    float: left;
+    margin-bottom: 24px;
+    background: #2c3d50;
+    height: 100px;
+    width: 48%;
+}
+
+.SchoolLectureBar_mainLectureTop__2zPvH .SchoolLectureBar_mainLectureTitle__2-UO4 .SchoolLectureBar_innerCon__NzsvG {
+    float: right;
+    width: 515px;
+    margin-left: 2%;
+}
+
+.SchoolLectureBar_mainLectureTop__2zPvH .SchoolLectureBar_mainLectureTitle__2-UO4 .SchoolLectureBar_innerCon__NzsvG .SchoolLectureBar_thisMonth__1W1B2 {
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+    background: #e4e4e4;
+    padding: 12px 0;
+    width: 70px;
+    text-align: center;
+    line-height: initial;
+    color: #2c3d50;
+    font-size: 14px;
+}
+
+.SchoolLectureBar_mainLectureTop__2zPvH .SchoolLectureBar_mainLectureTitle__2-UO4 .SchoolLectureBar_innerCon__NzsvG .SchoolLectureBar_thisMonth__1W1B2 strong {
+    font-size: 38px;
+}
+
+.SchoolLectureBar_mainLectureTop__2zPvH .SchoolLectureBar_mainLectureTitle__2-UO4 .SchoolLectureBar_innerCon__NzsvG .SchoolLectureBar_innerText__37ZdE {
+    margin: 23px 0 0 20px;
+    width: 400px;
+    line-height: initial;
+    font-size: 21px;
+    float: left;
+    word-break: break-word;
+    color: #fff;
+}
+
+.SchoolLectureBar_mainLectureTop__2zPvH .SchoolLectureBar_mainLectureTitle__2-UO4 .SchoolLectureBar_innerCon__NzsvG .SchoolLectureBar_innerText__37ZdE span {
+    font-size: 14px;
+    display: block;
+    margin-top: 2px;
+    color: #a6afde;
+}
+
+.SchoolLectureBar_mainLectureTop__2zPvH .SchoolLectureBar_mainLectureType__3gg34 {
+    float: left;
+    width: 52%;
+    height: 100px;
+    margin: 0 auto 15px;
+}
+
+.SchoolLectureBarButton_lectureBarButton__2Xsxj {
+    margin-top: 0;
+    padding-right: 8px;
+    padding-left: 16px;
+    height: 100%;
+}
+
+.SchoolLectureBarButton_lectureBarButton__2Xsxj .SchoolLectureBarButton_lectureBarLi__2shyU {
+    width: 112px;
+    float: left;
+    border-right: 1px solid #e4e4e4;
+    cursor: pointer;
+    max-width: 20%;
+    height: 100%;
+}
+
+.SchoolLectureBarButton_lectureBarButton__2Xsxj .SchoolLectureBarButton_lectureBarLi__2shyU a {
+    padding: 19px 0 21px;
+    display: block;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    background: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+.SchoolLectureBarButton_lectureBarButton__2Xsxj .SchoolLectureBarButton_lectureBarLi__2shyU .SchoolLectureBarButton_lectureTypeAll__2VTHK>em {
+    width: auto;
+    line-height: 18px;
+    font-weight: 500;
+    margin: 0 auto 20px;
+    display: block;
+    height: 18px;
+}
+
+.SchoolLectureBarButton_lectureBarButton__2Xsxj .SchoolLectureBarButton_lectureBarLi__2shyU .SchoolLectureBarButton_lectureTypeReward__2ZJCc>em {
+    background: #2e51ef;
+}
+
+.SchoolLectureBarButton_lectureBarButton__2Xsxj .SchoolLectureBarButton_lectureBarLi__2shyU a em {
+    margin: 0 auto 20px;
+    display: block;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    font-weight: 500;
+}
+
+.SchoolLectureBarButton_lectureBarButton__2Xsxj .SchoolLectureBarButton_lectureBarLi__2shyU .SchoolLectureBarButton_lectureTypeInvest___9Was>em {
+    background: #9f8673;
+    margin: 0 auto 20px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    font-weight: 500;
+    display: block;
+}
+
+.SchoolLectureBarButton_lectureBarButton__2Xsxj .SchoolLectureBarButton_lectureBarLi__2shyU .SchoolLectureBarButton_lectureTypeCombine__2TTKA>em {
+    background: #705f53;
+    margin: 0 auto 20px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    font-weight: 500;
+    display: block;
+}
+
+.SchoolLectureBarButton_lectureBarButton__2Xsxj .SchoolLectureBarButton_lectureBarLi__2shyU .SchoolLectureBarButton_lectureTypeSpecial__8tRQe>em {
+    background: #90949c;
+    margin: 0 auto 20px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    font-weight: 500;
+    display: block;
+}
+
+.SchoolLectureListContents_mainLectureInfo__B271f {
+    margin: 60px auto 0;
+    width: 1100px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.SchoolLectureListDesktop_mainSchoolLecture__3f2nw {
+    float: left;
+    width: 685px;
+    height: auto;
+}
+
+.SchoolLectureListDesktop_mainSchoolLecture__3f2nw .SchoolLectureListDesktop_schoolLecture__2EK3P {
+    margin-bottom: 23px;
+    border: 1px solid #e4e4e4;
+    background: #fff;
+    width: 633px;
+    height: 172px;
+}
+
+.SchoolLectureListDesktop_mainSchoolLecture__3f2nw .SchoolLectureListDesktop_schoolLecture__2EK3P .SchoolLectureListDesktop_background__2Kqf_.SchoolLectureListDesktop_visible__2lI79 {
+    background-image: url("https://cdn.wadiz.kr/ft/images/green001/2023/0510/20230510152215149_null.jpg/wadiz/thumbnail/252/format/jpg/quality/95/");
+    transform: scale(1);
+    opacity: 1;
+}
+
+.SchoolLectureListDesktop_mainSchoolLecture__3f2nw .SchoolLectureListDesktop_schoolLecture__2EK3P .SchoolLectureListDesktop_background__2Kqf_ {
+    display: block;
+    float: left;
+    transition: .25s ease-in-out;
+    transition-property: opacity,transform;
+    background: no-repeat 50%/contain border-box;
+    background-size: 100% 100%;
+    width: 100%;
+    max-width: 40%;
+    height: 100%;
+}
+
+.SchoolLectureListDesktop_mainSchoolLecture__3f2nw .SchoolLectureListDesktop_schoolLecture__2EK3P a {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.SchoolLectureListDesktop_mainSchoolLecture__3f2nw .SchoolLectureListDesktop_schoolLecture__2EK3P .SchoolLectureListDesktop_lectureCon__BhKMl {
+    position: relative;
+    float: left;
+    padding: 15px 20px;
+    width: 390px;
+    max-width: 60%;
+}
+
+.SchoolLectureListDesktop_mainSchoolLecture__3f2nw .SchoolLectureListDesktop_schoolLecture__2EK3P .SchoolLectureListDesktop_lectureCon__BhKMl .SchoolLectureListDesktop_lectureType__8_hUF {
+    text-align: right;
+    font-size: 12px;
+}
+
+.SchoolLectureListDesktop_mainSchoolLecture__3f2nw .SchoolLectureListDesktop_schoolLecture__2EK3P .SchoolLectureListDesktop_lectureCon__BhKMl .SchoolLectureListDesktop_lectureType__8_hUF .SchoolLectureListDesktop_reward__A5Tp2 {
+    background: #2e51ef;
+}
+
+.SchoolLectureListDesktop_mainSchoolLecture__3f2nw .SchoolLectureListDesktop_schoolLecture__2EK3P .SchoolLectureListDesktop_lectureCon__BhKMl .SchoolLectureListDesktop_lectureType__8_hUF i {
+    display: inline-block;
+    margin-right: 8px;
+    width: 10px;
+    height: 10px;
+}
+
+.SchoolLectureListDesktop_mainSchoolLecture__3f2nw .SchoolLectureListDesktop_schoolLecture__2EK3P .SchoolLectureListDesktop_lectureCon__BhKMl .SchoolLectureListDesktop_lectureTitle__2wTDN {
+    margin-bottom: 5px;
+    width: 350px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.SchoolLectureListDesktop_mainSchoolLecture__3f2nw .SchoolLectureListDesktop_schoolLecture__2EK3P .SchoolLectureListDesktop_lectureCon__BhKMl .SchoolLectureListDesktop_lectureSub__3soFP {
+    margin-bottom: 10px;
+    line-height: 18px;
+    font-size: 12px;
+}
+
+.SchoolLectureListDesktop_mainSchoolLecture__3f2nw .SchoolLectureListDesktop_schoolLecture__2EK3P .SchoolLectureListDesktop_lectureCon__BhKMl .SchoolLectureListDesktop_lectureInfo__1dFY_ {
+    margin-bottom: 5px;
+    line-height: 18px;
+    font-size: 12px;
+}
+.SchoolLectureListDesktop_mainSchoolLecture__3f2nw .SchoolLectureListDesktop_schoolLecture__2EK3P .SchoolLectureListDesktop_lectureCon__BhKMl .SchoolLectureListDesktop_lectureNum__oypsR {
+    position: absolute;
+    top: 135px;
+    right: 20px;
+    text-align: right;
+    font-size: 12px;
+}
+
+.SchoolLectureListDesktop_mainSchoolLecture__3f2nw .SchoolLectureListDesktop_schoolLecture__2EK3P .SchoolLectureListDesktop_lectureCon__BhKMl .SchoolLectureListDesktop_lectureNum__oypsR em {
+    padding-right: 10px;
+    color: #c04646;
+    font-weight: 500;
+}
+
+.SchoolLectureListDesktop_mainSchoolLecture__3f2nw .SchoolLectureListDesktop_schoolLecture__2EK3P .SchoolLectureListDesktop_lectureCon__BhKMl .SchoolLectureListDesktop_lectureNum__oypsR strong {
+    color: #929292;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.SchoolCalendar_mainSchoolCalendar__12b7z {
+    float: right;
+    position: sticky;
+    top: 4px;
+    margin-right: 25px;
+    width: 370px;
+}
+
