@@ -541,3 +541,8 @@ button:not(:disabled), input:not(:disabled), input:not(:disabled)+label {
     color: #868e96;
     margin-top: 16px;
 }
+
+#pemail{
+    font-size: 13px;
+    color: #f66;
+}
