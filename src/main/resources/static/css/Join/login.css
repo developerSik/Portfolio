@@ -199,6 +199,7 @@ h1.wz.text.display2, h2.wz.text.display2, h3.wz.text.display2, h4.wz.text.displa
     transition-duration: 0.2s, 0s;
     outline: none;
     border: 1px solid rgba(0, 0, 0, 0.15);
+    border-color: rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     background: #fff;
     padding: 0 0.9411764706em;
@@ -393,4 +394,9 @@ button:not(:disabled) {
     margin-left: 6px;
     text-decoration: underline;
     color: #00c4c4;
+}
+
+.pemail {
+    font-size: 13px;
+    color: #f66;
 }
