@@ -132,7 +132,8 @@
                             <p class="SignUpAllCheckTermsCheckbox_checkboxLabel__28Tow">전체동의</p>
                             <p class="SignUpAllCheckTermsCheckbox_checkboxDescription__2X16H">회원·서비스(필수), 스타트업찾기 서비스 (선택), 이벤트·혜택알림 동의(선택), 만 14세 이상(필수)</p>
                         </label>
-                        <button class="Button_button__3MO4n Button_text__2zg08 Button_iconOnly__1yhFC iconButton SignUpAllCheckTermsCheckbox_termsMoreButton__wal9S" type="button">
+
+                        <button class="Button_button__3MO4n Button_text__2zg08 Button_iconOnly__1yhFC iconButton SignUpAllCheckTermsCheckbox_termsMoreButton__wal9S btn_check_modal_view" type="button">
                             <span>
                                     <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__2KxnX" aria-hidden="true">
                                         <path d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"></path>
@@ -145,6 +146,276 @@
                     </button>
                 </form>
             </div>
+            <div class="ReactModalPortal">
+                <div
+                        class="ReactModal__Overlay ReactModal__Overlay--after-open ConfirmModal_overlay__3z622 waffle__modal__overlay"
+                        style="z-index: 99999; background-color: rgba(0, 0, 0, 0.2)"
+                >
+                    <div
+                            class="ReactModal__Content ReactModal__Content--after-open ConfirmModal_confirmModal__1IdNW ConfirmModal_sizeSm__17Y6Y App_modal__1KJpd"
+                            tabindex="-1"
+                            role="dialog"
+                            aria-modal="true"
+                    >
+                        <div class="ConfirmModal_header__oy2wU">
+                            <div class="ConfirmModal_closeIconRoot__LZKp5">
+                                <button class="btn_modal_close ConfirmModal_closeIconWrapper__1RoyF">
+                                    <svg
+                                            viewBox="0 0 40 40"
+                                            focusable="false"
+                                            role="presentation"
+                                            class="withIcon_icon__2KxnX ConfirmModal_closeIcon__KQjlQ"
+                                            aria-hidden="true"
+                                    >
+                                        <path
+                                                d="M33.4 8L32 6.6l-12 12-12-12L6.6 8l12 12-12 12L8 33.4l12-12 12 12 1.4-1.4-12-12 12-12z"
+                                        ></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div
+                                    title=""
+                                    class="ConfirmModal_titlePlaceholder__2JOjQ ConfirmModal_showCloseButton__3rs_K"
+                            ></div>
+                        </div>
+                        <div class="ConfirmModal_content__O4lpA">
+                            <div class="App_container__11y0W">
+                                <article class="TermsConfirmContainer_modalInner__1q1yU">
+                                    <div class="TermsConfirmContainer_header__2xVhi">
+                                        <header class="TermsConfirmHeader_container__poLUd">
+                                            <h1 class="TermsConfirmHeader_title__3CDUZ">약관확인</h1>
+                                            <p class="TermsConfirmHeader_description__3SEFB">
+                                                약관에 동의하셔야 해당 서비스를 이용할 수 있습니다.
+                                            </p>
+                                        </header>
+                                        <section class="FullAgreementCheckbox_container__3yWi7">
+                                            <label
+                                                    class="Checkbox_checkbox__10cSJ Checkbox_md__39fd8 Checkbox_labeled__1HTwN FullAgreementCheckbox_checkbox__15HFu"
+                                            ><input
+                                                    name="fullAgreement"
+                                                    data-testid="full-agreement-checkbox"
+                                                    type="checkbox"
+                                                    class="Checkbox_input__UIZH_"
+                                            /><span class="Checkbox_icon__GLNHN" aria-hidden="true"
+                                            ><svg
+                                                    viewBox="0 0 16 2"
+                                                    focusable="false"
+                                                    role="presentation"
+                                                    class="withIcon_icon__2KxnX Checkbox_removeIcon__10mz3"
+                                                    aria-hidden="true"
+                                            >
+                            <path fill-rule="evenodd" d="M0 0h16v2H0z"></path></svg
+                                            ><svg
+                                                    viewBox="0 0 48 48"
+                                                    focusable="false"
+                                                    role="presentation"
+                                                    class="withIcon_icon__2KxnX Checkbox_checkIcon__pmCQr"
+                                                    aria-hidden="true"
+                                            >
+                            <path
+                                    d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"
+                            ></path></svg></span
+                                            ><span class="Checkbox_content__3AASl"
+                                            ><span
+                                            ><span class="FullAgreementCheckbox_text__3VFz0">전체 동의</span
+                                            ><span class="FullAgreementCheckbox_subtext__3aKjx"
+                                            >(선택항목 포함)</span
+                                            ></span
+                                            ></span
+                                            ></label
+                                            >
+                                        </section>
+                                    </div>
+                                    <div>
+                                        <div
+                                                class="AccordionCheckbox_accordionHeader__7fp2J ServiceAgreementCheckbox_container__LME1_ TermsConfirmBody_service__2uPF1"
+                                        >
+                                            <div data-testid="service-agreement-checkbox">
+                                                <label
+                                                        class="Checkbox_checkbox__10cSJ Checkbox_sm__8LHaC Checkbox_labeled__1HTwN AccordionCheckbox_checkbox__1x0TO"
+                                                ><input
+                                                        name="funding"
+                                                        required=""
+                                                        type="checkbox"
+                                                        class="Checkbox_input__UIZH_"
+                                                /><span class="Checkbox_icon__GLNHN" aria-hidden="true"
+                                                ><svg
+                                                        viewBox="0 0 16 2"
+                                                        focusable="false"
+                                                        role="presentation"
+                                                        class="withIcon_icon__2KxnX Checkbox_removeIcon__10mz3"
+                                                        aria-hidden="true"
+                                                >
+                              <path fill-rule="evenodd" d="M0 0h16v2H0z"></path></svg
+                                                ><svg
+                                                        viewBox="0 0 48 48"
+                                                        focusable="false"
+                                                        role="presentation"
+                                                        class="withIcon_icon__2KxnX Checkbox_checkIcon__pmCQr"
+                                                        aria-hidden="true"
+                                                >
+                              <path
+                                      d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"
+                              ></path></svg></span
+                                                ><span class="Checkbox_content__3AASl"
+                                                ><span
+                                                ><div>
+                                <strong>회원·서비스</strong> 가입<span
+                                                        class="ServiceAgreementCheckbox_required__1KYhI"
+                                                >(필수)</span
+                                                >
+                              </div></span
+                                                ></span
+                                                ></label
+                                                >
+                                            </div>
+                                        </div>
+                                        <div
+                                                class="AccordionCheckbox_accordionHeader__7fp2J ServiceAgreementCheckbox_container__LME1_ TermsConfirmBody_service__2uPF1"
+                                        >
+                                            <div data-testid="service-agreement-checkbox">
+                                                <label
+                                                        class="Checkbox_checkbox__10cSJ Checkbox_sm__8LHaC Checkbox_labeled__1HTwN AccordionCheckbox_checkbox__1x0TO"
+                                                ><input
+                                                        name="funding"
+                                                        type="checkbox"
+                                                        class="Checkbox_input__UIZH_"
+                                                /><span class="Checkbox_icon__GLNHN" aria-hidden="true"
+                                                ><svg
+                                                        viewBox="0 0 16 2"
+                                                        focusable="false"
+                                                        role="presentation"
+                                                        class="withIcon_icon__2KxnX Checkbox_removeIcon__10mz3"
+                                                        aria-hidden="true"
+                                                >
+                              <path fill-rule="evenodd" d="M0 0h16v2H0z"></path></svg
+                                                ><svg
+                                                        viewBox="0 0 48 48"
+                                                        focusable="false"
+                                                        role="presentation"
+                                                        class="withIcon_icon__2KxnX Checkbox_checkIcon__pmCQr"
+                                                        aria-hidden="true"
+                                                >
+                              <path
+                                      d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"
+                              ></path></svg></span
+                                                ><span class="Checkbox_content__3AASl"
+                                                ><span><div>회원·서비스 이벤트 혜택 알림(선택)</div></span></span
+                                                ></label
+                                                ><em
+                                                    class="HelperMessage_helperMessage__1xhad Checkbox_message__1if3P Checkbox_sm__8LHaC"
+                                            >펀딩·프리오더·스토어 서비스, 이벤트·할인 혜택 등에 대한 정보를 이메일, 앱
+                                                알림(앱 회원가입 시)로 받아볼 수 있습니다. (동의 철회 시까지)</em
+                                            >
+                                            </div>
+                                        </div>
+                                        <div
+                                                class="AccordionCheckbox_accordionHeader__7fp2J ServiceAgreementCheckbox_container__LME1_ TermsConfirmBody_service__2uPF1"
+                                        >
+                                            <div data-testid="service-agreement-checkbox">
+                                                <label
+                                                        class="Checkbox_checkbox__10cSJ Checkbox_sm__8LHaC Checkbox_labeled__1HTwN AccordionCheckbox_checkbox__1x0TO"
+                                                ><input
+                                                        name="startup"
+                                                        type="checkbox"
+                                                        class="Checkbox_input__UIZH_"
+                                                /><span class="Checkbox_icon__GLNHN" aria-hidden="true"
+                                                ><svg
+                                                        viewBox="0 0 16 2"
+                                                        focusable="false"
+                                                        role="presentation"
+                                                        class="withIcon_icon__2KxnX Checkbox_removeIcon__10mz3"
+                                                        aria-hidden="true"
+                                                >
+                              <path fill-rule="evenodd" d="M0 0h16v2H0z"></path></svg
+                                                ><svg
+                                                        viewBox="0 0 48 48"
+                                                        focusable="false"
+                                                        role="presentation"
+                                                        class="withIcon_icon__2KxnX Checkbox_checkIcon__pmCQr"
+                                                        aria-hidden="true"
+                                                >
+                              <path
+                                      d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"
+                              ></path></svg></span
+                                                ><span class="Checkbox_content__3AASl"
+                                                ><span
+                                                ><div>
+                                <strong>스타트업 찾기</strong> 서비스 가입<span class=""
+                                                >(선택)</span
+                                                >
+                              </div></span
+                                                ></span
+                                                ></label
+                                                >
+                                            </div>
+                                        </div>
+                                        <div
+                                                class="AccordionCheckbox_accordionHeader__7fp2J ServiceAgreementCheckbox_container__LME1_ TermsConfirmBody_service__2uPF1"
+                                        >
+                                            <div data-testid="service-agreement-checkbox">
+                                                <label
+                                                        class="Checkbox_checkbox__10cSJ Checkbox_sm__8LHaC Checkbox_labeled__1HTwN AccordionCheckbox_checkbox__1x0TO"
+                                                ><input
+                                                        name="funding"
+                                                        required=""
+                                                        type="checkbox"
+                                                        class="Checkbox_input__UIZH_"
+                                                /><span class="Checkbox_icon__GLNHN" aria-hidden="true"
+                                                ><svg
+                                                        viewBox="0 0 16 2"
+                                                        focusable="false"
+                                                        role="presentation"
+                                                        class="withIcon_icon__2KxnX Checkbox_removeIcon__10mz3"
+                                                        aria-hidden="true"
+                                                >
+                              <path fill-rule="evenodd" d="M0 0h16v2H0z"></path></svg
+                                                ><svg
+                                                        viewBox="0 0 48 48"
+                                                        focusable="false"
+                                                        role="presentation"
+                                                        class="withIcon_icon__2KxnX Checkbox_checkIcon__pmCQr"
+                                                        aria-hidden="true"
+                                                >
+                              <path
+                                      d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"
+                              ></path></svg></span
+                                                ><span class="Checkbox_content__3AASl"
+                                                ><span
+                                                ><div>
+                                만 14세 이상입니다.<span
+                                                        class="ServiceAgreementCheckbox_required__1KYhI"
+                                                >(필수)</span
+                                                >
+                              </div></span
+                                                ></span
+                                                ></label
+                                                >
+                                            </div>
+                                        </div>
+                                        <p class="TermsConfirmBody_notice__3lqSF">
+                                            ·선택 동의를 거부해도 펀딩·프리오더·스토어 서비스(스타트업찾기 제외) 이용이
+                                            가능합니다.
+                                        </p>
+                                    </div>
+                                    <div class="TermsConfirmFooter_container__22Zte App_footer__19hsP">
+                                        <div class="FixedToast_toast__UhjeV"></div>
+                                        <button
+                                                aria-label="confirmation"
+                                                class="Button_button__3MO4n Button_primary__29fd0 Button_contained__1kfgl Button_xl__DdjPf Button_block__3npc4 Button_disabled__2II9A"
+                                                type="button"
+                                                disabled=""
+                                        >
+                                            <span><span class="Button_children__raEW4">확인</span></span>
+                                        </button>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 </div>

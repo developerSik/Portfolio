@@ -1,3 +1,19 @@
+
+let modal = $('.ReactModalPortal');
+let BtnModalView = $('.btn_check_modal_view');
+let BtnModalClose = $('.btn_modal_close');
+$(modal).hide();
+
+//   전체동의 모달 열기
+$(BtnModalView).on('click', function () {
+    $(modal).show();
+});
+
+//   전체동의 모달 닫기
+$(BtnModalClose).on('click', function () {
+    $(modal).hide();
+});
+
 var getMail = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
 
 $("#password").on("propertychange change keyup paste input",function() {
@@ -25,7 +41,6 @@ $("#password").on("propertychange change keyup paste input",function() {
         return false;
     }
 });
-
 $("#email").on("propertychange change keyup paste input",function() {
     if ($("#email").val() == "") {
         $("#pemail").html("이메일을 입력해주세요.")
@@ -49,6 +64,7 @@ $("#email").on("propertychange change keyup paste input",function() {
         return false;
     }
 });
+
 $("#name").on("propertychange change keyup paste input",function() {
     if ($("#name").val() == "") {
         $("#pname").html("이름을 입력해주세요.")
