@@ -229,12 +229,12 @@ h1.wz.text.display2, h2.wz.text.display2, h3.wz.text.display2, h4.wz.text.displa
 }
 
 .wz.button.primary {
-    background-color: #00c4c4;
+    background-color: #6B95FC;
     color: #fff;
 }
 
 .wz.button.primary, .wz.button.primary-outline {
-    border-color: #00c4c4;
+    border-color: #6B95FC;
 }
 
 .wz.button.block, .wz.button.fluid {
@@ -393,10 +393,32 @@ button:not(:disabled) {
 .user-sign-container .wz.container.form-container.form-login .bottom-message a {
     margin-left: 6px;
     text-decoration: underline;
-    color: #00c4c4;
+    color: #6B95FC;
 }
 
-.pemail {
+#pemail, #ppassword {
     font-size: 13px;
     color: #f66;
+}
+
+.wz.input > input:hover {
+    border-color: #6B95FC;
+}
+
+.wz .primary:hover {
+    border-color: #4874e1;
+    background-color: #4874e1;
+}
+
+input::placeholder {
+    color: #adb5bd;
+}
+
+.SNSButtonList_naverButton__1rzZ_:hover {
+    color: black;
+    border-color: #868e96;
+}
+
+.SNSButtonList_kakaoButton__2lTDs:hover {
+    border-color: #868e96;
 }

@@ -325,8 +325,8 @@ button:not(:disabled), input:not(:disabled), input:not(:disabled)+label {
 }
 
 .Button_button__3MO4n.Button_primary__29fd0.Button_contained__1kfgl {
-    border-color: #00c4c4;
-    background-color: #00c4c4;
+    border-color: #6B95FC;
+    background-color: #6B95FC;
     color: #fff;
 }
 
@@ -393,6 +393,7 @@ button:not(:disabled), input:not(:disabled), input:not(:disabled)+label {
 .TextField_textField__2k9OA.TextField_right__3aUp8.TextField_md__2Z-6K svg {
     padding-right: 16px;
     padding-left: 10px;
+    margin-bottom: 50px;
 }
 
 .TextField_textField__2k9OA button.TextField_icon__eNiI4 svg {
@@ -435,10 +436,12 @@ button:not(:disabled), input:not(:disabled), input:not(:disabled)+label {
     position: absolute;
     visibility: hidden;
     opacity: 0;
-    margin: 0;
+    margin-top: 4px;
     border: none;
     background-color: #0000;
     padding: 0;
+    width: 30px;
+    height: 30px;
 }
 
 .Checkbox_checkbox__10cSJ.Checkbox_md__39fd8 .Checkbox_icon__GLNHN {
@@ -497,7 +500,7 @@ button:not(:disabled), input:not(:disabled), input:not(:disabled)+label {
     margin-top: 32px;
 }
 
-#ppassword {
+#ppassword, #ppasswordcheck{
     font-size: 13px;
     color: #f66;
 }
@@ -797,7 +800,7 @@ strong {
     font-weight: 700;
 }
 .ServiceAgreementCheckbox_required__1KYhI {
-    color: #00b2b2;
+    color: #6B95FC;
 }
 .AccordionCheckbox_accordionButton__2T705 {
     position: absolute !important;
@@ -906,11 +909,6 @@ strong {
 .Checkbox_checkIcon__pmCQr {
     opacity: 1;
 }
-.Button_button__3MO4n.Button_primary__29fd0.Button_contained__1kfgl {
-    border-color: #00c4c4;
-    background-color: #00c4c4;
-    color: #fff;
-}
 .SNSButtonList_circularButton__2WsLD span {
     vertical-align: text-top;
 }
@@ -919,4 +917,25 @@ strong {
 + .Checkbox_icon__GLNHN
 .Checkbox_checkIcon__pmCQr {
     opacity: 1;
+}
+
+input:hover {
+    border-color: #6B95FC;
+}
+
+input::placeholder {
+    color: #adb5bd;
+}
+
+.SNSButtonList_naverButton__1rzZ_:hover {
+    color: black;
+    border-color: #868e96;
+}
+
+.SNSButtonList_kakaoButton__2lTDs:hover {
+    border-color: #868e96;
+}
+
+.submitButton {
+    margin-bottom: 30px;
 }
