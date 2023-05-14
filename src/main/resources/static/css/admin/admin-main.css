@@ -1,8 +1,5 @@
 @charset "utf-8";
 
-div.sidebar-main {
-    height: 110%;!important;
-}
 
 section.admin-main {
     width: 90%;
@@ -18,7 +15,6 @@ section.admin-main {
     width:100%;
     height:100%;
     border-top: 1px solid #252733;
-    /*border-bottom: 1px solid rgb(106 106 106 / 45%);*/
     border-collapse:collapse;
 }
 
@@ -42,7 +38,7 @@ table.management-table-main>tbody>tr {
 }
 
 div.management-big-box{
-    margin: 20px;
+    margin: 80px 20px;
     width: 97%;
     height: 90%;
 }

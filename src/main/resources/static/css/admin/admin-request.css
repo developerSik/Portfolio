@@ -10,7 +10,7 @@
 }
 
 .request-main {
-    padding-top: 80px;
+    padding: 160px 20px;
 }
 
 .request-box {
@@ -55,7 +55,9 @@ section div div select{
     padding:10px
 }
 
-
+.in-table{
+    padding: 5px 10px!important;
+}
 
 .table-content{
     position: absolute;
