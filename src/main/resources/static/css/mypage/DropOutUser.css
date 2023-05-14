@@ -414,15 +414,16 @@ html.scroll-top .web-header,html.wadiz-app.scroll-top .web-header,html.wadiz-app
     letter-spacing: -.5px;
     color: #f25555;
     font-size: 15px
+
 }
 
 .account-drop p label {
     margin-right: 0;
     line-height: 28px;
     letter-spacing: -.3px;
+    cursor: pointer;
     font-size: 15px
 }
-
 .account-drop p label input {
     margin-right: 8px;
     vertical-align: middle
@@ -616,7 +617,7 @@ html.scroll-top .web-header,html.wadiz-app.scroll-top .web-header,html.wadiz-app
     margin-bottom: 40px;
 }
 .wz.button.primary {
-    background-color: #00c4c4;
+    background-color: #6B95FC ;
     color: #fff;
 }
 .DesktopSearchApp_footer__2T9ts {
