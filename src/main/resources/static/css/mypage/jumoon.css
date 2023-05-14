@@ -63809,3 +63809,149 @@ input, textarea {
 textarea {
     overflow: auto;
 }
+
+
+
+
+
+
+
+
+.form-field ~ .form-field {
+    margin-top: 25px;
+}
+
+.form-field label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.form-field input {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-field input:focus {
+    border: 1px solid rgba(0, 204, 204, 1);
+}
+
+.form-field input[type='text'] {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.form-field input[type='text']:focus {
+    border: 1px solid rgba(0, 204, 204, 1);
+}
+
+.form-field input[type='checkbox'] {
+    width: auto;
+}
+
+.form-field .nesty-input {
+    border-radius: 4px;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    vertical-align: middle;
+}
+
+.form-field .nesty-input:focus {
+    border: 1px solid rgba(0, 204, 204, 1);
+    text-decoration: none;
+}
+
+.form-field .hc-multiselect-toggle:focus {
+    outline: none;
+    border: 1px solid rgba(0, 204, 204, 1);
+    text-decoration: none;
+}
+
+.form-field textarea {
+    vertical-align: middle;
+}
+
+.form-field input[type='checkbox'] + label {
+    margin: 0 0 0 10px;
+}
+
+.form-field .optional {
+    color: #666;
+    margin-left: 4px;
+}
+
+.form-field p {
+    color: #666;
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.request-main .form-field.comment-ccs > ul {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0;
+}
+
+.request-main .form-field.comment-ccs > ul[data-hc-focus='true'] {
+    border: 1px solid rgba(0, 204, 204, 1);
+}
+
+.request-main .form-field.comment-ccs > input[type='text'] {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0;
+}
+
+.form-field .nesty-input {
+    border-radius: 4px;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    vertical-align: middle;
+}
+.form-field input {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 10px;
+    width: 100%;
+}
+.request-form textarea {
+    min-height: 120px;
+}
+
+.request-form textarea {
+    min-height: 120px;
+}
+.form-field textarea {
+    vertical-align: middle;
+}
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+input, textarea {
+    color: #000;
+    font-size: 14px;
+}
+textarea {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    resize: vertical;
+    width: 100%;
+    outline: none;
+    padding: 10px;
+}
+input, textarea {
+    color: #000;
+    font-size: 14px;
+}
+textarea {
+    overflow: auto;
+}
+
