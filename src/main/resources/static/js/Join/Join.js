@@ -13,6 +13,74 @@ $(BtnModalClose).on('click', function () {
     $(modal).hide();
 });
 
+
+// 체크박스 활성화
+const chkList = $('input[type=checkbox]');
+const chk = $('.chk');
+const essentialChk = $('.essential_chk');
+const agreeAll = $('#termsUpdateRequestCheckBox');
+const btn_modal_agree = $('#btn_modal_agree');
+const fullAgreement = $('input[name=fullAgreement]');
+
+// madal btn 비활성화
+btn_modal_agree.attr('disabled', true);
+
+// checkbox => agreeAll
+agreeAll.click(function () {
+    console.log('agreeAll');
+    if ($(this).is(':checked')) {
+        chkList.prop('checked', true);
+        btn_modal_agree.attr('disabled', false);
+    } else {
+        chkList.prop('checked', false);
+        btn_modal_agree.attr('disabled', true);
+    }
+});
+
+// modal checkbox => fullAgreement
+fullAgreement.click(function () {
+    console.log('fullAgreement');
+    if ($(this).is(':checked')) {
+        chkList.prop('checked', true);
+        btn_modal_agree.attr('disabled', false);
+    } else {
+        chkList.prop('checked', false);
+        btn_modal_agree.attr('disabled', true);
+    }
+});
+
+// check list => select
+$('.chk').change(function () {
+    if ($('.chk:checked').length >= $('.chk').length) {
+        agreeAll.prop('checked', true);
+        fullAgreement.prop('checked', true);
+        btn_modal_agree.attr('disabled', false);
+    } else {
+        agreeAll.prop('checked', false);
+        fullAgreement.prop('checked', false);
+        btn_modal_agree.attr('disabled', true);
+    }
+});
+
+// essential check list => select
+essentialChk.change(function () {
+    if ($('.essential_chk:checked').length >= essentialChk.length) {
+        btn_modal_agree.attr('disabled', false);
+    } else {
+        btn_modal_agree.attr('disabled', true);
+    }
+});
+
+// madal btn
+btn_modal_agree.click(function () {
+    $(modal).hide();
+});
+
+
+
+
+
+
 /* 비밀번호 확인*/
 let firstsvg = $('.firstsvg');
 let secondsvg = $('.secondsvg');

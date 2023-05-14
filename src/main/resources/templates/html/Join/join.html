@@ -133,7 +133,14 @@
                     <div class="SignUpAllCheckTermsCheckbox_termsAllCheckWrapper__2f6i3 EmailSignUpFormContainer_formField__1vy9Q">
                         <label class="Checkbox_checkbox__10cSJ Checkbox_md__39fd8 SignUpAllCheckTermsCheckbox_termsAllCheck__PauIo">
                             <input id="termsUpdateRequestCheckBox" type="checkbox" class="Checkbox_input__UIZH_">
-                            <span class="Checkbox_icon__GLNHN"></span>
+                            <span class="Checkbox_icon__GLNHN">
+                                <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="withIcon_icon__2KxnX Checkbox_removeIcon__10mz3" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M0 0h16v2H0z"></path>
+                                </svg>
+                                <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon__2KxnX Checkbox_checkIcon__pmCQr" aria-hidden="true">
+                                    <path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path>
+                                </svg>
+                            </span>
                         </label>
                         <label class="SignUpAllCheckTermsCheckbox_termsAllCheckLabel__3TxCG">
                             <p class="SignUpAllCheckTermsCheckbox_checkboxLabel__28Tow">전체동의</p>
@@ -153,6 +160,7 @@
                     </button>
                 </form>
             </div>
+            <!-- [S] modal -->
             <div class="ReactModalPortal">
                 <div class="ReactModal__Overlay ReactModal__Overlay--after-open ConfirmModal_overlay__3z622 waffle__modal__overlay" style="z-index: 99999; background-color: rgba(0, 0, 0, 0.2)">
                     <div class="ReactModal__Content ReactModal__Content--after-open ConfirmModal_confirmModal__1IdNW ConfirmModal_sizeSm__17Y6Y App_modal__1KJpd" tabindex="-1" role="dialog" aria-modal="true">
@@ -180,13 +188,13 @@
                                             <label class="Checkbox_checkbox__10cSJ Checkbox_md__39fd8 Checkbox_labeled__1HTwN FullAgreementCheckbox_checkbox__15HFu">
                                                 <input name="fullAgreement" data-testid="full-agreement-checkbox" type="checkbox" class="Checkbox_input__UIZH_"/>
                                                 <span class="Checkbox_icon__GLNHN" aria-hidden="true">
-                                                    <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="withIcon_icon__2KxnX Checkbox_removeIcon__10mz3" ria-hidden="true">
-                                                         <path fill-rule="evenodd" d="M0 0h16v2H0z"></path>
-                                                    </svg>
-                                                    <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon__2KxnX Checkbox_checkIcon__pmCQr" aria-hidden="true">
-                                                          <path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path>
-                                                    </svg>
-                                                </span>
+                                                <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="withIcon_icon__2KxnX Checkbox_removeIcon__10mz3" aria-hidden="true">
+                                                     <path fill-rule="evenodd" d="M0 0h16v2H0z"></path>
+                                                </svg>
+                                                <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon__2KxnX Checkbox_checkIcon__pmCQr" aria-hidden="true">
+                                                    <path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path>
+                                                </svg>
+                                            </span>
                                                 <span class="Checkbox_content__3AASl">
                                                     <span>
                                                         <span class="FullAgreementCheckbox_text__3VFz0">전체 동의</span>
@@ -199,40 +207,60 @@
                                     <div>
                                         <div class="AccordionCheckbox_accordionHeader__7fp2J ServiceAgreementCheckbox_container__LME1_ TermsConfirmBody_service__2uPF1">
                                             <div data-testid="service-agreement-checkbox">
-                                                <label class="Checkbox_checkbox__10cSJ Checkbox_sm__8LHaC Checkbox_labeled__1HTwN AccordionCheckbox_checkbox__1x0TO"><input name="funding" required="" type="checkbox" class="Checkbox_input__UIZH_"/>
+                                                <label class="Checkbox_checkbox__10cSJ Checkbox_sm__8LHaC Checkbox_labeled__1HTwN AccordionCheckbox_checkbox__1x0TO">
+                                                    <input name="funding" required="" type="checkbox" class="chk essential_chk Checkbox_input__UIZH_"/>
                                                     <span class="Checkbox_icon__GLNHN" aria-hidden="true">
                                                         <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="withIcon_icon__2KxnX Checkbox_removeIcon__10mz3" aria-hidden="true">
-                                                            <path fill-rule="evenodd" d="M0 0h16v2H0z"></path>
-                                                         </svg>
+                                                          <path fill-rule="evenodd" d="M0 0h16v2H0z"></path>
+                                                        </svg>
                                                         <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon__2KxnX Checkbox_checkIcon__pmCQr" aria-hidden="true">
-                                                            <path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path>
+                                                             <path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path>
                                                         </svg>
                                                     </span>
                                                     <span class="Checkbox_content__3AASl">
                                                         <span>
                                                             <div>
                                                                 <strong>회원·서비스</strong> 가입
-                                                                <span class="ServiceAgreementCheckbox_required__1KYhI">(필수)</span>
+                                                                <span class="ServiceAgreementCheckbox_required__1KYhI">(필수)
+                                                                </span>
                                                             </div>
                                                         </span>
                                                     </span>
                                                 </label>
                                             </div>
+                                            <!-- <button
+                                              class="AccordionCheckbox_accordionButton__2T705"
+                                              aria-label="내용 보기"
+                                            >
+                                              <svg
+                                                viewBox="0 0 32 32"
+                                                focusable="false"
+                                                role="presentation"
+                                                class="withIcon_icon__2KxnX"
+                                                aria-hidden="true"
+                                              >
+                                                <path
+                                                  d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"
+                                                ></path>
+                                              </svg>
+                                            </button> -->
                                         </div>
                                         <div class="AccordionCheckbox_accordionHeader__7fp2J ServiceAgreementCheckbox_container__LME1_ TermsConfirmBody_service__2uPF1">
                                             <div data-testid="service-agreement-checkbox">
-                                                <label class="Checkbox_checkbox__10cSJ Checkbox_sm__8LHaC Checkbox_labeled__1HTwN AccordionCheckbox_checkbox__1x0TO"><input name="funding" type="checkbox" class="Checkbox_input__UIZH_"/>
+                                                <label class="Checkbox_checkbox__10cSJ Checkbox_sm__8LHaC Checkbox_labeled__1HTwN AccordionCheckbox_checkbox__1x0TO">
+                                                    <input name="funding" type="checkbox" class="Checkbox_input__UIZH_"/>
                                                     <span class="Checkbox_icon__GLNHN" aria-hidden="true">
-                                                        <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="withIcon_icon__2KxnX Checkbox_removeIcon__10mz3" aria-hidden="true">
+                                                        <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="chk withIcon_icon__2KxnX Checkbox_removeIcon__10mz3" aria-hidden="true">
                                                             <path fill-rule="evenodd" d="M0 0h16v2H0z"></path>
                                                         </svg>
                                                         <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon__2KxnX Checkbox_checkIcon__pmCQr" aria-hidden="true">
-                                                            <path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path>
+                                                             <path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path>
                                                         </svg>
                                                     </span>
-                                                    <span class="Checkbox_content__3AASl"><span>
-                                                        <div>회원·서비스 이벤트 혜택 알림(선택)</div>
-                                                    </span>
+                                                    <span class="Checkbox_content__3AASl">
+                                                        <span>
+                                                            <div>회원·서비스 이벤트 혜택 알림(선택)</div>
+                                                        </span>
                                                     </span>
                                                 </label>
                                                 <em class="HelperMessage_helperMessage__1xhad Checkbox_message__1if3P Checkbox_sm__8LHaC">펀딩·프리오더·스토어 서비스, 이벤트·할인 혜택 등에 대한 정보를 이메일, 앱 알림(앱 회원가입 시)로 받아볼 수 있습니다. (동의 철회 시까지)</em>
@@ -241,7 +269,46 @@
                                         <div class="AccordionCheckbox_accordionHeader__7fp2J ServiceAgreementCheckbox_container__LME1_ TermsConfirmBody_service__2uPF1">
                                             <div data-testid="service-agreement-checkbox">
                                                 <label class="Checkbox_checkbox__10cSJ Checkbox_sm__8LHaC Checkbox_labeled__1HTwN AccordionCheckbox_checkbox__1x0TO">
-                                                    <input name="startup" type="checkbox" class="Checkbox_input__UIZH_"/>
+                                                    <input name="startup" type="checkbox" class="chk Checkbox_input__UIZH_"/>
+                                                    <span class="Checkbox_icon__GLNHN" aria-hidden="true">
+                                                        <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="withIcon_icon__2KxnX Checkbox_removeIcon__10mz3" aria-hidden="true">
+                                                             <path fill-rule="evenodd" d="M0 0h16v2H0z"></path>
+                                                        </svg>
+                                                        <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon__2KxnX Checkbox_checkIcon__pmCQr" aria-hidden="true">
+                                                             <path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="Checkbox_content__3AASl">
+                                                        <span>
+                                                            <div>
+                                                                <strong>스타트업 찾기</strong> 서비스 가입
+                                                                <span class="">(선택)</span>
+                                                            </div>
+                                                        </span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <!-- <button
+                                              class="AccordionCheckbox_accordionButton__2T705"
+                                              aria-label="내용 보기"
+                                            >
+                                              <svg
+                                                viewBox="0 0 32 32"
+                                                focusable="false"
+                                                role="presentation"
+                                                class="withIcon_icon__2KxnX"
+                                                aria-hidden="true"
+                                              >
+                                                <path
+                                                  d="M16 22.4L5.6 12l1.12-1.12L16 20.16l9.28-9.28L26.4 12 16 22.4z"
+                                                ></path>
+                                              </svg>
+                                            </button> -->
+                                        </div>
+                                        <div class="AccordionCheckbox_accordionHeader__7fp2J ServiceAgreementCheckbox_container__LME1_ TermsConfirmBody_service__2uPF1">
+                                            <div data-testid="service-agreement-checkbox">
+                                                <label class="Checkbox_checkbox__10cSJ Checkbox_sm__8LHaC Checkbox_labeled__1HTwN AccordionCheckbox_checkbox__1x0TO">
+                                                    <input name="funding" required="" type="checkbox" class="chk essential_chk Checkbox_input__UIZH_"/>
                                                     <span class="Checkbox_icon__GLNHN" aria-hidden="true">
                                                         <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="withIcon_icon__2KxnX Checkbox_removeIcon__10mz3" aria-hidden="true">
                                                             <path fill-rule="evenodd" d="M0 0h16v2H0z"></path>
@@ -252,33 +319,11 @@
                                                     </span>
                                                     <span class="Checkbox_content__3AASl">
                                                         <span>
-                                                        <div>
-                                                             <strong>스타트업 찾기</strong> 서비스 가입
-                                                            <span class="">(선택)</span>
-                                                        </div>
+                                                            <div>만 14세 이상입니다.
+                                                                <span class="ServiceAgreementCheckbox_required__1KYhI">(필수)
+                                                                </span>
+                                                            </div>
                                                         </span>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="AccordionCheckbox_accordionHeader__7fp2J ServiceAgreementCheckbox_container__LME1_ TermsConfirmBody_service__2uPF1">
-                                            <div data-testid="service-agreement-checkbox">
-                                                <label class="Checkbox_checkbox__10cSJ Checkbox_sm__8LHaC Checkbox_labeled__1HTwN AccordionCheckbox_checkbox__1x0TO">
-                                                    <input name="funding" required="" type="checkbox" class="Checkbox_input__UIZH_"/>
-                                                    <span class="Checkbox_icon__GLNHN" aria-hidden="true">
-                                                        <svg viewBox="0 0 16 2" focusable="false" role="presentation" class="withIcon_icon__2KxnX Checkbox_removeIcon__10mz3" aria-hidden="true">
-                                                             <path fill-rule="evenodd" d="M0 0h16v2H0z"></path>
-                                                        </svg>
-                                                        <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon_icon__2KxnX Checkbox_checkIcon__pmCQr" aria-hidden="true">
-                                                             <path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="Checkbox_content__3AASl"><span>
-                                                        <div>
-                                                            만 14세 이상입니다.
-                                                            <span class="ServiceAgreementCheckbox_required__1KYhI">(필수)</span>
-                                                        </div>
-                                                    </span>
                                                     </span>
                                                 </label>
                                             </div>
@@ -290,8 +335,10 @@
                                     </div>
                                     <div class="TermsConfirmFooter_container__22Zte App_footer__19hsP">
                                         <div class="FixedToast_toast__UhjeV"></div>
-                                        <button aria-label="confirmation" class="Button_button__3MO4n Button_primary__29fd0 Button_contained__1kfgl Button_xl__DdjPf Button_block__3npc4 Button_disabled__2II9A" type="button" disabled="">
-                                            <span><span class="Button_children__raEW4">확인</span></span>
+                                        <button id="btn_modal_agree" aria-label="confirmation" class="Button_button__3MO4n Button_primary__29fd0 Button_contained__1kfgl Button_xl__DdjPf Button_block__3npc4" type="button">
+                                            <span>
+                                                <span class="Button_children__raEW4">확인</span>
+                                            </span>
                                         </button>
                                     </div>
                                 </article>
@@ -300,10 +347,9 @@
                     </div>
                 </div>
             </div>
-
-        </div>
-    </main>
-</div>
+              </div>
+          </main>
+      </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="../../../static/js/Join/Join.js"></script>
