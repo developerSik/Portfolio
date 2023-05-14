@@ -10,7 +10,7 @@
 }
 
 .member-main {
-    padding-top: 80px;
+    margin: 160px 20px;
 }
 
 .member-box {
@@ -54,11 +54,14 @@ section div div select{
     border-radius:2px;
     padding:10px
 }
+.in-table{
+    padding: 5px 10px!important;
+}
 .member-modify {
     background-color:white;
     border:1px solid #252733;
     border-radius:2px;
-    padding:10px
+    padding:5px 10px
 }
 
 
