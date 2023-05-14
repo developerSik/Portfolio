@@ -2,7 +2,7 @@
 
 
 .request-main {
-    padding-top: 80px;
+    padding: 160px 20px;
 }
 
 .request-box {
@@ -21,8 +21,6 @@
 
 table {
     width: 100%;
-    border-top: 1px solid #252733;
-    border-bottom: 1px solid #252733;
     background-color:white;
     border-collapse:collapse;
 }

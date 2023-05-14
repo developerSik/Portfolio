@@ -187,7 +187,7 @@ h2.wz.text.display1 {
 }
 
 .account-find .page-header .tab-list li.active {
-    border-bottom: 2px solid #00c4c4;
+    border-bottom: 2px solid #6B95FC;
     height: 47px;
     margin-right: 24px;
     width: auto;
@@ -195,7 +195,7 @@ h2.wz.text.display1 {
 }
 
 .account-find .page-header .tab-list li.active a {
-    color: #00b2b2;
+    color: #6B95FC;
 }
 
 .account-find .page-header .tab-list a {
@@ -265,9 +265,9 @@ h2.wz.text.display1 {
 }
 
 .wz.button.primary {
-    background-color: #00c4c4;
+    background-color: #6B95FC;
     color: #fff;
-    border-color: #00c4c4;
+    border-color: #6B95FC;
 }
 
 .wz.button.block, .wz.button.fluid {
@@ -524,4 +524,13 @@ h2.wz.text.display1 {
 .FooterContainer_container__3LibG .FooterContainer_rightSection__2uaQk .FooterContainer_infoNotice__3m1oJ {
     color: #868e96;
     margin-top: 16px;
+}
+
+.wz.button.primary:hover {
+    border-color: #4874e1;
+    background-color: #4874e1;
+}
+.wz.block.button.recheck:hover {
+    border-color: #868e96;
+    color: black;
 }

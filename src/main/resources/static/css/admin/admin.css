@@ -24,6 +24,14 @@ body {
     font-family: 'Pretendard';
 }
 
+body main{
+    display: flex;
+    height: 100%;
+}
+
+
+
+
 body, button, input, select, textarea {
     font-family: 'Pretendard';
 }
@@ -32,15 +40,20 @@ li {
     list-style: none;
 }
 
+textarea:focus, select:focus, input:focus {
+    outline: none;
+}
+
+
 div.sidebar {
     height: 100%;
     left: 0;
     top: 0;
-    position: absolute;
+    position: fixed;
     width: 10%;
-    min-width: 200px;
+    min-width: 150px;
     background: #252733;
-    z-index: 2;
+    z-index: 4;
 }
 
 div.management-top {
@@ -50,20 +63,24 @@ div.management-top {
     display: flex;
     align-content: center;
     align-items: center;
-    position: relative;
+    position: fixed;
     width: 100%;
+    z-index: 3;
 }
 
 div.page-name {
     position: relative;
-    left: 240px;
+    left: 50px;
 }
 
 /* 임시 */
 div.logo {
     color: #fff;
-
 }
+/*.admin-logo {*/
+/*    */
+/*}*/
+
 
 div.logo-container {
     padding: 24px;
@@ -110,7 +127,6 @@ section.management-main-content {
     width: 90%;
     margin-left: 10%;
     padding-top: 0 !important;
-    transition: .5s;
     position: relative;
     height: 100%;
 }

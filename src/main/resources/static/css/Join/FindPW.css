@@ -57,6 +57,11 @@ body, button, input, select, textarea {
     font-family: Pretendard;
 }
 
+
+input::placeholder {
+    color: #adb5bd;
+}
+
 #page-container{
     transform-origin: 50% 0;
     transition-property: opacity,transform;
@@ -187,7 +192,7 @@ h2.wz.text.display1 {
 }
 
 .account-find .page-header .tab-list li.active {
-    border-bottom: 2px solid #00c4c4;
+    border-bottom: 2px solid #6B95FC;
     height: 47px;
     margin-right: 24px;
     width: auto;
@@ -195,7 +200,7 @@ h2.wz.text.display1 {
 }
 
 .account-find .page-header .tab-list li.active a {
-    color: #00b2b2;
+    color: #6B95FC;
 }
 
 .account-find .page-header .tab-list a {
@@ -265,7 +270,7 @@ p.wz.text.body1 {
     transition-property: border-color, height, padding-right, color;
     transition-duration: 0.2s, 0s;
     outline: none;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    border: 1px solid #dde2e6;
     border-radius: 4px;
     background: #fff;
     padding: 0 0.9411764706em;
@@ -277,12 +282,15 @@ p.wz.text.body1 {
     -webkit-font-smoothing: antialiased;
 }
 
+.wz.input > input:hover {
+    border-color: #4874e1;
+}
 button:not(:disabled), input:not(:disabled), input:not(:disabled)+label {
     cursor: pointer;
 }
 
 .wz.button.primary {
-    background-color: #00c4c4;
+    background-color: #6B95FC;
     color: #fff;
 }
 
@@ -545,4 +553,9 @@ button:not(:disabled), input:not(:disabled), input:not(:disabled)+label {
 #pemail{
     font-size: 13px;
     color: #f66;
+}
+
+.wz.button.primary:hover {
+    border-color: #4874e1;
+    background-color: #4874e1;
 }
