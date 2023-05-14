@@ -1,6 +1,6 @@
 var getMail = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
 
-$("#email").on("propertychange change keyup paste input",function() {
+$("#email").on("keyup",function() {
     if ($("#email").val() == "") {
         $("#pemail").html("이메일을 입력해주세요.")
         $("#email").css("borderColor", "red")
@@ -20,6 +20,26 @@ $("#email").on("propertychange change keyup paste input",function() {
     else {
         $("#pemail").html("")
         $("#email").css("borderColor", "rgba(0, 0, 0, 0.08)")
+        return false;
+    }
+});
+$("#password").on("keyup",function() {
+    if ($("#password").val() == "") {
+        $("#ppassword").html("비밀번호를 입력해주세요.")
+        $("#password").css("borderColor", "red")
+        $("#password").focus();
+        return false;
+    }
+    else if ($("#password").val().length < 10 || $("#password").val().length > 20) {
+        $("#ppassword").html("10자리 이상 20자리 이하로 입력해주세요.")
+        $("#password").css("borderColor", "#f66")
+        $("#password").focus();
+        return false;
+    }
+
+    else {
+        $("#ppassword").html("")
+        $("#password").css("borderColor", "rgba(0, 0, 0, 0.08)")
         return false;
     }
 });
