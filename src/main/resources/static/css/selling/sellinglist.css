@@ -1470,3 +1470,25 @@ a, em, div {
         height: 400px
     }
 }
+
+.WishButton_button__1ZqbG.WishButton_active__3CKVe.WishButton_interaction__2FCel svg {
+    -webkit-animation: WishButton_heartbeat__TXA73 .3s ease-in-out forwards;
+    animation: WishButton_heartbeat__TXA73 .3s ease-in-out forwards
+}
+
+.PreorderMainCard_item__2FrO0 .PreorderMainCard_contentContainer__1OmhF .PreorderMainCard_subText__1LB5l {
+    line-height: 18px;
+    letter-spacing: 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: #868e96;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    order: 2;
+}
+.PreorderMainCard_item__2FrO0 .PreorderMainCard_contentContainer__1OmhF .PreorderMainCard_subText__1LB5l .PreorderMainCard_makerName__2Ufj1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
