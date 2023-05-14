@@ -1,6 +1,6 @@
 var getMail = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
 
-$("#email").on("propertychange change keyup paste input",function() {
+$("#email").on("keyup",function() {
     if ($("#email").val() == "") {
         $("#pemail").html("이메일을 입력해주세요.")
         $("#email").css("borderColor", "red")
