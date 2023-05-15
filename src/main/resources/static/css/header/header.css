@@ -238,6 +238,7 @@ button:not(:disabled), input:not(:disabled) {
     padding: 0;
     width: 100%;
     max-width: 200px;
+}
 
 .MenuList_container__3ofD- .MenuList_label__qSsts {
     letter-spacing: 0;
@@ -614,7 +615,7 @@ button[class*=Button_button] {
     bottom: 0;
     box-sizing: border-box;
     display: none;
-    color: #f66;
+    color: #ff6666;
     border-top: 1px solid #ff9d9d;
     border-bottom: 1px solid #ff9d9d;
     background-color: #fff1f1;
@@ -630,4 +631,68 @@ button[class*=Button_button] {
 
 .PreviewOverlay_container__W6b-E .PreviewOverlay_description__3Cqx5 {
     margin-left: 16px;
+}
+
+a, em, div {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+#main-app .web-header {
+    z-index: 1201;
+}
+
+@media screen and (min-width: 1097px) {
+    .web-header {
+        position: static;
+    }
+
+    .web-header {
+        position: relative;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        transition: top .25s;
+        z-index: 99;
+        width: 100%;
+    }
+}
+    article, main, section {
+        display: block;
+    }
+body>#root, #wadizTopBanner, #page-container {
+    transform-origin: 50% 0;
+    transition-property: opacity,transform;
+    transition-duration: 80ms;
+    transition-timing-function: ease-out;
+}
+#page-container, #wadizTopBanner, body>#root {
+    transform-origin: 50% 0;
+    transition-property: opacity,transform;
+    transition-duration: 80ms;
+    transition-timing-function: ease-out;
+}
+#page-container, #wadizTopBanner, body>#root {
+    transform-origin: 50% 0;
+    transition-property: opacity,transform;
+    transition-duration: 80ms;
+    transition-timing-function: ease-out;
+}
+
+body {
+    overflow-x: hidden;
+    line-height: inherit;
+    color: inherit;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -o-text-size-adjust: none;
+}
+body, table th {
+    font-weight: 400;
+}
+body, button, input, select, textarea {
+    font-family: Pretendard,Apple SD Gothic Neo,Segoe UI,Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,-apple-system,blinkmacsystemfont,sans-serif;
 }
