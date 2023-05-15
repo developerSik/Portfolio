@@ -33,6 +33,14 @@ button > svg, button > p {
     pointer-events: none;
 }
 
+div.MuiBox-root.css-1lh1jyd > div > hr:nth-child(2), div.MuiBox-root.css-1lh1jyd > div > div:nth-child(3) {
+    display: none;
+}
+
+div.MuiBox-root.css-1lh1jyd > p:nth-child(5) {
+    display: none;
+}
+
 .css-ldo4d5 {
     display: flex;
     -webkit-box-pack: center;
@@ -135,7 +143,7 @@ button > svg, button > p {
 }
 
 .css-1bqb22h.Mui-selected {
-    color: rgb(0, 178, 178);
+    color: #4874e1;
 }
 
 .css-eskagx {
@@ -144,7 +152,7 @@ button > svg, button > p {
     line-height: 1.5;
     font-weight: 700;
     font-size: 16px;
-    color: rgb(0, 178, 178);
+    color: #4874e1;
 }
 
 .css-mxlzig {
@@ -152,7 +160,7 @@ button > svg, button > p {
     bottom: 0px;
     width: 100%;
     transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    background-color: rgb(0, 178, 178);
+    background-color: #4874e1;
     height: 0px;
 }
 
@@ -311,7 +319,7 @@ button > svg, button > p {
 }
 
 .css-d6o49q {
-    background-color: rgb(0, 178, 178);
+    background-color: #4874e1;
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -454,7 +462,7 @@ button > svg, button > p {
 .css-bgkfvb {
     height: 22px;
     background-color: rgb(231, 249, 249);
-    color: rgb(0, 178, 178);
+    color: #4874e1;
     border-radius: 11px;
     padding-left: 12px;
     font-weight: 500;
@@ -605,7 +613,7 @@ button > svg, button > p {
 .css-qy5kay {
     min-height: 164px;
     padding-top: 16px;
-    border: 2px solid rgb(0, 196, 196);
+    border: 2px solid #4874e1;
     cursor: pointer;
 }
 
@@ -620,7 +628,7 @@ button > svg, button > p {
     margin: 0px auto 12px;
     border-radius: 50%;
     color: rgb(255, 255, 255);
-    background-color: rgb(0, 196, 196);
+    background-color: #4874e1;
 }
 
 .css-1l4w6pd {
@@ -693,7 +701,7 @@ button > svg, button > p {
     line-height: 1.75;
     min-width: 64px;
     border-radius: 4px;
-    color: rgb(0, 178, 178);
+    color: #4874e1;
     transition: none 0s ease 0s;
     -webkit-box-pack: start;
     justify-content: flex-start;
@@ -744,7 +752,7 @@ button > svg, button > p {
     line-height: 1.75;
     min-width: 64px;
     border-radius: 4px;
-    color: rgb(0, 178, 178);
+    color: #4874e1;
     transition: none 0s ease 0s;
     -webkit-box-pack: start;
     justify-content: flex-start;
@@ -779,7 +787,7 @@ button > svg, button > p {
     line-height: 1.75;
     min-width: 64px;
     border-radius: 4px;
-    color: rgb(0, 178, 178);
+    color: #4874e1;
     transition: none 0s ease 0s;
     -webkit-box-pack: start;
     justify-content: flex-start;
@@ -811,7 +819,172 @@ button > svg, button > p {
     line-height: 1.75;
     min-width: 64px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    color: rgb(0, 178, 178);
+    color: #4874e1;
     background-color: rgb(33, 37, 41);
     border-radius: 30px;
+}
+
+.css-1dw5g2w {
+    margin: 0px 0px 0px 8px;
+    font-family: NotoSansKR;
+    line-height: 1.5;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.css-1ni2qm7 {
+    margin-left: 13px;
+}
+
+.css-xi606m {
+    text-align: center;
+}
+
+.css-1i1bx2g {
+    margin: 0px;
+    font-family: NotoSansKR;
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 12px;
+    color: rgb(73, 80, 87);
+}
+
+.css-jkmjle {
+    margin: 3px 0px 0px;
+    font-family: NotoSansKR;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    color: rgb(33, 37, 41);
+    line-height: 26px;
+    text-align: center;
+}
+
+.css-taw0f7 {
+    flex-shrink: 0;
+    border-width: 0px thin 0px 0px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.12);
+    align-self: stretch;
+    margin: 3px 20px 0px;
+    height: 48px;
+}
+
+.css-1r7lepo {
+    margin: 8px 0px 0px;
+    font-family: NotoSansKR;
+    color: rgb(144, 148, 156);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: -0.3px;
+}
+
+.css-jmusfq {
+    margin: 24px 0px 0px;
+    font-family: NotoSansKR;
+    line-height: 1.5;
+    color: rgb(73, 80, 87);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.css-1fqpyuo {
+    margin: 8px 0px 0px;
+    font-family: NotoSansKR;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    color: rgb(73, 80, 87);
+}
+.css-1vekul3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.css-1ozfwd6 {
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-1apw4wz {
+    margin: 0px;
+    font-family: NotoSansKR;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 12px;
+    color: rgb(144, 148, 156);
+}
+
+.css-1ysmh82 {
+    flex-shrink: 0;
+    border-width: 0px thin 0px 0px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.12);
+    margin: 0px 10px;
+    height: 10px;
+}
+
+.css-jc8hnx {
+    flex-shrink: 0;
+    border-width: 0px thin 0px 0px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.12);
+    margin: 0px 10px;
+    height: 10px;
+}
+
+.css-1hw29i9{
+    margin-top: 12px;
+}
+
+.css-bpi3s1 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.css-vlt1vv {
+    width: 120px;
+    text-align: center;
+}
+
+.css-1is8dfo {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+    outline: 0px;
+    border: 0px;
+    margin: 0px;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    text-decoration: none;
+    text-transform: none;
+    font-family: NotoSansKR;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.75;
+    min-width: 64px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    color: #4874e1;
+}
+
+.css-h6f9l6 {
+    margin: 0px 0px 0px 8px;
+    font-family: NotoSansKR;
+    line-height: 1.5;
+    color: rgb(33, 37, 41);
+    font-size: 12px;
+    font-weight: 400;
 }
