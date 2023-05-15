@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.search-container{
+.search-container {
     display: flex;
     width: 52%;
     height: 40px;
@@ -20,17 +20,17 @@
     position: relative;
 }
 
-#search{
+#search {
     position: absolute;
-    width:75%;
-    height:40px;
-    padding:0 22%;
-    background-color:white;
+    width: 75%;
+    height: 40px;
+    padding: 0 22%;
+    background-color: white;
     border: 1px solid #252733;
-    border-radius:2px;
+    border-radius: 2px;
 }
 
-section div div select{
+section div div select {
     width: 20%;
     height: 100%;
     padding: 10px;
@@ -40,50 +40,51 @@ section div div select{
     z-index: 2;
 }
 
-.search{
-    height:75%;
+.search {
+    height: 75%;
     position: absolute;
-    z-index:2;
-    right:26%;
-    top:7%;
+    z-index: 2;
+    right: 26%;
+    top: 7%;
 }
 
 .delete {
-    background-color:white;
-    border:1px solid #252733;
-    border-radius:2px;
-    padding:10px
+    background-color: white;
+    border: 1px solid #252733;
+    border-radius: 2px;
+    padding: 10px
 }
 
-.in-table{
-    padding: 5px 10px!important;
+.in-table {
+    padding: 5px 10px !important;
 }
 
-.table-content{
+.table-content {
     position: absolute;
     width: 100%;
     height: 100%;
-    position:absolute;
-    top:70px;
+    position: absolute;
+    top: 70px;
 }
 
-table{
-    background-color:white;
-    width:100%;
-    text-align:center;
+table {
+    background-color: white;
+    width: 100%;
+    text-align: center;
     border-collapse: collapse;
 }
-td{
-    border-bottom:1px solid #efefef;
+
+td {
+    border-bottom: 1px solid #efefef;
     height: 2rem;
 }
 
-th{
+th {
     border-bottom: 1px solid #252733;
     height: 2rem;
 }
 
-.pages{
+.pages {
     padding: 30px;
     font-size: 20px;
     text-align: center;
