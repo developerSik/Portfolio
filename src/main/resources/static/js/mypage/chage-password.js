@@ -1,41 +1,43 @@
-
-/*
-if(!/^(?=.*[a-zA-Z])(?=.*\d)(?=.*\W).{8,20}$/.test(pwd)){
-    alert("비밀번호는 영문과 특수문자 숫자를 포함하며 8자 이상이어야 합니다.");
-    return false;
-}
-*/
-
-$("#newPassword").on("keyup",function() {
-    if(!/^(?=.*[a-zA-Z])(?=.*\d)(?=.*\W).{8,20}$/.test(pwd)){
-        $(".pwd-text").css("color","red")
-        return false;
-    }
-});
-
-
-
 $(document).ready(function() {
-    $(".wz.button.primary").click(function(event) {
-        $("#oldPassword").on("keyup",function() {
-            if ($("#oldPassword").val() == "") {
-                $("#oldPassword").html("비밀번호를 입력해주세요.")
-                $("#oldPassword").css("borderColor", "#f66")
-                $("#oldPassword").focus();
-                return false;
-            }
-            else if ($("#oldPassword").val().length < 10 || $("#oldPassword").val().length > 20) {
-                $("#oldPassword").html("10자리 이상 20자리 이하로 입력해주세요.")
-                $("#oldPassword").css("borderColor", "#f66")
-                $("#oldPassword").focus();
-                return false;
-            }
+    $("#saveBtn").click(function() {
+        // 현재 비밀번호, 새 비밀번호, 새 비밀번호 확인 값을 가져옴
+        const oldPassword = $("#oldPassword").val();
+        const newPassword = $("#newPassword").val();
+        const newPasswordConfirm = $("#newPasswordConfirm").val();
 
-            else {
-                $("#oldPassword").html("")
-                $("#oldPassword").css("borderColor", "rgba(0, 0, 0, 0.08)")
-                return false;
-            }
-        });
+        // 현재 비밀번호와 새 비밀번호가 일치하는지 확인
+        if (oldPassword !== '1234') {
+            $("#oldPasswordError").show();
+            $("#oldPassword").css("borderColor", "#f66")
+            return;
+        } else {
+            $("#oldPasswordError").hide();
+            $("#oldPassword").css("borderColor", "")
+        }
+
+        // 새 비밀번호와 새 비밀번호 확인이 일치하는지 확인
+        if (newPassword !== newPasswordConfirm) {
+            $(".error-text:last-of-type").show();
+            $("#newPassword").css("borderColor", "#f66")
+            $("#newPasswordConfirm").css("borderColor", "#f66")
+            $("#passwordError").css("color", "red")
+            return;
+        } else {
+            $(".error-text:last-of-type").hide();
+            $("#newPassword").css("borderColor", "")
+            $("#newPasswordConfirm").css("borderColor", "")
+            $("#passwordError").css("color", "")
+        }
+        // 새 비밀번호가 영문, 숫자, 특수문자 조합의 8자 이상인지 확인
+        const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*+=-]).{8,}$/;
+        if (!passwordRegex.test(newPassword)) {
+            $("#passwordError").css("color", "red")
+            $("#newPassword").css("borderColor", "#f66")
+            $("#newPasswordConfirm").css("borderColor", "#f66")
+            return;
+        } else {
+            $("#newPassword").css("borderColor",     "")
+            $("#newPasswordConfirm").css("borderColor", "")
+        }
     });
 });

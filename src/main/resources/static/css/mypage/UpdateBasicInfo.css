@@ -328,6 +328,7 @@ body > #root, #wadizTopBanner, #page-container {
     font-weight: normal;
 }
 
+
 .email-input-wrap {
     padding-top: 16px;
 }
@@ -723,11 +724,7 @@ input, textarea {
     margin-bottom: 10px;
 }
 
-.account-wrap {
-    width: 350px;
-    margin: 0 auto;
-    padding-top: 75px;
-}
+
 
 .account-wrap {
     padding-left: max(20px, env(safe-area-inset-left));

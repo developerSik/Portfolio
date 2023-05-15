@@ -550,6 +550,10 @@ li, ul {
     border-color: #4874e1;
     background-color: #4874e1;
 }
+.wz.button.gray:hover{
+    border-color: #60656a;
+    background-color: #60656a;
+}
 .input-text:hover {
     border-color: #4874e1;
 }
