@@ -328,6 +328,7 @@ body > #root, #wadizTopBanner, #page-container {
     font-weight: normal;
 }
 
+
 .email-input-wrap {
     padding-top: 16px;
 }
@@ -350,11 +351,16 @@ input:not(:disabled) {
     border: 1px solid #e4e4e4;
     outline: none;
 }
+.nameinsert:hover {
+    border-color: #4874e1;
+}
 
 .input-text {
     appearance: none;
-    border-radius: 0;
+    border-radius: 4px;
 }
+
+
 
 .input-area.disabled .input-text, .input-text:disabled {
     background: #e7e7e7;
@@ -687,6 +693,11 @@ i.wadizicon {
     border-color: #6B95FC ;
 }
 
+.wz.button.primary:hover{
+    border-color: #4874e1;
+    background-color: #4874e1;
+}
+
 .wz.button.block, .wz.button.fluid {
     width: 100%;
     text-align: center;
@@ -713,11 +724,7 @@ input, textarea {
     margin-bottom: 10px;
 }
 
-.account-wrap {
-    width: 350px;
-    margin: 0 auto;
-    padding-top: 75px;
-}
+
 
 .account-wrap {
     padding-left: max(20px, env(safe-area-inset-left));
@@ -1061,6 +1068,7 @@ input, textarea {
 .maker-input-wrap .input-text {
     margin-bottom: 7px;
 }
+
 
 .maker-input-wrap .input-text.error {
     margin-bottom: 7px;
