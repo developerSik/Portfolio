@@ -1,7 +1,8 @@
-@media screen and (min-width: 1097px)
+@media screen and (min-width: 1097px) {
     .web-header {
         position: static;
     }
+}
     .web-header .header-wrapper {
         position: relative;
         border-bottom: 1px solid #f2f4f6;
@@ -47,10 +48,12 @@
         max-width: 255px;
     }
 
-@media screen and (min-width: 1360px)
+@media screen and (min-width: 1360px) {
     .DesktopSearchApp_container__2VF9O {
         min-width: 360px;
     }
+}
+
     .CurateList_container__6Ih5B {
         padding: 20px;
     }
