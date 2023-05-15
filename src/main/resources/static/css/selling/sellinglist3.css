@@ -283,35 +283,35 @@ a.Button_button__2FuOU.Button_block__1-g8w {
 }
 
 .Button_button__2FuOU.Button_primary__2mZni {
-    border-color: #00c4c4;
-    color: #00c4c4
+    border-color: #6B95FC;
+    color: #6B95FC;
 }
 
 @media (hover: hover)and (pointer: fine) {
     .Button_button__2FuOU.Button_primary__2mZni.Button_hover__3JfDP, .Button_button__2FuOU.Button_primary__2mZni:hover {
-        border-color: #00c4c4;
-        background-color: #e7f9f9;
-        color: #00b2b2
+        border-color: #6B95FC;
+        background-color: #dfe5f5;
+        color: #6B95FC
     }
 }
 
 .Button_button__2FuOU.Button_primary__2mZni:active, .Button_button__2FuOU.Button_primary__2mZni.Button_active__e7FrC {
     text-decoration: none;
     border-color: #00c4c4;
-    background-color: #e7f9f9;
+    background-color: #c3d0f1;
     color: #00b2b2
 }
 
 .Button_button__2FuOU.Button_primary__2mZni.Button_contained__2SIAT {
-    border-color: #00c4c4;
-    background-color: #00c4c4;
+    border-color:#6B95FC;
+    background-color: #6B95FC;
     color: #fff
 }
 
 @media (hover: hover)and (pointer: fine) {
     .Button_button__2FuOU.Button_primary__2mZni.Button_contained__2SIAT.Button_hover__3JfDP, .Button_button__2FuOU.Button_primary__2mZni.Button_contained__2SIAT:hover {
-        border-color: #00b2b2;
-        background-color: #00b2b2;
+        border-color: #4874e1;
+        background-color: #4874e1;
         color: #fff
     }
 }
@@ -319,7 +319,7 @@ a.Button_button__2FuOU.Button_block__1-g8w {
 .Button_button__2FuOU.Button_primary__2mZni.Button_contained__2SIAT:active, .Button_button__2FuOU.Button_primary__2mZni.Button_contained__2SIAT.Button_active__e7FrC {
     text-decoration: none;
     border-color: #00b2b2;
-    background-color: #00b2b2;
+    background-color: #c3d0f1;
     color: #fff
 }
 
@@ -346,7 +346,7 @@ a.Button_button__2FuOU.Button_block__1-g8w {
 @media (hover: hover)and (pointer: fine) {
     .Button_button__2FuOU.Button_secondary__LNLsN.Button_hover__3JfDP, .Button_button__2FuOU.Button_secondary__LNLsN:hover {
         border-color: #adb5bd;
-        background-color: #f2f4f6;
+        background-color: #c3d0f1;
         color: #343a40
     }
 }
@@ -961,8 +961,8 @@ a.Button_button__2FuOU.Button_block__1-g8w {
 
 .Badge_container__9G9PS .Badge_badge__ovUKI.Badge_label__2Rft2.Badge_primary__tTdjx.Badge_tertiary__3uYKh {
     border: solid 1px #e7f9f9;
-    background-color: #e7f9f9;
-    color: #00c4c4
+    background-color: #dee5fc;
+    color: #4874e1
 }
 
 .Badge_container__9G9PS .Badge_badge__ovUKI.Badge_label__2Rft2.Badge_info__2cLy3.Badge_contained___xvcv {
@@ -1100,8 +1100,8 @@ a.Button_button__2FuOU.Button_block__1-g8w {
 }
 
 .Checkbox_checkbox__KagcU .Checkbox_input__Ge9vr:checked + .Checkbox_icon__1OUUf, .Checkbox_checkbox__KagcU .Checkbox_input__Ge9vr:indeterminate + .Checkbox_icon__1OUUf {
-    border: solid 1px #00b2b2;
-    background-color: #00c4c4
+    border: solid 1px  #6B95FC;
+    background-color:  #6B95FC
 }
 
 .Checkbox_checkbox__KagcU .Checkbox_input__Ge9vr:checked + .Checkbox_icon__1OUUf svg, .Checkbox_checkbox__KagcU .Checkbox_input__Ge9vr:indeterminate + .Checkbox_icon__1OUUf svg {
@@ -1196,8 +1196,8 @@ a.Button_button__2FuOU.Button_block__1-g8w {
     }
 
     .Checkbox_checkbox__KagcU:hover .Checkbox_input__Ge9vr:checked + .Checkbox_icon__1OUUf, .Checkbox_checkbox__KagcU:hover .Checkbox_input__Ge9vr:indeterminate + .Checkbox_icon__1OUUf {
-        border-color: #00a2a2;
-        background-color: #00b2b2
+        border-color: #4874e1;
+        background-color: #4874e1
     }
 }
 
@@ -7973,7 +7973,7 @@ body > #root, #wadizTopBanner, #page-container {
 }
 
 .ImageTab_tab__3siCY.ImageTab_simple__t8mcf.ImageTab_active__BGdXu .ImageTab_label__SvWW9, .ImageTab_active__BGdXu .ImageTab_thumbnailContainer__3Polb .ImageTab_thumbnailPlaceholder__3mluI {
-    border-color: #00c4c4
+    border-color: #6B95FC;
 }
 
 .ImageTab_active__BGdXu .ImageTab_labelContainer__2apP3 .ImageTab_label__SvWW9 {
@@ -11426,14 +11426,14 @@ html.scroll-top footer.inner-utils .question, html.scroll-top footer.inner-utils
     letter-spacing: -.3px;
     font-size: 16px;
     font-weight: 700;
-    color: #00c4c4
+    color: #6B95FC
 }
 
 .RecommendationCardDesktop_container__3nt92 .RecommendationCardDesktop_contentContainer__ad5nP .RecommendationCardDesktop_bottom__1YL1h .RecommendationCardDesktop_storeDetail__24l0b .RecommendationCardDesktop_price__3L8gd {
     line-height: 28px;
     letter-spacing: -.3px;
     font-size: 16px;
-    color: #00c4c4;
+    color: #6B95FC;
     font-weight: 700
 }
 
@@ -14751,7 +14751,7 @@ a.CardType_projectCard__2S8_G {
 
 @media screen and (min-width: 1097px) {
     .SearchController_container__35K5i {
-        border: 1px solid #00c4c4
+        border: 1px solid #6B95FC
     }
 }
 
@@ -17697,7 +17697,7 @@ button.SupporterFollowingButton_followingButton__6GRdi span:first-child .Support
 }
 
 .GNBDesktop_link__1AP6q.GNBDesktop_active__9BkhS:not(.GNBDesktop_more__39gyV) {
-    color: #00b2b2
+    color: #6B95FC;
 }
 
 .GNBDesktop_link__1AP6q.GNBDesktop_active__9BkhS .GNBDesktop_icon__ZX6B_ {
