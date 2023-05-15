@@ -77,10 +77,6 @@ btn_modal_agree.click(function () {
 });
 
 
-
-
-
-
 /* 비밀번호 확인*/
 let firstsvg = $('.firstsvg');
 let secondsvg = $('.secondsvg');
@@ -114,7 +110,15 @@ $(checksecondsvg).on('click', function () {
     $(checksecondsvg).hide();
     $('#passwordcheck').prop("type", "password");
 });
+/*인증하기*/
+$(".return").hide()
+$(".checkEmail").hide()
 
+$("#checkEmail").on("click", function () {
+    $(".return").show()
+    $(".checkEmail").show()
+    $("#checkEmail").hide()
+})
 // 유효성 검사
 var getMail = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
 
@@ -197,3 +201,15 @@ $("#passwordcheck").on("keyup", function () {
     }
 });
 
+$(".checkEmail").on("keyup", function () {
+    if ($(".checkEmail").val().length == 6) {
+        $('.checkEmailbtn').css("opacity", "1")
+        $('.checkEmailbtn').css("pointer-events", "auto")
+        return false;
+    }
+    else {
+        $('.checkEmailbtn').css("opacity", ".45")
+        $('.checkEmailbtn').css("pointer-events", "none")
+        return false;
+    }
+});
