@@ -119,6 +119,23 @@ $("#checkEmail").on("click", function () {
     $(".checkEmail").show()
     $("#checkEmail").hide()
 })
+// flag
+let emailCheck = false;
+let nameCheck = false;
+let pwdCheck = false;
+let rePwdCheck = false;
+let chkboxCheck = false;
+
+// flag check
+function flagCheck() {
+    if (emailCheck && nameCheck && pwdCheck && rePwdCheck) {
+        $(".submitButton").css("opacity", "1");
+        $(".submitButton").css("pointer-events", "auto");
+    } else {
+        $(".submitButton").attr('disabled', true);
+    }
+}
+
 // 유효성 검사
 var getMail = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
 
@@ -127,19 +144,23 @@ $("#password").on("keyup", function () {
         $("#ppassword").html("비밀번호를 입력해주세요.")
         $("#password").css("borderColor", "#f66")
         $("#password").focus();
+        pwdCheck = false;
         return false;
 
     } else if ($("#password").val().length < 10 || $("#password").val().length > 20) {
         $("#ppassword").html("10자리 이상 20자리 이하로 입력해주세요.")
         $("#password").css("borderColor", "#f66")
         $("#password").focus();
+        pwdCheck = false;
         return false;
 
     } else {
         $("#ppassword").html("")
         $("#password").css("borderColor", "rgba(0, 0, 0, 0.08)")
+        pwdCheck = true;
         return false;
     }
+    flagCheck();
 });
 $("#email").on("keyup", function () {
     if ($("#email").val() == "") {
@@ -148,6 +169,7 @@ $("#email").on("keyup", function () {
         $("#email").focus();
         $("#checkEmail").css("opacity", ".45")
         $('#checkEmail').css("pointer-events", "none")
+        emailCheck = false;
         return false;
 
     } else if (!getMail.test($("#email").val())) {
@@ -156,6 +178,7 @@ $("#email").on("keyup", function () {
         $("#pemail").css("Color", "#f66")
         $("#checkEmail").css("opacity", ".45")
         $('#checkEmail').css("pointer-events", "none")
+        emailCheck = false;
         return false;
 
     } else {
@@ -163,8 +186,10 @@ $("#email").on("keyup", function () {
         $("#email").css("borderColor", "rgba(0, 0, 0, 0.08)")
         $('#checkEmail').css("opacity", "1")
         $('#checkEmail').css("pointer-events", "auto")
+        emailCheck = true;
         return false;
     }
+    flagCheck();
 });
 
 $("#name").on("keyup", function () {
@@ -172,13 +197,16 @@ $("#name").on("keyup", function () {
         $("#pname").html("이름을 입력해주세요.")
         $("#name").css("borderColor", "red")
         $("#name").focus();
+        nameCheck = false;
         return false;
 
     } else {
         $("#pname").html("")
         $("#name").css("borderColor", "rgba(0, 0, 0, 0.08)")
+        nameCheck = true;
         return false;
     }
+    flagCheck();
 });
 
 $("#passwordcheck").on("keyup", function () {
@@ -186,19 +214,23 @@ $("#passwordcheck").on("keyup", function () {
         $("#ppasswordcheck").html("비밀번호를 입력해주세요.")
         $("#passwordcheck").css("borderColor", "#f66")
         $("#passwordcheck").focus();
+        pwdCheck = false;
         return false;
 
     } else if ($("#passwordcheck").val() != $("#password").val()) {
         $("#ppasswordcheck").html("비밀번호가 다릅니다.")
         $("#passwordcheck").css("borderColor", "#f66")
         $("#passwordcheck").focus();
+        pwdCheck = false;
         return false;
 
     } else {
         $("#ppasswordcheck").html("")
         $("#passwordcheck").css("borderColor", "rgba(0, 0, 0, 0.08)")
+        pwdCheck = true;
         return false;
     }
+    flagCheck();
 });
 
 $(".checkEmail").on("keyup", function () {
