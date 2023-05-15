@@ -7,7 +7,6 @@
     font-style: normal;
 }
 
-
 * {
     list-style: none;
     margin: 0;
@@ -24,13 +23,10 @@ body {
     font-family: 'Pretendard';
 }
 
-body main{
+body main {
     display: flex;
     height: 100%;
 }
-
-
-
 
 body, button, input, select, textarea {
     font-family: 'Pretendard';
@@ -73,19 +69,15 @@ div.page-name {
     left: 50px;
 }
 
-/* 임시 */
-div.logo {
-    color: #fff;
+.admin-logo {
+    width: 60px;
+    height: 60px;
 }
-/*.admin-logo {*/
-/*    */
-/*}*/
 
 
 div.logo-container {
-    padding: 24px;
-    margin-bottom: 0;
-    background: #252733;
+    padding: 0 0 0 20px;
+    background: white;
     border-bottom: #fff solid 1px;
 }
 
@@ -108,7 +100,6 @@ li.management-menu-list {
     cursor: pointer;
     color: white;
     text-align: start;
-    font-weight: 700;
 }
 
 li.site-shortcut {
