@@ -3,7 +3,13 @@ const toggle = document.querySelector('.ProductSelect_title__3FqMO');
 const arrow = document.querySelector('.ProductSelect_moreButton__2P_Sz');
 const items = document.querySelectorAll('.ProductSelectMenu_content__39QFr div li');
 const lists = document.querySelector('.ProductSelectMenu_content__39QFr');
-const heartsbtn = document.querySelectorAll('.ProductFloatButton_wishButton__2uCyk');
+const heartbtn = document.querySelector('.ProductFloatButton_wishButton__2uCyk');
+const moreinfobtn = document.querySelector('.ProductEtcInfo_titleArea__4p9Wk');
+const moreinfo = document.querySelector('#tmi');
+const moreinfoarrow = document.querySelector('.ProductEtcInfo_button__rAty1');
+
+const showmorebtn = document.querySelector('MoreButton_button__3qNcH');
+
 
 toggle.addEventListener('click', function () {
     choosier.classList.toggle('ProductSelectMenu_unfold__95PrK');
@@ -15,19 +21,25 @@ toggle.addEventListener('click', function () {
     }
     });
 
-
-// heartsbtn.forEach(item=>item.addEventListener('click',function (){
-//     if(item.getAttribute('aria-pressed')==='true'){
-//         item.classList.add('wishButton_active__3CKVe');
-//         item.style.transition="scale 1s";
-//         item.style.scale= "0.5";
-//         item.setAttribute('aria-pressed','false');
-//         item.style.scale= "1.0";
-//         setTimeout(()=>{item.classList.remove('wishButton_active__3CKVe');},300);
+// showmorebtn.addEventListener('click',function () {
+//     showmorebtn.classList.toggle('MoreButton_isFold__JVqoe');
 //
-//     }else if(item.getAttribute('aria-pressed')==='false'){
-//         item.classList.add('wishButton_active__3CKVe');
-//         item.setAttribute('aria-pressed','true');
-//         setTimeout(()=>{item.classList.remove('wishButton_active__3CKVe')},300);
-//     }
-// }));
+// });
+
+heartbtn.addEventListener('click',function () {
+    if(heartbtn.getAttribute('aria-pressed')==='true') {
+        heartbtn.setAttribute('aria-pressed', 'false');
+    }  else{
+        heartbtn.setAttribute('aria-pressed', 'true');
+    }
+});
+
+moreinfobtn.addEventListener('click',function () {
+    moreinfobtn.classList.toggle('ProductEtcInfo_fold__26Z5O');
+    moreinfoarrow.classList.toggle('MoreButton_isFold__JVqoe');
+    if(moreinfobtn.classList.length>1){
+        moreinfo.style.display="block";
+    }else{
+        moreinfo.style.display="none";
+    }
+});
