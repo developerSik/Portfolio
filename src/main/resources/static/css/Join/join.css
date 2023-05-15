@@ -191,6 +191,10 @@ button:not(:disabled) {
 
 }
 
+.return {
+    background-color: #0000;
+}
+
 .Button_button__3MO4n span {
     display: inline-flex;
     align-items: center;
@@ -938,4 +942,39 @@ input::placeholder {
 
 .submitButton {
     margin-bottom: 30px;
+}
+
+.Checkbox_checkbox__10cSJ .Checkbox_input__UIZH_ {
+    cursor: pointer;
+}.Checkbox_checkbox__10cSJ .Checkbox_input__UIZH_+.Checkbox_icon__GLNHN .Checkbox_checkIcon__pmCQr, .Checkbox_checkbox__10cSJ .Checkbox_input__UIZH_+.Checkbox_icon__GLNHN .Checkbox_removeIcon__10mz3 {
+     opacity: 0;
+ }
+.Checkbox_checkbox__10cSJ .Checkbox_input__UIZH_:checked+.Checkbox_icon__GLNHN .Checkbox_checkIcon__pmCQr {
+    opacity: 1;
+}
+.Checkbox_checkbox__10cSJ .Checkbox_input__UIZH_:checked+.Checkbox_icon__GLNHN, .Checkbox_checkbox__10cSJ .Checkbox_input__UIZH_:indeterminate+.Checkbox_icon__GLNHN {
+    border: solid 1px #6B95FC;
+    background-color: #6B95FC;
+}
+
+.Checkbox_checkbox__10cSJ .Checkbox_input__UIZH_:checked+.Checkbox_icon__GLNHN svg {
+    fill: #fff;
+}
+
+.Button_button__3MO4n.Button_secondary__2ECH- {
+    border-color: #cdd3d8;
+    color: #495057;
+}
+
+.EmailAuthField_emailAuthField__2E9P2 {
+    padding-bottom: 8px;
+}
+
+.EmailAuthField_emailAuthField__2E9P2 .EmailAuthField_inputFieldContainer__1BgHY {
+    display: flex;
+}
+
+.EmailAuthField_emailAuthField__2E9P2 .EmailAuthField_inputField__y3EHZ {
+    position: relative;
+    width: 100%;
 }
