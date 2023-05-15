@@ -11,16 +11,15 @@
 <body>
 
 <main>
-    <div class="sidebar sidebar-main">
+    <div class="sidebar">
         <div class="logo-container">
-            <div class="logo">로고</div>
-            <!--로고 확정후 변경-->
-            <!--<img src="" class="admin-logo">-->
+            <img src="../../../static/image/tikkeul.png" class="admin-logo">
         </div>
         <nav class="nav">
             <ul class="side-menu">
                 <li class="site-shortcut">
-                    <input type="button" class="side-menu-button" value="사이트 바로가기">
+                    <input type="button" class="side-menu-button" value="사이트 바로가기"
+                           onclick="location.href='../mypage/main.html'">
                 </li>
                 <div class="management-title">사이트 관리</div>
                 <li class="management-menu-list">
@@ -224,8 +223,7 @@
                         <p>신고내역</p>
                         <input type="image"
                                src="https://cdn1.iconfinder.com/data/icons/essentials-pack/96/add_create_new_plus_positive-512.png"
-                               class="see-details" onclick="location.href='admin-report.html'"
-                        />
+                               class="see-details" onclick="location.href='admin-report.html'"/>
                     </div>
                     <div>
                         <table class="management-table-main">

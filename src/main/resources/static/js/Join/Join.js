@@ -13,6 +13,70 @@ $(BtnModalClose).on('click', function () {
     $(modal).hide();
 });
 
+
+// 체크박스 활성화
+const chkList = $('input[type=checkbox]');
+const chk = $('.chk');
+const essentialChk = $('.essential_chk');
+const agreeAll = $('#termsUpdateRequestCheckBox');
+const btn_modal_agree = $('#btn_modal_agree');
+const fullAgreement = $('input[name=fullAgreement]');
+
+// madal btn 비활성화
+btn_modal_agree.attr('disabled', true);
+
+// checkbox => agreeAll
+agreeAll.click(function () {
+    console.log('agreeAll');
+    if ($(this).is(':checked')) {
+        chkList.prop('checked', true);
+        btn_modal_agree.attr('disabled', false);
+    } else {
+        chkList.prop('checked', false);
+        btn_modal_agree.attr('disabled', true);
+    }
+});
+
+// modal checkbox => fullAgreement
+fullAgreement.click(function () {
+    console.log('fullAgreement');
+    if ($(this).is(':checked')) {
+        chkList.prop('checked', true);
+        btn_modal_agree.attr('disabled', false);
+    } else {
+        chkList.prop('checked', false);
+        btn_modal_agree.attr('disabled', true);
+    }
+});
+
+// check list => select
+$('.chk').change(function () {
+    if ($('.chk:checked').length >= $('.chk').length) {
+        agreeAll.prop('checked', true);
+        fullAgreement.prop('checked', true);
+        btn_modal_agree.attr('disabled', false);
+    } else {
+        agreeAll.prop('checked', false);
+        fullAgreement.prop('checked', false);
+        btn_modal_agree.attr('disabled', true);
+    }
+});
+
+// essential check list => select
+essentialChk.change(function () {
+    if ($('.essential_chk:checked').length >= essentialChk.length) {
+        btn_modal_agree.attr('disabled', false);
+    } else {
+        btn_modal_agree.attr('disabled', true);
+    }
+});
+
+// madal btn
+btn_modal_agree.click(function () {
+    $(modal).hide();
+});
+
+
 /* 비밀번호 확인*/
 let firstsvg = $('.firstsvg');
 let secondsvg = $('.secondsvg');
@@ -46,7 +110,15 @@ $(checksecondsvg).on('click', function () {
     $(checksecondsvg).hide();
     $('#passwordcheck').prop("type", "password");
 });
+/*인증하기*/
+$(".return").hide()
+$(".checkEmail").hide()
 
+$("#checkEmail").on("click", function () {
+    $(".return").show()
+    $(".checkEmail").show()
+    $("#checkEmail").hide()
+})
 // 유효성 검사
 var getMail = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
 
@@ -129,3 +201,15 @@ $("#passwordcheck").on("keyup", function () {
     }
 });
 
+$(".checkEmail").on("keyup", function () {
+    if ($(".checkEmail").val().length == 6) {
+        $('.checkEmailbtn').css("opacity", "1")
+        $('.checkEmailbtn').css("pointer-events", "auto")
+        return false;
+    }
+    else {
+        $('.checkEmailbtn').css("opacity", ".45")
+        $('.checkEmailbtn').css("pointer-events", "none")
+        return false;
+    }
+});

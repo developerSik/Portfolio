@@ -620,6 +620,14 @@ html.scroll-top .web-header,html.wadiz-app.scroll-top .web-header,html.wadiz-app
     background-color: #6B95FC ;
     color: #fff;
 }
+.wz.button.primary:hover{
+    border-color: #4874e1;
+    background-color: #4874e1;
+}
+.input-text:hover {
+    border-color: #4874e1;
+}
+
 .DesktopSearchApp_footer__2T9ts {
     position: relative;
     padding: 13px 16px 11px;

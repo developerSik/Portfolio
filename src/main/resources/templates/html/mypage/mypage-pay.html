@@ -2,112 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>회원 탈퇴</title>
-    <link rel="stylesheet" href="../../../static/css/mypage/DropOutUser.css">
+    <title>결제 정보 관리</title>
+    <link rel="stylesheet" href="../../../static/css/mypage/mypage-pay.css">
     <link rel="stylesheet" href="../../../static/css/footer/footer.css">
 </head>
 <body>
 <div id="page-container">
-    <div id="wz-header">
-        <div class="web-header">
-            <div class="web-header-large">
-                <header class="header-wrapper web-header-simple">
-                    <div class="header-container">
-                        <h1 class="wadiz-logo"><a href="/"><span class="label">와디즈</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="85" height="25" viewBox="0 0 85 25">
-                                <path fill="#1D2129" fill-rule="nonzero"
-                                      d="M58.49 2.23h2.11v21.29H59a1.73 1.73 0 0 1-1.62-1.16 9 9 0 0 1-10.93-.28 7.48 7.48 0 0 1-2.75-6.29 7.65 7.65 0 0 1 12.79-5.07V4.23a2 2 0 0 1 2-2zm-6.3 18.62a4.36 4.36 0 0 0 4.16-4.52 4.19 4.19 0 1 0-8.35 0 4.36 4.36 0 0 0 4.19 4.52zM42 23.52h-1.52a1.73 1.73 0 0 1-1.64-1.16 9 9 0 0 1-10.93-.28 7.48 7.48 0 0 1-2.75-6.29A7.65 7.65 0 0 1 38 10.72a2 2 0 0 1 1.9-1.79H42v14.59zm-8.41-2.67h.02a4.35 4.35 0 0 0 4.15-4.52 4.35 4.35 0 0 0-4.17-4.51 4.35 4.35 0 0 0-4.17 4.51 4.36 4.36 0 0 0 4.17 4.52zM83.47 8.94v2.11l-7.07 9.06h7.06v3.47h-13v-2.1l7.08-9.07h-6.62v-1.47a2 2 0 0 1 2-2h10.55zM65.86 7.3a2.48 2.48 0 1 1 0-4.96 2.48 2.48 0 0 1 0 4.96zM21.21 8.94h4.14l-4.86 14.59h-4.15l-3.21-9.36-3.21 9.36H5.77L.92 8.94h4.13L8 18l2.5-7.74a2 2 0 0 1 1.86-1.34h2.9l3 9.08 2.95-9.06zm42.65 14.59l-.04-12.59a2 2 0 0 1 2-2h2.11v14.59h-4.07z"></path>
-                            </svg>
-                        </a></h1>
-                </header>
-            </div>
-        </div>
-    </div>
-    <main class="account-drop wzui">
-        <div class="wrap">
-            <h1>회원 탈퇴</h1>
-            <p><strong>최보근</strong>님, 와디즈를 이용하시는데 혹시 아래와 같은 불편함이 있으셨으면, 아래 방법을 한번 이용해보세요.</p>
-            <div class="message-box">
-                <dl>
-                    <dt>문자 메시지 / 이메일 수신이 불편하신가요?</dt>
-                    <dd>수신거부는 MY 정보설정 &gt; <a href="/web/waccount/wAccountUpdateBasicInfo">기본 정보 설정</a>에서 하실 수 있습니다.
-                    </dd>
-                    <dt>투자회원 가입 시 업로드한 개인 신분증 때문에 불편하신가요?</dt>
-                    <dd>와디즈에서는 실명인증 확인 후, 24시간 이내 즉시 파기하고 있습니다.</dd>
-                    <dt>기타 불편한 사항이 있으시면 언제든 와디즈에게 알려주세요.</dt>
-                    <dd>
-                        <a href="#" data-intercom-message="회원 탈퇴 관련 질문">와디즈에 문의하기</a> ㅣ 1661-9056 ㅣ 카카오톡 친구추가 ‘와디즈’ ㅣ
-                        info@wadiz.kr
-                    </dd>
-                </dl>
-            </div>
-            <h2>어떤 점이 불편하셨나요?</h2>
-            <p>와디즈를 이용하면서 불편했던 점을 말씀해주시면, 와디즈의 서비스 개선에 참고하도록 하겠습니다.</p>
-            <div class="selectbox">
-                <select id="selectDropOutReason" name="reason">
-                    <option value="">탈퇴사유는 무엇인가요?</option>
-                    <option>재 가입을 위해</option>
-                    <option>콘텐츠 품질과 서비스 정보 부족</option>
-                    <option>고객 서비스의 불만</option>
-                    <option>프로젝트 진행안내 및 메이커 새소식 수신거부</option>
-                    <option>와디즈 광고 SMS, EMAIL수신거부</option>
-                    <option>시스템 장애 (속도, 잦은 장애)</option>
-                    <option>개인 정보 (통신 및 신용정보 등) 노출 우려</option>
-                    <option value="etc">기타</option>
-                </select>
-                <span>탈퇴사유는 무엇인가요?</span>
-                <em id="selectDropOutReasonError" style="display:none">탈퇴 사유를 선택해주세요.</em>
-            </div>
-            <div class="reason-text" id="inputDropOutReason" style="display:none">
-                <input type="text" name="reason-text" id="reason-text" placeholder="사유를 입력해 주세요." class="large" maxlength="64">
-                <em id="inputDropOutReasonError" style="display:none">탈퇴 사유를 입력해주세요.</em>
-            </div>
-            <h2>탈퇴 전, 꼭 확인하세요!</h2>
-            <p>탈퇴 전 반드시 아래 유의 사항을 확인하시기 바랍니다.<br><em>참여∙모집 중인 프로젝트가 있을때 또는 와디즈 계좌에 예치금이 남았을 경우 탈퇴가 불가능합니다.</em></p>
-            <dl>
-                <dt>탈퇴 후 3개월 내 재가입 불가</dt>
-                <dd>탈퇴 후 3개월 내 동일 아이디(이메일)로 재가입 불가</dd>
-                <dt>와디즈 계좌개설 되어있는 경우 탈퇴 후 3개월 내 동일한 실명정보로 계좌개설 불가</dt>
-                <dd>와디즈 계좌가 있어야만 이용 가능한 투자 신청 이용 불가</dd>
-                <dt>탈퇴 후 재가입 시 신규 회원혜택 제한</dt>
-                <dd>재가입 후 신규 회원혜택 및 제휴 프로모션 관련 혜택 지급 불가</dd>
-                <dt>탈퇴 후 개인 정보 일괄 삭제</dt>
-                <dd>참여한/찜 한/개설 중인 프로젝트 및 쿠폰, 포인트 등 개인 정보 일괄 삭제</dd>
-                <dt>와디즈 내 모든 서비스에서 탈퇴</dt>
-                <dd>펀딩, 투자, 스타트업 찾기 등 와디즈 회원으로서 이용하던 서비스 모두 이용 불가</dd>
-                <dt>탈퇴 후 작성한 게시물은 삭제 불가</dt>
-                <dd>게시글, 댓글, 펀딩한 프로젝트의 투자 리스트에 남겨진 이름 등 삭제 불가</dd>
-                <dt>미상환 투자금 환급 불이익 감수</dt>
-                <dd>아직 상환되지 않은 투자금이 있을때, 투자금을 돌려받지 못할 불이익과 위험 감수</dd>
-            </dl>
-            <p><label class="wz checkbox"><input type="checkbox" name="agree" value="Y" id="dropConfirm"><span>상기 와디즈 탈퇴 시 유의 사항을 확인하였습니다.</span></label>
-            </p>
-            <h2>본인 확인</h2>
-            <p>안전한 탈퇴를 위해 본인 인증 절차를 진행합니다. 본인확인하기 버튼을 클릭해주세요.</p>
-            <div id="verify-step1" class="verify-box">
-                <input type="button" value="본인 확인하기" class="wz button primary" id="verify-next">
-            </div>
-            <div id="verify-step2" class="verify-box" style="display:none">
-                <div class="wz input action user-verify" style="padding-right:0">
-                    <input type="text" name="respon" value="010-****-*909" readonly="readonly">
-                    <input type="hidden" name="pfKey" id="pfKey">
-                    <button type="button" class="wz button" id="verify-retry">재전송</button>
-                </div>
-                <div class="user-verify-confirm">
-                    <form name="verify-code-confirm" style="padding-right:0" onsubmit="">
-                        <div class="wz input action verify-code">
-                            <input type="number" name="code" id="code" placeholder="인증번호 입력" maxlength="6">
-                            <span class="timer" id="timer" style="right:100px">00:00</span>
-                            <button type="submit" class="wz button gray" id="verify-confirm">인증 확인</button>
+    <main id="main-app">
+        <div class="MainWrapper_content__GZkTa">
+            <div class="MyRewardContainer_container__2qXDp"><h2 class="MyRewardContainer_title__2TKbO">결제 정보 관리</h2>
+                <div class="MyRewardContainer_column__1d06O">
+                    <div class="SimplePayInfo_simplePayInfo__ejCel" id="registCardInfo"><h3
+                            class="SimplePayInfo_title__1a9F1">간편결제 정보</h3>
+                        <div class="SimplePayCard_simplecard__2wYo7 SimplePayCard_info__3rLl3 SimplePayCard_noInfo__pdX40">
+                            <div class="SimplePayCard_unregisted__2uiqp">
+                                <div class="SimplePayCard_addCard__2eagF">
+                                    <svg viewBox="0 0 32 32" focusable="false" role="presentation"
+                                         class="withIcon_icon__3VTbq SimplePayCard_addIcon__2DOov" aria-hidden="true">
+                                        <path d="M30.4 15.2H16.8V1.6h-1.6v13.6H1.6v1.6h13.6v13.6h1.6V16.8h13.6v-1.6z"></path>
+                                    </svg>
+                                    <span class="SimplePayCard_title__PpPWZ">간편 결제 카드 등록</span><span
+                                        class="SimplePayCard_description__IFa0t">카드 등록하고, 빠르게 결제 예약하세요!</span></div>
+                                <div class="SimplePayCard_notice__3PRPU">
+                                    <svg viewBox="0 0 40 40" focusable="false" role="presentation"
+                                         class="withIcon_icon__3VTbq withIcon_inline__1lwwX" aria-hidden="true">
+                                        <path fill="none" d="M0 0h40v40H0z"></path>
+                                        <path d="M20 39a19 19 0 1 1 19-19 19.06 19.06 0 0 1-19 19zm0-36a17 17 0 1 0 17 17A17 17 0 0 0 20 3z"></path>
+                                        <path d="M20 26a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 1 0 0-3.6zm-1.04-15.83h2.08v13h-2.08z"></path>
+                                    </svg>
+                                    <em>와디즈에서 카드번호를 저장하지 않습니다!</em>
+                                    <p>카드사에서 제공하는 암호화된 정보만을 저장하기 때문에 안심하셔도 됩니다.</p></div>
+                            </div>
+                            <div class="SimplePayCard_registed__2yAC4">
+                                <div class="SimplePayCard_creditCard__2nvHf"><span
+                                        class="SimplePayCard_cardName__1no5L">카드</span>
+                                    <button type="button" class="SimplePayCard_editButton__Q120P">
+                                        <svg viewBox="0 0 40 40" focusable="false" role="presentation"
+                                             class="withIcon_icon__3VTbq SimplePayCard_deleteIcon__1tC7k"
+                                             aria-hidden="true">
+                                            <path d="M36.67 5.31H3.33v2h2.82v31.88h27.7V7.31h2.82zm-4.82 31.88H8.15V7.31h23.7zM15 .81h10v2H15z"></path>
+                                            <path d="M14.75 15.18h2v15h-2zm8.5 0h2v15h-2z"></path>
+                                        </svg>
+                                        삭제
+                                    </button>
+                                    <div class="SimplePayCard_cardNumber__3fnJ-"></div>
+                                    <span class="SimplePayCard_createdAt__Alwbk">간편 결제 등록일<span>YYYY. MM. DD</span></span>
+                                </div>
+                                <div class="SimplePayCard_notice__3PRPU"><em>할부는 직접 입력으로만 이용 가능합니다.</em></div>
+                            </div>
                         </div>
-                    </form>
-                    <em id="verify-error" style="display:none">인증번호를 잘못 입력하셨습니다. 다시 입력해 주세요.</em>
-                    <em id="verify-time-over" style="display:none">인증시간이 초과되었습니다. 재전송 버튼를 눌러주세요.</em>
-                </div>
-            </div>
-            <hr>
-            <div class="drop-button">
-                <input type="button" value="회원 탈퇴" class="wz button red" disabled="disabled" id="btnDropOut">
+                    </div>
+                    <ul class="SimplePayInfo_noticeList__VXr7r">
+                        <li>와디즈에서는 카드 번호를 저장하지 않으니 안심하세요.</li>
+                        <li>간편 결제 카드 등록은 1개만 가능해요.</li>
+                        <li>결제 비밀번호를 잊어버렸거나 변경을 원한다면, 기존 등록되었던 결제 정보를 삭제하고 다시 등록해 주세요.</li>
+                        <li>간편 결제 번호를 변경하더라도 변경 전 참여한 프로젝트의 결제 정보는 변경되지 않아요.<br>이미 참여한 프로젝트의 결제 정보 변경은 프로젝트 내역에서 변경할 수
+                            있어요.
+                        </li>
+                        <li>할부는 직접 입력으로만 이용 가능합니다.</li>
+                    </ul>
+                    <input type="hidden" name="has-simplepay-info" value="false"></div>
             </div>
         </div>
         <footer id="footer" class="web-footer inner-utils">
@@ -184,7 +138,8 @@
                                     <path d="M28 20L15 33l-1.4-1.4L25.2 20 13.6 8.4 15 7l13 13z"></path>
                                 </svg>
                             </button>
-                            <a href="https://helpcenter.wadiz.kr/hc/ko/requests/new" class="FooterContainer_directBtn__2ICcT"
+                            <a href="https://helpcenter.wadiz.kr/hc/ko/requests/new"
+                               class="FooterContainer_directBtn__2ICcT"
                                target="_blank" rel="noreferrer">문의 등록하기
                                 <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="withIcon_icon__djI-9"
                                      aria-hidden="true">
@@ -225,7 +180,8 @@
                         <div class="FooterContainer_appStoreSection__2zpAZ"><a
                                 href="https://play.google.com/store/apps/details?id=com.markmount.wadiz" target="_blank"
                                 class="icon-google-play" rel="noopener noreferrer">Android앱</a>
-                            <a href="https://itunes.apple.com/kr/app/wadijeu/id1107828621" target="_blank" class="icon-apple"
+                            <a href="https://itunes.apple.com/kr/app/wadijeu/id1107828621" target="_blank"
+                               class="icon-apple"
                                rel="noopener noreferrer">iOS앱</a></div>
                     </section>
                 </div>
@@ -238,8 +194,10 @@
                                                           aria-hidden="true"><path
                                 d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-.96 4.96 5.44-3.6 2.4.16c6.96 0 12.64-4.48 12.64-10.08S22.96 4.56 16 4.64z"></path></svg></span>
                             <ul>
-                                <li><a href="http://pf.kakao.com/_MGxgmxl" target="_blank" rel="noopener noreferrer">투자</a></li>
-                                <li><a href="http://pf.kakao.com/_pEeEl" target="_blank" rel="noopener noreferrer">펀딩</a></li>
+                                <li><a href="http://pf.kakao.com/_MGxgmxl" target="_blank" rel="noopener noreferrer">투자</a>
+                                </li>
+                                <li><a href="http://pf.kakao.com/_pEeEl" target="_blank" rel="noopener noreferrer">펀딩</a>
+                                </li>
                             </ul>
                         </li>
                         <li><span title="페이스북"><svg viewBox="0 0 48 48" focusable="false" role="presentation"
@@ -289,6 +247,5 @@
         </footer>
     </main>
 </div>
-<div id="wadiz-app-banner"></div>
 </body>
 </html>
