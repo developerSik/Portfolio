@@ -1139,3 +1139,7 @@ button[class*=Button_button] {
 .toastui-calendar-weekday-grid{
     z-index: 1;
 }
+
+.toastui-calendar-daygrid-cell {
+    cursor: pointer;
+}

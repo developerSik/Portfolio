@@ -17860,3 +17860,8 @@ html.scroll-top .MainWrapper_content__GZkTa,html.wadiz-app .MainWrapper_content_
         padding-top: 0
     }
 }
+
+.Moabanner img{
+    width: 100%;
+    height: 350px;
+}
