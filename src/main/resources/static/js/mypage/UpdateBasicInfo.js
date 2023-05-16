@@ -46,8 +46,6 @@ $("#mobileChangeBtn").click(function () {
         $('#mobileNumber').attr("disabled", true);
         $("#mobileNumber").css("background-color", "#e7e7e7");
         $("#emailCheckBtn").show();
-        $(".input-btn-wrap").hide();
-        $(".tr").hide();
     }
 });
 
