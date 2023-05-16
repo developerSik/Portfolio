@@ -112,7 +112,7 @@ body, button, input, select, textarea {
 }
 /*헤더*/
 
-.account-reset-password .wz.container {
+.account-reset-password .container {
     margin: 0 auto;
     padding: 0 16px;
     width: 100%;
@@ -120,7 +120,7 @@ body, button, input, select, textarea {
     color: #212529;
 }
 
-.wz.container {
+.container {
     position: relative;
     box-sizing: border-box;
     line-height: 20px;
@@ -128,30 +128,30 @@ body, button, input, select, textarea {
     font-weight: 400;
 }
 
-.account-reset-password .wz.container .page-header {
+.account-reset-password .container .page-header {
     padding-top: 50px;
     padding-bottom: 44px;
 }
 
-.account-reset-password .wz.container .page-header h2 {
+.account-reset-password .container .page-header h2 {
     font-size: 36px;
     font-weight: 700;
     line-height: 1.33;
 }
 
-.account-reset-password .wz.container .page-header .desc {
+.account-reset-password .container .page-header .desc {
     margin-top: 16px;
     color: #495057;
 }
 
-.account-reset-password .wz.container .page-body .label {
+.account-reset-password .container .page-body .label {
     line-height: 24px;
 }
-.account-reset-password .wz.container .page-body .text-field {
+.account-reset-password .container .page-body .text-field {
     position: relative;
 }
 
-.account-reset-password .wz.container .page-body .text-field .input-text {
+.account-reset-password .container .page-body .text-field .input-text {
     margin: 4px 0;
     padding: 0 16px;
     width: 100%;
@@ -163,25 +163,25 @@ body, button, input, select, textarea {
     outline: none;
 }
 
-.account-reset-password .wz.container .page-body .btn-wrap {
+.account-reset-password .container .page-body .btn-wrap {
     margin-top: 36px;
 }
 
-.account-reset-password .wz.container .page-body .wz.button {
+.account-reset-password .container .page-body .button {
     height: 56px;
 }
 
-.wz.button.primary {
+.button.primary {
     background-color: #6B95FC;
     color: #fff;
     border-color: #6B95FC;
 }
-.wz.button.block {
+.button.block {
     width: 100%;
     text-align: center;
 }
 
-.wz.button {
+.button {
     display: inline-block;
     text-decoration: none;
     transition-property: background-color, border-color, color, opacity;
@@ -204,7 +204,7 @@ body, button, input, select, textarea {
 }
 
 /* active */
-.account-reset-password .wz.container .page-body .text-field .input-text {
+.account-reset-password .container .page-body .text-field .input-text {
     transition-property: border-color, background-color, color;
     transition-duration: 0.15s;
     outline: none;
@@ -222,19 +222,19 @@ body, button, input, select, textarea {
     font-weight: 400;
 }
 
-.account-reset-password .wz.container .page-body .text-field .input-text:hover {
+.account-reset-password .container .page-body .text-field .input-text:hover {
     border-color: #4874e1;
 }
 
 .account-reset-password
-.wz.container
+.container
 .page-body
 .text-field
 .input-text::-webkit-input-placeholder {
     color: #adb5bd;
 }
 
-.wz.button.primary:hover {
+.button.primary:hover {
     border-color: #4874e1;
     background-color: #4874e1;
 }
