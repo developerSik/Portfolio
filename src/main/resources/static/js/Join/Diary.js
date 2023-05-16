@@ -79,10 +79,6 @@ const options = {
 
 const calendar = new Calendar(container, options);
 
-calendar.on('clickEvent', ({ event }) => {
-    console.log(event)
-});
-
 var currentDate = calendar.getDate();
 
 
@@ -113,11 +109,32 @@ $("#calender-next").click(() => {
     $(".month").text(nextMonthIndex + 1 + "월");
 
     calendar.next();
-})
-
-$("#today").click(() => {
-    $(".year").text(year+ "년");
-    $(".month").text(month + "월");
-
-    calendar.today();
 });
+
+$(document).ready(function() {
+    $('.toastui-calendar-daygrid-cell').on('click', function() {
+        for(let i =0; i< 37;i++){
+            clickedDay = $($('.toastui-calendar-daygrid-cell').children().children().children()[i])
+            if(clickedDay.hasClass('toastui-calendar-weekday-grid-date-decorator')){
+                clickedDay.removeClass('toastui-calendar-weekday-grid-date-decorator')
+                clickedDay.css('color', 'black')
+                $(this).children().children().children().addClass('toastui-calendar-weekday-grid-date-decorator')
+                $(this).children().children().children().css('color', 'white')
+            }
+
+        }
+    })
+
+});
+// $(document).ready(function() {
+//     for (let i = 0; i < 37; i++) {
+//         clickedDay = $($('.toastui-calendar-daygrid-cell').children().children().children()[i])
+//         if (clickedDay.hasClass('toastui-calendar-weekday-grid-date-decorator')) {
+//             clickedDay.removeClass('toastui-calendar-weekday-grid-date-decorator')
+//             clickedDay.css('color', 'black')
+//             $(this).children().children().children().addClass('toastui-calendar-weekday-grid-date-decorator')
+//             $(this).children().children().children().css('color', 'white')
+//         }
+//
+//     }
+// });
