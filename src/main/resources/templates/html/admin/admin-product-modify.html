@@ -84,6 +84,14 @@
                             <input type="text" name="" value="" class="modify-input">
                         </td>
                     </tr>
+                    <tr>
+                        <td>이미지</td>
+                        <td>
+                            <form method="post" enctype="multipart/form-data">
+                                <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)">
+                            </form>
+                        </td>
+                    </tr>
                 </table>
                 <div class="button-box">
                     <input type="button" name="report-list" value="상품목록" onClick="location.href='admin-product.html'"/>
