@@ -577,16 +577,14 @@ a.Button_button__2FuOU.Button_block__1-g8w {
 }
 
 .Button_button__2FuOU.Button_tertiaryGrey__3jJV7.Button_contained__2SIAT {
-    border-color: #f2f4f6;
-    background-color: #f2f4f6;
-    color: #495057
+    background-color: #6B95FC;
+    color: white;
 }
 
 @media (hover: hover)and (pointer: fine) {
     .Button_button__2FuOU.Button_tertiaryGrey__3jJV7.Button_hover__3JfDP,.Button_button__2FuOU.Button_tertiaryGrey__3jJV7:hover {
-        border-color:#e9ecef;
-        background-color: #e9ecef;
-        color: #343a40
+        background-color: #4874e1;
+        color: white;
     }
 }
 
