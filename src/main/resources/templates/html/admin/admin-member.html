@@ -70,14 +70,14 @@
                     <div>
                         <input type="button" class="member-modify" name="modify" value="수정"
                                onclick="location.href='admin-member-modify.html'"/>
-                        <input type="button" class="member-delete" name="delete" value="삭제"/>
+                        <input type="button" class="member-delete" id="delete-button" name="delete" value="삭제"/>
                     </div>
 
                 </div>
                 <div class="table-content">
                     <table>
                         <tr>
-                            <th><input type="checkbox" name="delete-report" class="all"/></th>
+                            <th><input type="checkbox" class="all"/></th>
                             <th>회원 번호</th>
                             <th>이름</th>
                             <th>ID</th>
@@ -88,7 +88,7 @@
                             <th>이메일</th>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="delete-report" class="term"/></td>
+                            <td><input type="checkbox" name="table-row" class="term"/></td>
                             <td>1</td>
                             <td>오명근</td>
                             <td>omg0223</td>
@@ -99,160 +99,147 @@
                             <td>aaa1234@gmail.com</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="delete-report" class="term"/></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
+                            <td><input type="checkbox" name="table-row" class="term"/></td>
+                            <td>1</td>
+                            <td>오명근</td>
+                            <td>omg0223</td>
+                            <td>서울</td>
+                            <td>30</td>
+                            <td>남</td>
+                            <td>010-1234-1234</td>
+                            <td>aaa1234@gmail.com</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="delete-report" class="term"/></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
+                            <td><input type="checkbox" name="table-row" class="term"/></td>
+                            <td>1</td>
+                            <td>오명근</td>
+                            <td>omg0223</td>
+                            <td>서울</td>
+                            <td>30</td>
+                            <td>남</td>
+                            <td>010-1234-1234</td>
+                            <td>aaa1234@gmail.com</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="delete-report" class="term"/></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
+                            <td><input type="checkbox" name="table-row" class="term"/></td>
+                            <td>1</td>
+                            <td>오명근</td>
+                            <td>omg0223</td>
+                            <td>서울</td>
+                            <td>30</td>
+                            <td>남</td>
+                            <td>010-1234-1234</td>
+                            <td>aaa1234@gmail.com</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="delete-report" class="term"/></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
+                            <td><input type="checkbox" name="table-row" class="term"/></td>
+                            <td>1</td>
+                            <td>오명근</td>
+                            <td>omg0223</td>
+                            <td>서울</td>
+                            <td>30</td>
+                            <td>남</td>
+                            <td>010-1234-1234</td>
+                            <td>aaa1234@gmail.com</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="delete-report" class="term"/></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
+                            <td><input type="checkbox" name="table-row" class="term"/></td>
+                            <td>1</td>
+                            <td>오명근</td>
+                            <td>omg0223</td>
+                            <td>서울</td>
+                            <td>30</td>
+                            <td>남</td>
+                            <td>010-1234-1234</td>
+                            <td>aaa1234@gmail.com</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="delete-report" class="term"/></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
+                            <td><input type="checkbox" name="table-row" class="term"/></td>
+                            <td>1</td>
+                            <td>오명근</td>
+                            <td>omg0223</td>
+                            <td>서울</td>
+                            <td>30</td>
+                            <td>남</td>
+                            <td>010-1234-1234</td>
+                            <td>aaa1234@gmail.com</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="delete-report" class="term"/></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
+                            <td><input type="checkbox" name="table-row" class="term"/></td>
+                            <td>1</td>
+                            <td>오명근</td>
+                            <td>omg0223</td>
+                            <td>서울</td>
+                            <td>30</td>
+                            <td>남</td>
+                            <td>010-1234-1234</td>
+                            <td>aaa1234@gmail.com</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="delete-report" class="term"/></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
+                            <td><input type="checkbox" name="table-row" class="term"/></td>
+                            <td>1</td>
+                            <td>오명근</td>
+                            <td>omg0223</td>
+                            <td>서울</td>
+                            <td>30</td>
+                            <td>남</td>
+                            <td>010-1234-1234</td>
+                            <td>aaa1234@gmail.com</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="delete-report" class="term"/></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
+                            <td><input type="checkbox" name="table-row" class="term"/></td>
+                            <td>1</td>
+                            <td>오명근</td>
+                            <td>omg0223</td>
+                            <td>서울</td>
+                            <td>30</td>
+                            <td>남</td>
+                            <td>010-1234-1234</td>
+                            <td>aaa1234@gmail.com</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="delete-report" class="term"/></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
+                            <td><input type="checkbox" name="table-row" class="term"/></td>
+                            <td>1</td>
+                            <td>오명근</td>
+                            <td>omg0223</td>
+                            <td>서울</td>
+                            <td>30</td>
+                            <td>남</td>
+                            <td>010-1234-1234</td>
+                            <td>aaa1234@gmail.com</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="delete-report" class="term"/></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
+                            <td><input type="checkbox" name="table-row" class="term"/></td>
+                            <td>1</td>
+                            <td>오명근</td>
+                            <td>omg0223</td>
+                            <td>서울</td>
+                            <td>30</td>
+                            <td>남</td>
+                            <td>010-1234-1234</td>
+                            <td>aaa1234@gmail.com</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="delete-report" class="term"/></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
+                            <td><input type="checkbox" name="table-row" class="term"/></td>
+                            <td>1</td>
+                            <td>오명근</td>
+                            <td>omg0223</td>
+                            <td>서울</td>
+                            <td>30</td>
+                            <td>남</td>
+                            <td>010-1234-1234</td>
+                            <td>aaa1234@gmail.com</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="delete-report" class="term"/></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
+                            <td><input type="checkbox" name="table-row" class="term"/></td>
+                            <td>1</td>
+                            <td>오명근</td>
+                            <td>omg0223</td>
+                            <td>서울</td>
+                            <td>30</td>
+                            <td>남</td>
+                            <td>010-1234-1234</td>
+                            <td>aaa1234@gmail.com</td>
                         </tr>
 
                     </table>
@@ -267,23 +254,6 @@
 </main>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
-    const $all = $(".all");
-    const $checkboxes = $(".term");
-    $all.on("click", function () {
-        $checkboxes.prop("checked", $(this).is(":checked"));
-    });
-
-
-    $checkboxes.on("click", function () {
-        $all.prop("checked", $checkboxes.filter(":checked").length == 10);
-    });
-
-
-    $checkboxes.each(function (i, checkbox) {
-        if (!($(checkbox).is(":checked"))) {
-            $all.prop("checked", false);
-        }
-    });
-</script>
+<script src="../../../static/js/admin/checkbox.js"></script>
+<script src="../../../static/js/admin/delete-button.js"></script>
 </html>
