@@ -506,11 +506,14 @@
                         <div id="tabContent1" class="tab-content">
                             <h5>프로필 사진</h5>
                             <div class="profileimg-wrap">
-                                <button type="button" id="resultProfileImg" class="profileimg"><em
+                               <!-- <button type="button" id="resultProfileImg profile_image" class="profileimg" src="기존_프로필_이미지.jpg" alt="프로필 이미지"><em
                                         style="background-image:url(https://www.wadiz.kr/wwwwadiz/green001/sns_profile_pics/20230510032032299_2782810566.jpg)"></em>
-                                </button>
+                                </button>-->
+                                <img id="profile_image"  class="profileimg"  style="background-image:url(https://d2v80xjmx68n4w.cloudfront.net/assets/icon/mykmong-profile-default@3x.png
+)">
                                 <p class="setting-profileimg">
-                                    <button type="file" id="btn_updatePhoto">
+                                    <input type="file" id="file_input" style="display: none;">
+                                    <button type="button" id="btn_updatePhoto">
                                         <span>바꾸기</span>
                                     </button>
                                     <button type="button" id="btn_deletePhoto">삭제</button>
@@ -555,7 +558,7 @@
                             인증해주세요.</p>
                         <p id="emailSuccessNumberCheckMsg" class="error-text emailMsg"
                            style="color: rgb(80, 227, 194); display: none;">인증이 완료되었습니다.</p>
-                        <p id="emailError" class="error-text emailMsg" style="display: none;">이메일 형식이 올바르지 않습니다.</p>
+                        <p id="emailError" class="error-text emailMsg">이메일 형식이 올바르지 않습니다.</p>
                         <p id="emailJoinedError" class="error-text emailMsg" style="display: none;">이미 회원가입된 계정입니다. 다른
                             이메일을
                             입력해주세요.</p>
@@ -606,6 +609,9 @@
                                 </a>
                             </div>
                         </div>
+
+
+
 
                         <div class="social-account-wrap">
                             <h3 class="title">SNS 연동</h3>
