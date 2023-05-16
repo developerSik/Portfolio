@@ -17865,3 +17865,24 @@ html.scroll-top .MainWrapper_content__GZkTa,html.wadiz-app .MainWrapper_content_
     width: 100%;
     height: 350px;
 }
+
+li {
+    cursor: pointer;
+}
+
+li:hover {
+    transform: scale(1.1);
+    transition: all 1s;
+}
+
+.BenefitCard_benefitImage__2VAAW {
+    background-image: url("../../../static/image/programseedLogo.png");
+}
+
+.leaf{
+    background-image: url("../../../static/image/programleafLogo.png");
+}
+
+.tree {
+    background-image: url("../../../static/image/programtreeLogo.png");
+}
