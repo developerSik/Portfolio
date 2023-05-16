@@ -201,9 +201,6 @@ body > #root, #wadizTopBanner, #page-container {
     pointer-events: none;
 }
 
-.Button_button__2FuOU .Button_children__ilFun {
-    vertical-align: top;
-}
 
 .ProjectSearchTags_container__7YZNA .ProjectSearchTags_hashTags__3v6i6 .ProjectSearchTags_hashTagButton__fCndq .ProjectSearchTags_hashTag__2UMo_ {
     line-height: 18px;
@@ -988,7 +985,7 @@ MakerBadgeContainer_badge__HceMd {
 
 .DetailTab_container__1NVYg {
     position: sticky;
-    top: 42px;
+    top:0px;
     z-index: 1;
     margin: 0 auto 24px;
     border-bottom: 1px solid #f2f4f6;
@@ -1405,10 +1402,6 @@ strong {
     width: 20px;
     height: 20px;
     color: #495057;
-}
-.ProductEtcInfo_container__3w3bk {
-    word-break: keep-all;
-    overflow-wrap: break-word;
 }
 
 .ProductEtcInfo_container__3w3bk .ProductEtcInfo_titleArea__4p9Wk {
@@ -1902,4 +1895,94 @@ ProductPaymentPriceInfo_storePaymentPriceInfo__PybRp .ProductPaymentPriceInfo_pr
     letter-spacing: -.3px;
     font-size: 16px;
     font-weight: 400;
+}
+
+
+.ProductFloatButton_wishButtonBox__236EH .ProductFloatButton_wishButton__2uCyk .ProductFloatButton_count__1a-7B {
+    line-height: 18px;
+    letter-spacing: 0;
+    font-size: 12px;
+    font-weight: 400;
+    display: block;
+    color: #868e96;
+}
+.ProductFloatButton_wishButtonBox__236EH .ProductFloatButton_wishButton__2uCyk * {
+    pointer-events: none;
+}
+
+.Button_button__2FuOU span {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: top;
+}
+
+.Button_button__2FuOU span svg {
+    display: block;
+}.Button_button__2FuOU .Button_children__ilFun {
+     vertical-align: top;
+ }
+.Button_button__2FuOU span {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: top;
+}
+
+.ProductFloatButton_wishButtonBox__236EH .ProductFloatButton_wishButton__2uCyk {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    justify-content: center;
+}
+.ProductFloatButton_wishButtonBox__236EH .ProductFloatButton_wishButton__2uCyk .ProductFloatButton_count__1a-7B {
+    line-height: 18px;
+    letter-spacing: 0;
+    font-size: 12px;
+    font-weight: 400;
+    display: block;
+    color: #868e96;
+}
+DetailStory_service__2rTtM{
+
+}
+.DetailStory_container__2f685 .DetailStory_service__2rTtM>div {
+    background: #f9fafb;
+    padding: 16px;
+}
+
+.DetailStory_container__2f685 .DetailStory_service__2rTtM ul {
+    line-height: 18px;
+    letter-spacing: 0;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 16px;
+    color: #212529;
+    list-style-type: none;
+}
+
+@media screen and (min-width: 769px) {
+    .DetailStory_container__2f685 .DetailStory_service__2rTtM ul {
+        padding: 8px 0;
+    }
+}
+.DetailStory_container__2f685 .DetailStory_service__2rTtM ul li {
+    position: relative;
+}
+
+@media screen and (min-width: 769px) {
+    .ProductEtcInfo_container__3w3bk .ProductEtcInfo_titleArea__4p9Wk {
+        padding: 16px 0;
+    }
+}
+
+.ProductEtcInfo_container__3w3bk .ProductEtcInfo_fold__26Z5O {
+    border-bottom: none;
+}
+.MoreButton_button__3qNcH.MoreButton_isFold__JVqoe .MoreButton_icon__2UKz5 {
+    transform: rotate(180deg);
+}
+#tmi{
+    display: none;
 }

@@ -26,7 +26,7 @@
     height: 40px;
     padding: 0 22%;
     background-color: white;
-    border: 1px solid #252733;
+    border: 1px solid #cdcdcd;
     border-radius: 2px;
 }
 
@@ -35,7 +35,7 @@ section div div select {
     height: 100%;
     padding: 10px;
     background-color: white;
-    border: 1px solid #252733;
+    border: 1px solid #cdcdcd;
     border-radius: 2px 0 0 2px;
     z-index: 2;
 }
@@ -50,20 +50,17 @@ section div div select {
 
 .member-delete {
     background-color: white;
-    border: 1px solid #252733;
+    border: 1px solid #cdcdcd;
     border-radius: 2px;
     padding: 10px
 }
 
-.in-table {
-    padding: 5px 10px !important;
-}
 
 .member-modify {
     background-color: white;
-    border: 1px solid #252733;
+    border: 1px solid #cdcdcd;
     border-radius: 2px;
-    padding: 5px 10px
+    padding: 10px
 }
 
 
@@ -88,7 +85,7 @@ td {
 }
 
 th {
-    border-bottom: 1px solid #252733;
+    border-bottom: 1px solid #cdcdcd;
     height: 2rem;
 }
 
