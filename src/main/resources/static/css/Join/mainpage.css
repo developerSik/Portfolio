@@ -1085,4 +1085,57 @@ button[class*=Button_button] {
 /*    background-size: 100%;*/
 /*    !*background-repeat: no-repeat;*!*/
 /*    float: left;*/
-/*}*/
+/*}**/
+
+.auto-flex, .auto-flex svg, .btn-padding, .calendar-box {
+    background: #fff;
+}
+
+.auto-flex svg {
+    width: 16px;
+    cursor: pointer;
+}
+
+.Maincalender {
+    padding-left: 649px;
+}
+
+.calender{
+    right: 0;
+    top: 31px;
+}
+
+#calendar {
+    width: 453px;
+    height: 450px;
+    background: #fff;
+}
+
+.tui-full-calendar {
+    width: 100%;
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.toastui-calendar-template-time,   .toastui-calendar-weekday-grid-more-events {
+    display: none;
+}
+
+.toastui-calendar-month-daygrid{
+    padding:20px
+}
+
+.toastui-calendar-daygrid-cell+.toastui-calendar-daygrid-cell {
+    border:none !important;
+}
+
+.toastui-calendar-weekday-grid{
+    border:none !important;
+}
+
+.toastui-calendar-weekday-grid{
+    z-index: 1;
+}
