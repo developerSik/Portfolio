@@ -683,12 +683,11 @@ html.scroll-top .web-header,html.wadiz-app.scroll-top .web-header,html.wadiz-app
     color: rgba(255, 255, 255, 0.7);
 }
 .account-drop h2 {
-    margin-top: 80px;
     line-height: 36px;
     font-size: 28px;
 }
 .account-drop h1, .account-drop h2, .account-drop p {
-    margin-bottom: 8px;
+    margin-bottom: 26px;
 }
 .account-drop h1 {
     line-height: 44px;
