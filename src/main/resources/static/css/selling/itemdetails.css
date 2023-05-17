@@ -1077,6 +1077,7 @@ MakerBadgeContainer_badge__HceMd {
             flex: 0 0 66.9%;
             padding-left: 37px;
             max-width: 66.9%;
+            margin: 0 auto;
         }
     }
 
