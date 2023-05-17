@@ -174,12 +174,12 @@ li {
     height: 50px;
     line-height: 50px;
     padding-right: 20px;
-    font-size: 14px;
+    font-size: 11px;
     text-align: right;
 }
 
 .school-summary .school-sum-info dl dd span {
-    color: #00c4c4;
+    color: #6B95FC;
 }
 
 .school-summary .school-sum-info .done-info {
@@ -235,7 +235,7 @@ input[type=text].lect-val-num {
     padding-right: 20px;
     height: 50px;
     line-height: 50px;
-    color: #00c4c4;
+    color: #6B95FC;
 }
 
 .school-summary .school-sum-info .school-btn-apply {
@@ -253,7 +253,7 @@ input[type=text].lect-val-num {
     font-size: 18px;
     font-weight: 500;
     color: #fff;
-    background: #00c4c4;
+    background: #6B95FC;
     border: none;
     border-radius: 3px;
     border-top: 1px solid #e4e4e4;

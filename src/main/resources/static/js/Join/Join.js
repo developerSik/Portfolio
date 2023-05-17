@@ -31,9 +31,13 @@ agreeAll.click(function () {
     if ($(this).is(':checked')) {
         chkList.prop('checked', true);
         btn_modal_agree.attr('disabled', false);
+        chkboxCheck = true;
+        flagCheck();
     } else {
         chkList.prop('checked', false);
         btn_modal_agree.attr('disabled', true);
+        chkboxCheck = false;
+        flagCheck();
     }
 });
 
@@ -43,6 +47,7 @@ fullAgreement.click(function () {
     if ($(this).is(':checked')) {
         chkList.prop('checked', true);
         btn_modal_agree.attr('disabled', false);
+
     } else {
         chkList.prop('checked', false);
         btn_modal_agree.attr('disabled', true);
@@ -59,6 +64,7 @@ $('.chk').change(function () {
         agreeAll.prop('checked', false);
         fullAgreement.prop('checked', false);
         btn_modal_agree.attr('disabled', true);
+
     }
 });
 
@@ -260,7 +266,7 @@ $(".checkEmail").on("keyup", function () {
 // flag check
 function flagCheck() {
     console.log("실행중");
-    if (emailCheck && nameCheck && pwdCheck && rePwdCheck) {
+    if (emailCheck && nameCheck && pwdCheck && rePwdCheck && chkboxCheck) {
         console.log(emailCheck);
         console.log(nameCheck);
         console.log(pwdCheck);

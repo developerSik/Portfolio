@@ -154,7 +154,7 @@ input::placeholder {
     text-align: left;
 }
 
-.account-find .page-header .wz.text.display1 {
+.account-find .page-header .text.display1 {
     padding-top: 56px;
     padding-bottom: 36px;
     text-align: left;
@@ -163,7 +163,7 @@ input::placeholder {
     max-width: 1024px;
     color: #000;
 }
-h2.wz.text.display1 {
+h2.text.display1 {
     line-height: 40px;
     font-size: 32px;
     letter-spacing: -0.6px;
@@ -230,7 +230,7 @@ h2.wz.text.display1 {
     background: #f5f7fa;
 }
 
-.account-find .wz.container {
+.account-find .container {
     margin: 0 auto;
     border-top: 1px solid rgba(0,0,0,0);
     padding: 24px 16px 160px;
@@ -239,34 +239,34 @@ h2.wz.text.display1 {
     color: #000;
 }
 
-.account-find .wz.container.id-check .wz.text.body1 {
+.account-find .container.id-check .text.body1 {
     margin-bottom: 40px;
     color: #0000008a;
 }
 
-p.wz.text.body1 {
+p.text.body1 {
     line-height: 20px;
     font-size: 15px;
     font-weight: 400;
 }
 
-.wz.form .field {
+.form .field {
     margin: 24px 0;
 }
 
-.wz.input {
+.input {
     display: block;
     position: relative;
     font-size: 17px;
 }
 
-.wz.input > input {
+.input > input {
     height: 48px;
     line-height: 1.2em;
     font-size: 17px;
     font-weight: 300;
 }
-.wz.input > input {
+.input > input {
     transition-property: border-color, height, padding-right, color;
     transition-duration: 0.2s, 0s;
     outline: none;
@@ -282,24 +282,24 @@ p.wz.text.body1 {
     -webkit-font-smoothing: antialiased;
 }
 
-.wz.input > input:hover {
+.input > input:hover {
     border-color: #4874e1;
 }
 button:not(:disabled), input:not(:disabled), input:not(:disabled)+label {
     cursor: pointer;
 }
 
-.wz.button.primary {
+.button.primary {
     background-color: #6B95FC;
     color: #fff;
 }
 
-.wz.button.block, .wz.button.fluid {
+.button.block, .button.fluid {
     width: 100%;
     text-align: center;
 }
 
-.wz.button {
+.button {
     display: inline-block;
     padding-top: 0.07em;
     text-decoration: none;
@@ -555,7 +555,7 @@ button:not(:disabled), input:not(:disabled), input:not(:disabled)+label {
     color: #f66;
 }
 
-.wz.button.primary:hover {
+.button.primary:hover {
     border-color: #4874e1;
     background-color: #4874e1;
 }

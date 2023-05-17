@@ -149,7 +149,7 @@ body, button, input, select, textarea {
     text-align: left;
 }
 
-.account-find .page-header .wz.text.display1 {
+.account-find .page-header .text.display1 {
     padding-top: 56px;
     padding-bottom: 36px;
     text-align: left;
@@ -158,7 +158,7 @@ body, button, input, select, textarea {
     max-width: 1024px;
     color: #000;
 }
-h2.wz.text.display1 {
+h2.text.display1 {
     line-height: 40px;
     font-size: 32px;
     letter-spacing: -0.6px;
@@ -224,14 +224,14 @@ h2.wz.text.display1 {
 .account-find .page-body {
     background: #f5f7fa;
 }
-.account-find .wz.container {
+.account-find .container {
     margin: 0 auto;
     border-top: 1px solid rgba(0,0,0,0);
     width: 100%;
     max-width: 400px;
     padding: 24px 16px 160px;
 }
-.wz.container {
+.container {
     position: relative;
     box-sizing: border-box;
     line-height: 20px;
@@ -239,7 +239,7 @@ h2.wz.text.display1 {
     font-weight: 400;
 }
 
-.account-find .wz.container.id-result .wz.text.headline2 {
+.account-find .container.id-result .text.headline2 {
     margin-top: 24px;
     margin-bottom: 12px;
     color: #000000d6;
@@ -247,34 +247,34 @@ h2.wz.text.display1 {
     font-size: 28px;
     font-weight: 700;
 }
-.account-find .wz.container.id-result .wz.text.body1 {
+.account-find .container.id-result .text.body1 {
     color: #0000008a;
     line-height: 20px;
     font-size: 15px;
     font-weight: 400;
 }
 
-.account-find .wz.container.id-result .inner-container {
+.account-find .container.id-result .inner-container {
     margin-top: 24px;
 }
 
-.account-find .wz.container.id-result .wz.button {
+.account-find .container.id-result .button {
     margin-bottom: 16px;
     text-align: center;
     line-height: 46px;
 }
 
-.wz.button.primary {
+.button.primary {
     background-color: #6B95FC;
     color: #fff;
     border-color: #6B95FC;
 }
 
-.wz.button.block, .wz.button.fluid {
+.button.block, .button.fluid {
     width: 100%
 }
 
-.wz.button {
+.button {
     display: inline-block;
     padding-top: 0.07em;
     text-decoration: none;
@@ -526,12 +526,12 @@ h2.wz.text.display1 {
     margin-top: 16px;
 }
 
-.wz.block.button.recheck:hover {
+.block.button.recheck:hover {
     border-color: #868e96;
     color: black;
 }
 
-.wz.button.primary.rejoin:hover {
+.button.primary.rejoin:hover {
     border-color: #4874e1;
     background-color: #4874e1;
 }
