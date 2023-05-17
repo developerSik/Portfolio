@@ -12,7 +12,7 @@
 <main>
     <div class="sidebar sidebar-main">
         <div class="logo-container">
-            <img src="../../../static/image/tikkeul.png" class="admin-logo">
+            <img src="../../../static/image/Logo.png" class="admin-logo">
         </div>
         <nav class="nav">
             <ul class="side-menu">
@@ -82,6 +82,14 @@
                         <td>상품명</td>
                         <td>
                             <input type="text" name="" value="" class="registration-input">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이미지</td>
+                        <td>
+                            <form method="post" enctype="multipart/form-data">
+                                <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)">
+                            </form>
                         </td>
                     </tr>
                 </table>
