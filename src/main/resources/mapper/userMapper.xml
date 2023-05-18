@@ -8,10 +8,17 @@
     </select>
 
     <select id="selectByUserId" resultType="UserVO">
+    SELECT ID, IDENTIFICATION, PASSWORD, NAME, PHONENUMBER, ADDRESS, STATUS, ROLL, CREATEDDATE, PROFILEIMAGENAME, PROFILEIMAGESIZE, PROFILEIMAGEUUID, SAVINGLEVEL_ID
+    FROM USERS;
 
     </select>
 
 <!--회원가입-->
-    <insert id="insert"></insert>
+    <insert id="insert">
+    INSERT INTO USERS
+    (ID, IDENTIFICATION, PASSWORD, NAME, PHONENUMBER, ADDRESS, STATUS, ROLL, CREATEDDATE, PROFILEIMAGENAME, PROFILEIMAGESIZE, PROFILEIMAGEUUID, SAVINGLEVEL_ID)
+    VALUES(SEQ_USER.NEXTVAL, #{identification},#{password},#{name},#{phoneNumber},#{address},1,normal, SYSDATE,#{profileImageName},#{profileImageSize},#{profileImageUuid},#{levelId});
+    </insert>
+
 
 </mapper>

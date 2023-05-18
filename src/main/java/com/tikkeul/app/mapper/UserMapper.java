@@ -11,8 +11,9 @@ import java.util.Optional;
 
 @Mapper
 public interface UserMapper {
-//  관리자페이지에서 회원 리스트 조회
+    //  관리자페이지에서 회원 리스트 조회
     public List<UserVO> adminSelectUserAll();
+
     //    아이디 중복검사
     public Optional<UserVO> selectByUserId(String identification);
 
@@ -20,7 +21,7 @@ public interface UserMapper {
     public void insert(UserVO userVO);
 
     //    로그인
-    @Select("SELECT ID FROM TBL_MEMBER WHERE MEMBER_ID = #{memberId} AND MEMBER_PASSWORD = #{memberPassword}")
-    public Optional<Long> selectByMemberIdAndMemberPassword(@Param("memberId") String memberId, @Param("memberPassword") String memberPassword);
+    @Select("SELECT ID FROM USERS WHERE ID = #{id} AND PASSWORD = #{password}")
+    public Optional<Long> selectByUserIdAndUserPassword(@Param("id") String id, @Param("password") String password);
 
 }
