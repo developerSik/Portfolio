@@ -18,8 +18,13 @@ public class UserMapperTests {
 
 //  관리자페이지가 만듬(어드민단위 테스트)
     @Test
-    public void adminselectTest(){
-      assertThat(userMapper.adminSelectUserAll()).hasSize(1);
+    public void adminSelectUserAllTest(){
+      assertThat(userMapper.adminSelectUserAll()).hasSize(3);
     }
 
+//  관리자페이지가 만듬(어드민단위 테스트)
+    @Test
+    public void adminDeleleUserTest(){
+        userMapper.adminDeleteUser(4L);
+    }
 }
