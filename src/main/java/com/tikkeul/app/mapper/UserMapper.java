@@ -17,7 +17,7 @@ public interface UserMapper {
     public Optional<UserVO> selectByUserId(String identification);
 
     //    회원가입
-    public void insert(MemberVO memberVO);
+    public void insert(UserVO userVO);
 
     //    로그인
     @Select("SELECT ID FROM TBL_MEMBER WHERE MEMBER_ID = #{memberId} AND MEMBER_PASSWORD = #{memberPassword}")
