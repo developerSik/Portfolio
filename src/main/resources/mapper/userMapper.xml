@@ -18,8 +18,8 @@
 
 
         INSERT INTO USERS
-        (ID, IDENTIFICATION, PASSWORD, NAME, PHONENUMBER, ADDRESS, STATUS, ROLL, CREATEDDATE, PROFILEIMAGENAME, PROFILEIMAGESIZE, PROFILEIMAGEUUID, PROFILEIMAGEPATH, SAVINGLEVEL_ID, REGISTERED_KAKAO, REGISTERED_NAVER)
-        VALUES(SEQ_USER.NEXTVAL, #{identification},#{password},#{name},#{phoneNumber},#{address}, default, default,#{roll},#{profileImageName,jdbcType=VARCHAR}, #{profileImageSize,jdbcType=NUMERIC},#{profileImagePath,jdbcType=VARCHAR},#{profileImageUuid,jdbcType=VARCHAR},#{levelId}, default, default);
+        (ID, IDENTIFICATION, PASSWORD, NAME, PHONENUMBER, ADDRESS, ROLL, PROFILEIMAGENAME, PROFILEIMAGESIZE, PROFILEIMAGEUUID, PROFILEIMAGEPATH, SAVINGLEVEL_ID)
+        VALUES(SEQ_USER.NEXTVAL, #{identification},#{password},#{name},#{phoneNumber},#{address}, #{roll},#{profileImageName,jdbcType=VARCHAR}, #{profileImageSize,jdbcType=NUMERIC},#{profileImageUuid,jdbcType=VARCHAR},#{profileImagePath,jdbcType=VARCHAR},#{levelId});
 
 
     </insert>

@@ -29,14 +29,15 @@ public class UserMapperTests {
         UserVO userVO = new UserVO();
         userVO.setIdentification("a");
         userVO.setPassword("b");
-        userVO.setLevelId(1L);
         userVO.setName("홍홍홍");
+        userVO.setAddress("서울");
         userVO.setRoll("normal");
         userVO.setPhoneNumber("010-1231-1123");
-        userVO.setAddress("서울");
         userVO.setProfileImageName("A");
         userVO.setProfileImageSize("a");
         userVO.setProfileImageUuid("a");
+        userVO.setProfileImagePath("a");
+        userVO.setLevelId(1L);
         userMapper.insert(userVO);
     }
 
