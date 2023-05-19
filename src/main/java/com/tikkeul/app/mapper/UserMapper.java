@@ -21,6 +21,7 @@ public interface UserMapper {
 
     //    로그인
     @Select("SELECT ID FROM TBL_MEMBER WHERE MEMBER_ID = #{memberId} AND MEMBER_PASSWORD = #{memberPassword}")
-    public Optional<Long> selectByMemberIdAndMemberPassword(@Param("memberId") String memberId, @Param("memberPassword") String memberPassword);
+    public  Optional<Long> selectByUserIdAndUserPassword(String id, String password);
+
 
 }
