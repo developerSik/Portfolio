@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 public class AdminController {
 
-    @GetMapping("admin-member")
-    public void read(){
+    @GetMapping("member")
+    public void member(){
+        log.info("memberController.....");
     }
 }
