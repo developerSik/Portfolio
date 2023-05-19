@@ -5,6 +5,7 @@ import com.tikkeul.app.mapper.UserMapper;
 import lombok.RequiredArgsConstructor;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.Optional;
 
@@ -22,16 +23,17 @@ public class UserDAO {
     //    아이디 중복검사
     public Optional<UserVO> selectByUserId(String identification){
         return userMapper.selectByUserId(identification);
-    }
+    };
 
     //    회원가입
-    public void insert(UserVO userVO){
+    public RedirectView insert(UserVO userVO){
         userMapper.insert(userVO);
-    }
+        return new RedirectView("/login");
+    };
 
     //    로그인
     public Optional<Long> selectByUserIdAndUserPassword(@Param("id") String id, @Param("password") String password){
         return userMapper.selectByUserIdAndUserPassword(id,password);
-    }
+    };
 
 }
