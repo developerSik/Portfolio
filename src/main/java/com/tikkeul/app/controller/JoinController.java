@@ -15,15 +15,15 @@ import java.util.Optional;
 @RequestMapping("/join/*")
 @RequiredArgsConstructor
 public class JoinController {
-    final UserMapper userMapper;
-    private JoinController joinController;
-    //    아이디 중복검사
-    @PostMapping("user")
-    public void goToJoinForm(){
-    };
-
-    //    회원가입
-    public void insert(UserVO userVO){
-        userMapper.insert(userVO);
-    };
+//    final UserMapper userMapper;
+//    private JoinController joinController;
+//    //    아이디 중복검사
+//    @PostMapping("user")
+//    public void goToJoinForm(){
+//    };
+//
+//    //    회원가입
+//    public void insert(UserVO userVO){
+//        userMapper.insert(userVO);
+//    };
 }
