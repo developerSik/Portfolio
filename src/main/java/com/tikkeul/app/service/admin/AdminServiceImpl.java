@@ -1,5 +1,6 @@
 package com.tikkeul.app.service.admin;
 
+import com.tikkeul.app.dao.AdminDAO;
 import com.tikkeul.app.dao.UserDAO;
 import com.tikkeul.app.domain.vo.UserVO;
 import lombok.RequiredArgsConstructor;
@@ -13,16 +14,5 @@ import java.util.List;
 @RequiredArgsConstructor
 @Qualifier("admin") @Primary
 public class AdminServiceImpl implements AdminService {
-    private final UserDAO userDAO;
 
-    @Override
-    public List<UserVO> adminGetUserList() {
-        return userDAO.adminFindUserAll();
-    }
-
-    @Override
-    public void adminRemoveUser(Long id) {
-        userDAO.adminDeleteUser(id);
-
-    }
 }

@@ -10,19 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @Slf4j
-@RequestMapping("/Daumyulmae/*")
+@RequestMapping("/admin/*")
 @RequiredArgsConstructor
 public class AdminController {
-    private final AdminService adminService;
-
-    @GetMapping("member/list")
-    public void goToListForm(){
-        log.info("memberController.....");
-    }
-
-    @GetMapping("yulmaemukruk")
-    public void goToDetailForm( ) {
-
-    }
 
 }
