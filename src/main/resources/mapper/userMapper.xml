@@ -13,6 +13,8 @@
         DELETE FROM USERS WHERE ID = #{id}
     </delete>
 
+<!--    -->
+
     <select id="selectByUserId" resultType="UserVO">
 
     </select>
