@@ -28,3 +28,7 @@ public class UserMapperTests {
         userMapper.adminDeleteUser(4L);
     }
 }
+
+
+
+
