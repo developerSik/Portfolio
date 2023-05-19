@@ -15,5 +15,5 @@ public class DoranBoardVO {
     private String registerDate;
     private String updateDate;
     private Long userId;
-    private Long levelId;
+    private Long itemId;
 }

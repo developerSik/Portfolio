@@ -2,4 +2,35 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tikkeul.app.mapper.DoranBoardMapper">
 
+<!--
+    <select id="selectAll" resultType="doranBoarDTO">
+        SELECT ID, TITLE, CONTENT, VIEWCOUNT, REGISTERDATE, UPDATEDATE, USER_ID, ITEM_ID
+        FROM USERS U JOIN DORANBOARD D
+        ON U.USER_ID = D.ID JOIN ITEM I on U.USER_ID JOIN I.ITEM_ID
+    </select>
+-->
+
+    <insert id="insert">
+         INSERT INTO DORANBOARD(ID, TITLE, CONTENT, VIEWCOUNT)
+         VALUES(SEQ_POST.NEXTVAL, #{title}, #{content}, #{viewCount});
+    </insert>
+
+
+<!--    <select id="select" resultType="doranBoarDTO">
+        SELECT ID, TITLE, CONTENT, VIEWCOUNT, REGISTERDATE, UPDATEDATE, USER_ID, ITEM_ID
+        FROM USERS U JOIN DORANBOARD D
+        ON U.USER_ID = D.ID JOIN ITEM I on U.USER_ID JOIN I.ITEM_ID AND D.ID = #{id}
+    </select>
+
+    <update id="update">
+        UPDATE DORANBOARD
+        SET TITLE = #{title}, CONTENT =  #{content}, VIEWCOUNT = #{viewcount},UPDATEDATE = SYSDATE, USER_ID = #{id}, ITEM_ID = #{id}
+        WHERE ID = #{id};
+      </update>
+
+    <delete id="delete">
+        DELETE FROM DORANBOARD WHERE ID = #{id}
+    </delete>-->
+
+
 </mapper>
