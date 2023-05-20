@@ -20,6 +20,7 @@ public class UserVO {
     private String profileImageName;
     private String profileImageSize;
     private String profileImageUuid;
+    private String profileImagePath;
     private Long levelId;
 
 }
