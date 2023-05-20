@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleag.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="/css/header/headerking.css">
 </head>
 <body>
-<div id="page-container">
+<header >
+    <div id="page-container">
     <main id="main-app">
-        <div class="web-header">
+        <div class="web-header" th:fragment="main-header">
 
             <div class="web-header-large">
                 <header class="header-wrapper">
@@ -24,7 +25,7 @@
                                                                   href="../program/programsoge.html"><span>티끌모아</span></a>
                             </li>
                             <li class="GNBDesktop_item__H8bay"><a class="GNBDesktop_link__1AP6q"
-                                                                  href="../selling/sellinglist.html"><span>열매샵</span></a></li>
+                                                                  href="../item/list.html"><span>열매샵</span></a></li>
                             <li class="GNBDesktop_item__H8bay"><a class="GNBDesktop_link__1AP6q"
                                                                   href=href="../dorandoran/doranboard.html"><span>도란도란</span></a></li>
                             <li class="GNBDesktop_item__H8bay"><a class="GNBDesktop_link__1AP6q" href=href="../Daumyulmae/yulmaemukruk.html"><span>다음열매는</span></a>
@@ -318,8 +319,9 @@
         </div>
     </main>
 </div>
+</header>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="../../static/js/header/header.js"></script>
+<script src="/js/header/header.js"></script>
 </html>

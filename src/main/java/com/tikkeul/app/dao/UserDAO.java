@@ -32,7 +32,7 @@ public class UserDAO {
         userMapper.adminDeleteUser(id);
     }
 
-}
+
 
 //  정상수의 작업공간
 
@@ -62,4 +62,4 @@ public class UserDAO {
     };
 
 }
->>>>>>> 882861dfad40c8cd486f0c581303cb016e19cc74
+
