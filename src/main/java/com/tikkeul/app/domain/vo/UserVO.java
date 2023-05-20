@@ -18,7 +18,7 @@ public class UserVO {
     private String roll;
     private String createDate;
     private String profileImageName;
-    private String profileImageSize;
+    private Long profileImageSize;
     private String profileImageUuid;
     private String profileImagePath;
     private Long levelId;
