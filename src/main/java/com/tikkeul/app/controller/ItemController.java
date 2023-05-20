@@ -25,6 +25,5 @@ public class ItemController {
 
     @GetMapping("itemdetails/{id}")
     public void showItemDetails(Model model){
-        model.addAttribute("item", itemService.get)
     }
 }
