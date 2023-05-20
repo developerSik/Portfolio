@@ -288,8 +288,22 @@ function flagCheck() {
         $(".submitButton").attr('disabled', true);
     }
 }
+$("#checkEmail").on("click",function(){
+
+    $.ajax({
+        type:"POST",
+        url: `/join/checkId/${$("#email").val()}`,
+        success: function(result){
+            if(result){
+                showWarnModal("사용중인 아이디입니다.");
+            }else{
+                showWarnModal("인증번호를 전송했습니다.");
 
 
+            }
+        }
+    });
+});
 
 
 
