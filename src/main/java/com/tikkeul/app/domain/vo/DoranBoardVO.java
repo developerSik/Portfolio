@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 @Data
 @NoArgsConstructor
 public class DoranBoardVO {
+/*도란보드 최보근*/
     private Long id;
     private String title;
     private String content;

@@ -9,6 +9,7 @@ import java.util.Optional;
 
 @Mapper
 public interface DoranBoardMapper {
+    /*도란보드 최보근*/
 //    게시글 목록
     public List<DoranBoardDTO> selectAll();
 

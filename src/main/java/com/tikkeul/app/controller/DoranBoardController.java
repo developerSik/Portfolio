@@ -21,13 +21,16 @@ import javax.servlet.http.HttpSession;
 @RequestMapping("/doranboard/*")
 @RequiredArgsConstructor
 public class DoranBoardController {
+    /*도란보드 최보근*/
 
     private final DoranBoardService doranBoardService;
 
+    /*목록 가져오기*/
     @GetMapping("doranboard")
     public void list(Model model){ model.addAttribute("doranboards", doranBoardService.getList());
     }
 
+    /*게시글 추가*/
     @GetMapping("doranwrite")
     public void goToWriteForm(DoranBoardVO doranBoardVO){;}
 
@@ -37,18 +40,20 @@ public class DoranBoardController {
         return new RedirectView("/doranboard/doranboard");
     }
 
+    /*게시글 조회*/
     @GetMapping("read")
     public void read(Long id, Model model){
         model.addAttribute("doranboard",doranBoardService.read(id));
     }
 
+    /*게시글 수정*/
     @GetMapping("doranmodify")
     public RedirectView modify(DoranBoardDTO doranBoardDTO, RedirectAttributes redirectAttributes){
         doranBoardService.modify(doranBoardDTO);
         redirectAttributes.addAttribute("id", doranBoardDTO.getId());
         return new RedirectView("/doranboard/doranmodify");
     }
-
+    /*게시글 삭제*/
     @PostMapping("remove")
     public RedirectView remove(Long id){
         doranBoardService.remove(id);

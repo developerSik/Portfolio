@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Data
 public class DoranBoardDTO {
+/*도란보드 최보근*/
     private Long id;
     private String title;
     private String content;

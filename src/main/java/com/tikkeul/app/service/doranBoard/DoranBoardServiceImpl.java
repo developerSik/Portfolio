@@ -15,29 +15,31 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @Qualifier("doranBoard") @Primary
 public class DoranBoardServiceImpl implements DoranBoardService {
+    /*도란보드 최보근*/
     private final DoranBoardDAO doranBoardDAO;
 
+    /*게시글 목록*/
     @Override
     public List<DoranBoardDTO> getList() {
         return doranBoardDAO.findAll();
     }
-
+    /*게시글 추가*/
     @Override
     public void write(DoranBoardVO doranBoardVO) {
         doranBoardDAO.save(doranBoardVO);
     }
-
+    /*게시글 조회*/
     @Override
     public Optional<DoranBoardDTO> read(Long id) {
         return doranBoardDAO.findById(id);
     }
-
+    /*게시글 수정*/
     @Override
     public void modify(DoranBoardDTO doranBoardDTO) {
 
         doranBoardDAO.setPostDTO(doranBoardDTO);
     }
-
+    /*게시글 삭제*/
     @Override
     public void remove(Long id) {
         doranBoardDAO.delete(id);
