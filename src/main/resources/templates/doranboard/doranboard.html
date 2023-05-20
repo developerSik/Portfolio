@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleag.org">
+<head>
+    <meta charset="UTF-8">
+    <title>도란도란</title>
+    <link rel="stylesheet" href="/css/dorandoran/doranboard.css">
+    <link rel="stylesheet" href="/css/dorandoran/doranboard1.css">
+    <link rel="stylesheet" href="/css/dorandoran/doranboard2.css">
+    <link rel="stylesheet" href="/css/dorandoran/doranboard3.css">
+    <link rel="stylesheet" href="/css/dorandoran/doranboard4.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+</head>
+<body>
+<div class="wcommunity-wrap">
+    <div class="wcommunity-top">
+        <h2><a href="/web/wcast/main"><em class="logo_wcommunity"></em></a></h2>
+    </div><!-- //wcommunity-top -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.new-header .gnb > li:eq(3)').addClass('menu-on');
+        });
+
+        /* 말머리 클릭시 */
+        function searchByHeadWord(boardId, headWordId) {
+            $('#searchSelect1').val('');
+            $('#searchText1').val('');
+            $('#searchSelect5').val(boardId);
+            $('#searchSelect4').val(headWordId);
+            $('#cPage').val(1);
+            $('#formSearch').attr('action', '/web/wcast/list/' + boardId + '/' + headWordId);
+            $('#formSearch').submit();
+        }
+
+        /* 내가 쓴 글 검색 */
+        function searchByUserNameInViewN(userId) {
+            $('#searchSelect1').val('ui');
+            $('#searchText1').val(userId);
+            $('#searchText6').val('N');
+            $('#formSearch').attr('action', '/web/wcast/search');
+            $('#formSearch').submit();
+        }
+    </script>
+
+    <div class="wcommunity-content-wrap">
+        <div class="wcommunity-section1">
+
+            <div class="top-category-menu">
+                <h3><em>도란도란 리스트</em></h3>
+                <!--                    <select name="order" class="select-list">-->
+                <!--<option value="1" selected="">최신순</option>
+                <option value="2">조회순</option>
+                <option value="3">추천순</option>-->
+                <!--                    </select>-->
+                <div class="sub-category-list">
+                    <ul>
+                        <li>
+                            <button type="button" onclick="location.href='/web/wcast/list/BRD0000012'">씨앗</button>
+                        </li>
+
+                        <li>
+                            <button type="button" onclick="searchByHeadWord('BRD0000012', '41')">새싹</button>
+                        </li>
+
+                        <li>
+                            <button type="button" onclick="searchByHeadWord('BRD0000012', '26')">열매</button>
+                        </li>
+
+                        <li class="active">
+                            <button type="button" onclick="searchByHeadWord('BRD0000012', '21')">자유이야기</button>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="wcommunity-webzine-list">
+                <ul>
+
+                </ul>
+            </div>
+
+
+            <div class="wcommunity-page-list">
+                <ul>
+                    <li class="active">
+                        <button type="button" onclick="movePage(1)">1</button>
+                    </li>
+
+                    <li>
+                        <button type="button" onclick="movePage(2)">2</button>
+                    </li>
+
+                    <li>
+                        <button type="button" onclick="movePage(3)">3</button>
+                    </li>
+
+                    <li>
+                        <button type="button" onclick="movePage(4)">4</button>
+                    </li>
+
+                    <li>
+                        <button type="button" onclick="movePage(5)">5</button>
+                    </li>
+
+
+                    <li class="next-btn">
+                        <button type="button" onclick="movePage(6)">&gt;</button>
+                    </li>
+
+                </ul>
+            </div><!-- //wcommunity-page-list -->
+            <!-- 컨텐츠 없을 시 -->
+            <div id="notExist" class="wcommunity-contents-none" style="display: none;">
+                <p id="notExistContents">컨텐츠를 준비중입니다.<br>조금만 기다려주세요!</p>
+                <!-- 검색 결과없을 시 -->
+                <p id="notExistResult">검색결과가 없습니다.</p>
+            </div>
+            <div class="wcommunity-bottom-util">
+                <div class="search-story">
+                    <select id="searchSelectInBoard" class="select-list">
+                        <option value="tc">제목+내용</option>
+                        <option value="t">제목</option>
+                        <option value="c">내용</option>
+                        <option value="u">작성자</option>
+                        <option value="ht">태그</option>
+                    </select>
+                    <div class="wcommunity-search-area">
+                        <input type="text" id="searchTextInBoard" name="searchTextInBoard" value=""
+                               placeholder="도란도란 리스트 검색">
+                        <button type="button" class="btn-search" onclick="searchInBoard()"></button>
+                    </div>
+                </div>
+            </div><!-- //wcommunity-bottom-util -->
+        </div><!-- //wcommunity-section1 -->
+    </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
+<script src="/js/doranboard/doranboard.js"></script>
+<script th:inline="javascript">
+    let boards =[[${doranboards}]];
+    console.log(boards);
+</script>
+</html>
