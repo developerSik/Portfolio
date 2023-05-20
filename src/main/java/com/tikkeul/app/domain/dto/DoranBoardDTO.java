@@ -1,4 +1,4 @@
-package com.tikkeul.app.domain.vo;
+package com.tikkeul.app.domain.dto;
 
 
 import lombok.Data;
@@ -15,4 +15,7 @@ public class DoranBoardDTO {
     private String updateDate;
     private Long userId;
     private Long itemId;
+    private String name;
+    private String status;
+
 }

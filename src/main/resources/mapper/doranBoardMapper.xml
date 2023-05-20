@@ -2,35 +2,32 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tikkeul.app.mapper.DoranBoardMapper">
 
-<!--
-    <select id="selectAll" resultType="doranBoarDTO">
-        SELECT ID, TITLE, CONTENT, VIEWCOUNT, REGISTERDATE, UPDATEDATE, USER_ID, ITEM_ID
-        FROM USERS U JOIN DORANBOARD D
-        ON U.USER_ID = D.ID JOIN ITEM I on U.USER_ID JOIN I.ITEM_ID
+    <select id="selectAll" resultType="DoranBoardDTO">
+        SELECT D.ID, D.TITLE, D.CONTENT, D.VIEWCOUNT, D.REGISTERDATE, D.UPDATEDATE, D.USER_ID, D.ITEM_ID, U.NAME, I.NAME, I.STATUS
+        FROM DORANBOARD D
+        JOIN USERS U ON U.ID = D.USER_ID
+        JOIN ITEM I ON I.ID = D.ITEM_ID
     </select>
--->
 
     <insert id="insert">
-         INSERT INTO DORANBOARD(ID, TITLE, CONTENT, VIEWCOUNT)
-         VALUES(SEQ_POST.NEXTVAL, #{title}, #{content}, #{viewCount});
+         INSERT INTO DORANBOARD(ID, TITLE, CONTENT, VIEWCOUNT, USER_ID, ITEM_ID)
+         VALUES(SEQ_POST.NEXTVAL, #{title}, #{content}, #{viewCount}, #{userId}, #{itemId})
     </insert>
 
 
-<!--    <select id="select" resultType="doranBoarDTO">
-        SELECT ID, TITLE, CONTENT, VIEWCOUNT, REGISTERDATE, UPDATEDATE, USER_ID, ITEM_ID
+    <select id="select" resultType="DoranBoardDTO">
+        SELECT D.ID, TITLE, CONTENT, VIEWCOUNT, REGISTERDATE, UPDATEDATE, USER_ID, ITEM_ID,U.NAME
         FROM USERS U JOIN DORANBOARD D
-        ON U.USER_ID = D.ID JOIN ITEM I on U.USER_ID JOIN I.ITEM_ID AND D.ID = #{id}
+        ON U.ID = D.USER_ID  AND D.ID = #{id}
     </select>
 
     <update id="update">
         UPDATE DORANBOARD
-        SET TITLE = #{title}, CONTENT =  #{content}, VIEWCOUNT = #{viewcount},UPDATEDATE = SYSDATE, USER_ID = #{id}, ITEM_ID = #{id}
-        WHERE ID = #{id};
+        SET TITLE = #{title}, CONTENT =  #{content}, UPDATEDATE = SYSDATE
+        WHERE ID = #{id}
       </update>
 
     <delete id="delete">
         DELETE FROM DORANBOARD WHERE ID = #{id}
-    </delete>-->
-
-
+    </delete>
 </mapper>
