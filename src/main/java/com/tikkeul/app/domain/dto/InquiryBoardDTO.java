@@ -7,11 +7,12 @@ import org.springframework.stereotype.Component;
 @Data
 public class InquiryBoardDTO {
     private Long id;
-    private String type;
-    private String title;
-    private String content;
-    private String registerDate;
-    private String updateDate;
+    private String inquireType;
+    private String inquireTitle;
+    private String inquireContent;
+    private String inquireDate;
+    private String inquireUpDate;
+    private String status;
     private Long userId;
     private String name;
     private String identification;
