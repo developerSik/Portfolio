@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>문의게시판목록</title>
+    <title>회원목록</title>
     <link rel="stylesheet" type="text/css" href="/css/admin/admin.css">
-    <link rel="stylesheet" type="text/css" href="/css/admin/admin-QnA-detail.css">
+    <link rel="stylesheet" type="text/css" href="/css/admin/admin-member-modify.css">
 </head>
 <body>
 <main>
-    <div class="sidebar">
+    <div class="sidebar sidebar-main">
         <div class="logo-container">
             <img src="/image/Logo.png" class="admin-logo">
         </div>
@@ -51,50 +51,63 @@
 
     <section class="management-main-content">
         <div class="management-top">
-            <div class="page-name">문의게시판 상세보기</div>
+            <div class="page-name">회원수정</div>
         </div>
-
-        <div class="QnA-main">
-
-            <div class="QnA-box">
-
+        <div class="modify-main">
+            <div class="modify-box">
                 <table class="table-contents">
                     <tr>
-                        <td>문의 번호</td>
+                        <td>회원 번호</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>이름</td>
-                        <td></td>
+                        <td>
+                            <input type="text" name="" value="" class="modify-input">
+                        </td>
                     </tr>
                     <tr>
                         <td>ID</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>작성일</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>문의내용</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>답변내용</td>
                         <td>
-                            <textarea class="summernote" name="editordata"></textarea>
+                            <input type="text" name="" value="" class="modify-input">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>주소</td>
+                        <td>
+                            <input type="text" name="" value="" class="modify-input">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>나이</td>
+                        <td>
+                            <input type="text" name="" value="" class="modify-input">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>성별</td>
+                        <td>
+                            <input type="text" name="" value="" class="modify-input">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>전화번호</td>
+                        <td>
+                            <input type="text" name="" value="" class="modify-input">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이메일</td>
+                        <td>
+                            <input type="text" name="" value="" class="modify-input">
                         </td>
                     </tr>
                 </table>
                 <div class="button-box">
-                    <input type="button" name="report-list" value="문의게시판 목록"
-                           onClick="location.href='admin-QnA.html'"/>
-                    <input type="button" name="report-answer" value="답변 등록"/>
+                    <input type="button" name="report-list" value="회원목록" onClick="location.href='admin-member.html'"/>
+                    <input type="button" name="report-answer" value="수정완료"/>
                 </div>
-
-
             </div>
-
     </section>
 </main>
 </body>
