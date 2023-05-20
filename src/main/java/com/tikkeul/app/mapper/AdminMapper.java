@@ -1,10 +1,15 @@
 package com.tikkeul.app.mapper;
 
 
+import com.tikkeul.app.domain.dto.InquiryBoardDTO;
+import com.tikkeul.app.domain.dto.Pagination;
+import com.tikkeul.app.domain.vo.AnswerVO;
 import com.tikkeul.app.domain.vo.UserVO;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Optional;
 
 @Mapper
 public interface AdminMapper {
@@ -14,4 +19,21 @@ public interface AdminMapper {
 
     // 관리자페이지에서 회원 삭제
     public void adminDeleteUser(Long id);
+
+    //    관리자 페이지에서 문의 내역 전체 조회
+    public List<InquiryBoardDTO> adminSelectInquiryAll(Pagination pagination);
+
+    //    관리자 페이지에서 문의 내역 상세 조회
+    public Optional<InquiryBoardDTO> adminSelectInquiry(Long id);
+
+    //   관리자 페이지에서 문의 답변
+    public void adminInsertAnswer(AnswerVO answerVO);
+
+
+    //    관리자페이지에서 문의 글 총 개수
+    public int selectCountOfInquiry();
+
+
+
+
 }

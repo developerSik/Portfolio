@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleag.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,47 +55,55 @@
         </div>
 
         <div class="QnA-main">
+            <form action="">
+                <div class="QnA-box">
 
-            <div class="QnA-box">
-
-                <table class="table-contents">
-                    <tr>
-                        <td>문의 번호</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>이름</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>ID</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>작성일</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>문의내용</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>답변내용</td>
-                        <td>
-                            <textarea class="summernote" name="editordata"></textarea>
-                        </td>
-                    </tr>
-                </table>
-                <div class="button-box">
-                    <input type="button" name="report-list" value="문의게시판 목록"
-                           onClick="location.href='admin-QnA.html'"/>
-                    <input type="button" name="report-answer" value="답변 등록"/>
+                    <table class="table-contents">
+                        <tr>
+                            <td>문의 번호</td>
+                            <td th:text="${id}"></td>
+                        </tr>
+                        <tr>
+                            <td>이름</td>
+                            <td th:text="${name}"></td>
+                        </tr>
+                        <tr>
+                            <td>ID</td>
+                            <td th:text="${identification}"></td>
+                        </tr>
+                        <tr>
+                            <td>작성일</td>
+                            <td th:text="${inquireDate}"></td>
+                        </tr>
+                        <tr>
+                            <td>문의내용</td>
+                            <td th:text="${inquireContent}"></td>
+                        </tr>
+                        <tr>
+                            <td>답변내용</td>
+                            <td>
+                                <textarea class="summernote" name="editordata"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="button-box">
+                        <input type="button" name="report-list" value="문의게시판 목록"
+                               onClick="location.href='/admin/inquiry/list'"/>
+                        <input type="button" name="report-answer" value="답변 등록"/>
+                    </div>
                 </div>
+            </form>
 
+        </div>
 
-            </div>
 
     </section>
 </main>
 </body>
+<script th:inline="javascript">
+    let id = [[${id}]];
+    console.log(id);
+    let name = [[${name}]];
+    console.log(name)
+</script>
 </html>
