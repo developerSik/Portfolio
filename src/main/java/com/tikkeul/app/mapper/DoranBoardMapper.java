@@ -1,8 +1,10 @@
 package com.tikkeul.app.mapper;
 
 import com.tikkeul.app.domain.dto.DoranBoardDTO;
+import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.vo.DoranBoardVO;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,7 +13,7 @@ import java.util.Optional;
 public interface DoranBoardMapper {
     /*도란보드 최보근*/
 //    게시글 목록
-    public List<DoranBoardDTO> selectAll();
+    public List<DoranBoardDTO> selectAll(Pagination pagination);
 
 //    게시글 추가
     public void insert(DoranBoardVO doranBoardVO);

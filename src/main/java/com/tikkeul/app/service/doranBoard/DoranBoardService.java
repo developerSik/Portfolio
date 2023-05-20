@@ -1,6 +1,7 @@
 package com.tikkeul.app.service.doranBoard;
 
 import com.tikkeul.app.domain.dto.DoranBoardDTO;
+import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.vo.DoranBoardVO;
 
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.Optional;
 
 public interface DoranBoardService {
     //    게시글 목록
-    public List<DoranBoardDTO> getList();
+    public List<DoranBoardDTO> getList(Pagination pagination);
 
     //    게시글 추가
     public void write(DoranBoardVO doranBoardVO);

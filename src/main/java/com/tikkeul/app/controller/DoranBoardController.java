@@ -2,6 +2,7 @@ package com.tikkeul.app.controller;
 
 
 import com.tikkeul.app.domain.dto.DoranBoardDTO;
+import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.vo.DoranBoardVO;
 import com.tikkeul.app.service.doranBoard.DoranBoardService;
 import lombok.RequiredArgsConstructor;
@@ -14,8 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
-import javax.servlet.http.HttpSession;
-
 @Controller
 @Slf4j
 @RequestMapping("/doranboard/*")
@@ -27,35 +26,38 @@ public class DoranBoardController {
 
     /*목록 가져오기*/
     @GetMapping("doranboard")
-    public void list(Model model){ model.addAttribute("doranboards", doranBoardService.getList());
+    public void list(Model model){ model.addAttribute("doranboards", doranBoardService.getList(new Pagination(3)));
     }
 
     /*게시글 추가*/
     @GetMapping("doranwrite")
-    public void goToWriteForm(DoranBoardVO doranBoardVO){;}
+    public void goToWriteForm(DoranBoardVO doranBoardVO) {
+        ;
+    }
 
     @PostMapping("doranwrite")
-    public RedirectView write(DoranBoardVO doranBoardVO){
+    public RedirectView write(DoranBoardVO doranBoardVO) {
         doranBoardService.write(doranBoardVO);
         return new RedirectView("/doranboard/doranboard");
     }
 
     /*게시글 조회*/
     @GetMapping("read")
-    public void read(Long id, Model model){
-        model.addAttribute("doranboard",doranBoardService.read(id));
+    public void read(Long id, Model model) {
+        model.addAttribute("doranboard", doranBoardService.read(id));
     }
 
     /*게시글 수정*/
     @GetMapping("doranmodify")
-    public RedirectView modify(DoranBoardDTO doranBoardDTO, RedirectAttributes redirectAttributes){
+    public RedirectView modify(DoranBoardDTO doranBoardDTO, RedirectAttributes redirectAttributes) {
         doranBoardService.modify(doranBoardDTO);
         redirectAttributes.addAttribute("id", doranBoardDTO.getId());
         return new RedirectView("/doranboard/doranmodify");
     }
+
     /*게시글 삭제*/
     @PostMapping("remove")
-    public RedirectView remove(Long id){
+    public RedirectView remove(Long id) {
         doranBoardService.remove(id);
         return new RedirectView("/doranboard/doranboard");
     }

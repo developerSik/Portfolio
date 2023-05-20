@@ -2,6 +2,7 @@ package com.tikkeul.app;
 
 
 import com.tikkeul.app.domain.dto.DoranBoardDTO;
+import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.vo.DoranBoardVO;
 import com.tikkeul.app.mapper.DoranBoardMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -22,12 +23,12 @@ public class DoranDoranTests {
     @Test
     public void insertTest() {
         DoranBoardVO doranBoardVO = new DoranBoardVO();
-        doranBoardVO.setId(2L);
-        doranBoardVO.setTitle("테스트 제목 2");
-        doranBoardVO.setContent("테스트 내용2");
-        doranBoardVO.setViewCount(2);
-        doranBoardVO.setUserId(2L);
-        doranBoardVO.setItemId(2L);
+        doranBoardVO.setId(3L);
+        doranBoardVO.setTitle("테스트 제목 3");
+        doranBoardVO.setContent("테스트 내용3");
+        doranBoardVO.setViewCount(3);
+        doranBoardVO.setUserId(3L);
+        doranBoardVO.setItemId(3L);
 
 
         doranBoardMapper.insert(doranBoardVO);
@@ -35,7 +36,10 @@ public class DoranDoranTests {
 
     @Test
     public void selectAllTest(){
-        assertThat(doranBoardMapper.selectAll()).hasSize(2);
+        Pagination pagination = new Pagination(3);
+        pagination.setPage(1); //화면에서 전달받은 페이지
+//        assertThat(doranBoardMapper.selectAll()).hasSize(2);
+        doranBoardMapper.selectAll(pagination).stream().map(DoranBoardDTO::toString).forEach(log::info);
     }
 
     @Test

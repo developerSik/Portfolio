@@ -2,6 +2,7 @@ package com.tikkeul.app.service.doranBoard;
 
 import com.tikkeul.app.dao.DoranBoardDAO;
 import com.tikkeul.app.domain.dto.DoranBoardDTO;
+import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.vo.DoranBoardVO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -20,8 +21,8 @@ public class DoranBoardServiceImpl implements DoranBoardService {
 
     /*게시글 목록*/
     @Override
-    public List<DoranBoardDTO> getList() {
-        return doranBoardDAO.findAll();
+    public List<DoranBoardDTO> getList(Pagination pagination) {
+        return doranBoardDAO.findAll(pagination);
     }
     /*게시글 추가*/
     @Override
