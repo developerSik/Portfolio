@@ -30,14 +30,7 @@ public class UserMapperTests {
         userVO.setIdentification("a");
         userVO.setPassword("b");
         userVO.setName("홍홍홍");
-        userVO.setAddress("서울");
         userVO.setRoll("normal");
-        userVO.setPhoneNumber("010-1231-1123");
-        userVO.setProfileImageName("A");
-        userVO.setProfileImageSize("a");
-        userVO.setProfileImageUuid("a");
-        userVO.setProfileImagePath("a");
-        userVO.setLevelId(1L);
         userMapper.insert(userVO);
     }
 
