@@ -3,6 +3,7 @@ package com.tikkeul.app.service.doranBoard;
 import com.tikkeul.app.dao.DoranBoardDAO;
 import com.tikkeul.app.domain.dto.DoranBoardDTO;
 import com.tikkeul.app.domain.dto.Pagination;
+import com.tikkeul.app.domain.dto.Search;
 import com.tikkeul.app.domain.vo.DoranBoardVO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -21,8 +22,8 @@ public class DoranBoardServiceImpl implements DoranBoardService {
 
     /*게시글 목록*/
     @Override
-    public List<DoranBoardDTO> getList(Pagination pagination) {
-        return doranBoardDAO.findAll(pagination);
+    public List<DoranBoardDTO> getList(Pagination pagination, Search search) {
+        return doranBoardDAO.findAll(pagination, search);
     }
     /*게시글 추가*/
     @Override
@@ -44,5 +45,10 @@ public class DoranBoardServiceImpl implements DoranBoardService {
     @Override
     public void remove(Long id) {
         doranBoardDAO.delete(id);
+    }
+
+    @Override
+    public int getTotal(Search search) {
+        return doranBoardDAO.findCountOfPost(search);
     }
 }
