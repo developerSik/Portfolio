@@ -33,12 +33,12 @@ public class AdminController {
         model.addAttribute("users", adminService.adminGetListUserAll());
     }
 
-/*    @GetMapping("inquiry/list")
+    @GetMapping("inquiry/list")
     public void GoToinquirylist(Pagination pagination,Model model) {
         pagination.setTotal(adminService.getInquiryTotal());
         pagination.progress();
         model.addAttribute("inquirys", adminService.adminGetListInquiryAll(pagination));
-    }*/
+    }
 
     @GetMapping("inquiry/read")
     public void read(Long id, Model model, HttpSession session){
