@@ -7,9 +7,15 @@
     <title>문의게시판목록</title>
     <link rel="stylesheet" type="text/css" href="/css/admin/admin.css">
     <link rel="stylesheet" type="text/css" href="/css/admin/admin-QnA-detail.css">
+    <link rel="stylesheet" type="text/css" href="/css/admin/modal.css">
 </head>
 <body>
 <main>
+    <div class="modal">
+        <div class="warn-modal">
+            <div id="content-wrap"></div>
+        </div>
+    </div>
     <div class="sidebar">
         <div class="logo-container">
             <img src="/image/Logo.png" class="admin-logo">
@@ -55,7 +61,6 @@
         </div>
 
         <div class="QnA-main">
-            <form action="">
                 <div class="QnA-box">
 
                     <table class="table-contents">
@@ -79,6 +84,7 @@
                             <td>문의내용</td>
                             <td th:text="${inquireContent}"></td>
                         </tr>
+                        <form action="@{/admin/inquiry/write}" method="post">
                         <tr>
                             <td>답변내용</td>
                             <td>
@@ -87,16 +93,12 @@
                         </tr>
                     </table>
                     <div class="button-box">
-                        <input type="button" name="report-list" value="문의게시판 목록"
-                               onClick="location.href='/admin/inquiry/list'"/>
-                        <input type="button" name="report-answer" value="답변 등록"/>
+                        <input type="button" name="report-list" value="문의게시판 목록" onClick="location.href='/admin/inquiry/list'"/>
+                        <input type="submit" name="report-answer" value="답변 등록"/>
                     </div>
                 </div>
             </form>
-
         </div>
-
-
     </section>
 </main>
 </body>

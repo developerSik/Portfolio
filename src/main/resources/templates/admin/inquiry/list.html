@@ -44,7 +44,7 @@
                 </li>
                 <li class="management-menu-list">
                     <input type="button" class="side-menu-button" value="문의게시판목록"
-                           onclick="location.href='admin-QnA.html'">
+                           onclick="location.href='/admin/inquiry/list'">
                 </li>
             </ul>
         </nav>
@@ -58,19 +58,19 @@
         <div class="QnA-main">
 
             <div class="QnA-box">
-
+                <form th:action="@{/admin/inquiry/list}">
                 <div class="search-container">
-                    <select>
-                        <option value="content">내용</option>
-                        <option value="name">이름</option>
-                        <option value="id">ID</option>
-                    </select> <input type="text" name="search" id="search"/>
-                    <input
-                            type="image" class="search"
-                            src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png"/>
+                    <select name="type">
+                        <option value="c" th:selected="${search.type eq 'c'}">내용</option>
+                        <option value="n" th:selected="${search.type eq 'n'}">이름</option>
+                        <option value="i" th:selected="${search.type eq 'i'}">ID</option>
+                    </select>
+                    <input type="text" name="keyword" id="search" th:value="${search.keyword}"/>
+                    <button type="submit" class="search"></button>
                     <input type="button" class="delete" id="delete-button" name="delete" value="삭제"/>
 
                 </div>
+                </form>
 
                 <div class="table-content">
                     <table>
@@ -111,7 +111,9 @@
     let inquirys = [[${inquirys}]];
     let pagination = [[${pagination}]];
     console.log(pagination);
+    console.log((inquirys));
 </script>
 <script src="/js/admin/inquirylist.js"></script>
 <script src="/js/admin/Paging.js"></script>
+<script src="/js/admin/modal.js"></script>
 </html>

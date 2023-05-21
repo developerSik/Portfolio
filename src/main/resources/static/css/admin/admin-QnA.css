@@ -46,6 +46,13 @@ section div div select {
     z-index: 2;
     right: 26%;
     top: 7%;
+    background-image: url("/image/search.png");
+    background-repeat : no-repeat;
+    background-size: 100%;
+    width: 30px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
 }
 
 .delete {
@@ -118,6 +125,9 @@ a.paging-move {
 
 a {
     text-decoration: none;
-    color: black
-;
+    color: black;
+}
+
+.tr {
+    cursor: pointer;
 }

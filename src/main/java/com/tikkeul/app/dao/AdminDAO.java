@@ -2,6 +2,7 @@ package com.tikkeul.app.dao;
 
 import com.tikkeul.app.domain.dto.InquiryBoardDTO;
 import com.tikkeul.app.domain.dto.Pagination;
+import com.tikkeul.app.domain.dto.Search;
 import com.tikkeul.app.domain.vo.AnswerVO;
 import com.tikkeul.app.domain.vo.UserVO;
 import com.tikkeul.app.mapper.AdminMapper;
@@ -29,8 +30,8 @@ public class AdminDAO {
     }
 
     //    관리자 페이지에서 문의 내역 전체 조회
-    public List<InquiryBoardDTO> adminFindInquiryAll(Pagination pagination){
-        return adminMapper.adminSelectInquiryAll(pagination);
+    public List<InquiryBoardDTO> adminFindInquiryAll(Pagination pagination, Search search){
+        return adminMapper.adminSelectInquiryAll(pagination, search);
     }
 
     //    관리자 페이지에서 문의 내역 상세 조회
@@ -38,8 +39,9 @@ public class AdminDAO {
         return adminMapper.adminSelectInquiry(id);
     }
 
-    public int FindCountOfInquiry(){
-        return adminMapper.selectCountOfInquiry();
+    //  관리자페이지에서  문의 내역 총개수
+    public int FindCountOfInquiry(Search search){
+        return adminMapper.selectCountOfInquiry(search);
     }
 
 
