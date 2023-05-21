@@ -31,6 +31,7 @@ public class DoranBoardController {
         pagination.setTotal(doranBoardService.getTotal(search));
         pagination.progress();
         model.addAttribute("doranboards", doranBoardService.getList(pagination, search));
+        
     }
 
     /*게시글 추가*/
