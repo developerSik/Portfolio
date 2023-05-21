@@ -14,11 +14,6 @@ import java.util.Optional;
 public class UserDAO {
     private final UserMapper userMapper;
 
-
-
-
-
-
 //    홍윤기의 작업공간
     //    아이디 중복검사
     public Optional<UserVO> findById(String identification){
@@ -27,13 +22,14 @@ public class UserDAO {
 
 //    //    회원가입
     public RedirectView save(UserVO userVO){
+        userVO.setLevelId(0L);
         userMapper.insert(userVO);
         return new RedirectView("/login");
     };
-//
-//    //    로그인
-//    public Optional<Long> selectByUserIdAndUserPassword(@Param("id") String id, @Param("password") String password){
-//        return userMapper.selectByUserIdAndUserPassword(id,password);
-//    };
+
+    //    로그인
+    public Optional<Long> selectByUserIdAndUserPassword(@Param("id") String id, @Param("password") String password){
+        return userMapper.selectByUserIdAndUserPassword(id,password);
+    };
 
 }
