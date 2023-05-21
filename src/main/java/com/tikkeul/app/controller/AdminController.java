@@ -1,10 +1,8 @@
 package com.tikkeul.app.controller;
 
-<<<<<<< HEAD
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
-=======
 import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.vo.AnswerVO;
 import com.tikkeul.app.domain.vo.UserVO;
@@ -17,7 +15,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
->>>>>>> 86cf0de86c2909fda49ef95707b1ac8f7486e37c
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.view.RedirectView;
 
@@ -29,8 +26,6 @@ import javax.servlet.http.HttpSession;
 @RequestMapping("/admin/*")
 @RequiredArgsConstructor
 public class AdminController {
-<<<<<<< HEAD
-=======
     private final AdminService adminService;
 
     @GetMapping("user/list")
@@ -63,5 +58,4 @@ public class AdminController {
 
 
 
->>>>>>> 86cf0de86c2909fda49ef95707b1ac8f7486e37c
 }

@@ -1,6 +1,7 @@
 package com.tikkeul.app.mapper;
 
 import com.tikkeul.app.domain.dto.DoranBoardDTO;
+import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.vo.DoranBoardVO;
 import org.apache.ibatis.annotations.Mapper;
 

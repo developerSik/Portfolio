@@ -1,6 +1,7 @@
 package com.tikkeul.app.dao;
 
 import com.tikkeul.app.domain.dto.DoranBoardDTO;
+import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.vo.DoranBoardVO;
 import com.tikkeul.app.mapper.DoranBoardMapper;
 import lombok.RequiredArgsConstructor;
