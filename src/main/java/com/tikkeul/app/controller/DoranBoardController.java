@@ -2,7 +2,6 @@ package com.tikkeul.app.controller;
 
 
 import com.tikkeul.app.domain.dto.DoranBoardDTO;
-import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.vo.DoranBoardVO;
 import com.tikkeul.app.service.doranBoard.DoranBoardService;
 import lombok.RequiredArgsConstructor;

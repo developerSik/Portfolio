@@ -2,7 +2,6 @@ package com.tikkeul.app.service.doranBoard;
 
 import com.tikkeul.app.dao.DoranBoardDAO;
 import com.tikkeul.app.domain.dto.DoranBoardDTO;
-import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.vo.DoranBoardVO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;

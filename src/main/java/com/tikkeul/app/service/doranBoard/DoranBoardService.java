@@ -1,7 +1,6 @@
 package com.tikkeul.app.service.doranBoard;
 
 import com.tikkeul.app.domain.dto.DoranBoardDTO;
-import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.vo.DoranBoardVO;
 
 import java.util.List;
