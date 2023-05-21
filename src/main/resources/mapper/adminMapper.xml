@@ -24,7 +24,7 @@
     </sql>
     <!--   괸리자 유저 조회 -->
     <select id="adminSelectUserAll" resultType="userVO">
-        SELECT ID, NAME , IDENTIFICATION, ADDRESS, PHONENUMBER
+        SELECT ID, NAME , IDENTIFICATION, ADDRESS, PHONENUMBER, STATUS
         FROM USERS
     </select>
 
