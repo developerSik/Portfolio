@@ -1,13 +1,12 @@
-package com.tikkeul.app.domain.vo;
+package com.tikkeul.app.domain.dto;
+
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
 @Data
-@NoArgsConstructor
-public class DoranBoardVO {
+public class DoranBoardDTO {
 /*도란보드 최보근*/
     private Long id;
     private String title;
@@ -17,4 +16,7 @@ public class DoranBoardVO {
     private String updateDate;
     private Long userId;
     private Long itemId;
+    private String name;
+    private String status;
+
 }

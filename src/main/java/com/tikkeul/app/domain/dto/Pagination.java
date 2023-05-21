@@ -4,9 +4,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
+
 @Data
 public class Pagination {
-    private Integer page;
+     private Integer page;
     private int rowCount;
     private int pageCount;
     private int startPage;
@@ -18,7 +19,7 @@ public class Pagination {
 
     public void progress() {
         this.page = page == null ? 1: page;
-        this.rowCount = 10;
+        this.rowCount = 3;
         this.pageCount = 5;
         this.total = total;
         this.endPage = (int)(Math.ceil(page / (double)pageCount) * pageCount);
