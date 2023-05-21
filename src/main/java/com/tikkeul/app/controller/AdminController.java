@@ -1,6 +1,7 @@
 package com.tikkeul.app.controller;
 
 import com.tikkeul.app.domain.dto.Pagination;
+import com.tikkeul.app.domain.dto.Search;
 import com.tikkeul.app.domain.vo.AnswerVO;
 import com.tikkeul.app.domain.vo.UserVO;
 import com.tikkeul.app.service.admin.AdminService;
@@ -30,11 +31,11 @@ public class AdminController {
         model.addAttribute("users", adminService.adminGetListUserAll());
     }
 
-    @GetMapping("inquiry/list")
-    public void GoToinquirylist(Pagination pagination,Model model) {
-        pagination.setTotal(adminService.getInquiryTotal());
+    @GetMapping(value = {"inquiry/list", "inquiry/write"})
+    public void GoToinquirylist(Pagination pagination, Search search, Model model) {
+        pagination.setTotal(adminService.getInquiryTotal(search));
         pagination.progress();
-        model.addAttribute("inquirys", adminService.adminGetListInquiryAll(pagination));
+        model.addAttribute("inquirys", adminService.adminGetListInquiryAll(pagination, search));
     }
 
     @GetMapping("inquiry/read")

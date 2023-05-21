@@ -40,8 +40,8 @@ public class AdminDaoTests {
     @Test
     public void adminSaveAnswerTest(){
         AnswerVO answerVO = new AnswerVO();
-        answerVO.setContent("테스트3");
-        answerVO.setInquiryBoardId(5L);
+        answerVO.setAnswerContent("테스트11");
+        answerVO.setInquireId(5L);
         adminDAO.adminSaveAnswer(answerVO);
     }
 

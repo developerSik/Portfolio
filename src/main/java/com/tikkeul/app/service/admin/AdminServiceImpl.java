@@ -4,6 +4,7 @@ import com.tikkeul.app.dao.AdminDAO;
 import com.tikkeul.app.dao.UserDAO;
 import com.tikkeul.app.domain.dto.InquiryBoardDTO;
 import com.tikkeul.app.domain.dto.Pagination;
+import com.tikkeul.app.domain.dto.Search;
 import com.tikkeul.app.domain.vo.AnswerVO;
 import com.tikkeul.app.domain.vo.UserVO;
 import lombok.RequiredArgsConstructor;
@@ -32,8 +33,8 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public List<InquiryBoardDTO> adminGetListInquiryAll(Pagination pagination) {
-        return adminDAO.adminFindInquiryAll(pagination);
+    public List<InquiryBoardDTO> adminGetListInquiryAll(Pagination pagination, Search search) {
+        return adminDAO.adminFindInquiryAll(pagination, search);
     }
 
     @Override
@@ -42,8 +43,8 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public int getInquiryTotal() {
-        return adminDAO.FindCountOfInquiry();
+    public int getInquiryTotal(Search search) {
+        return adminDAO.FindCountOfInquiry(search);
 
     }
 

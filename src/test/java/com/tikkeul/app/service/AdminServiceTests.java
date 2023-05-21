@@ -42,8 +42,8 @@ public class AdminServiceTests {
     @Test
     public void adminWriteAnswerTest(){
         AnswerVO answerVO = new AnswerVO();
-        answerVO.setContent("테스트4");
-        answerVO.setInquiryBoardId(5L);
+        answerVO.setAnswerContent("서비스테스트1");
+        answerVO.setInquireId(5L);
         adminService.adminWriteAnswer(answerVO);
     }
 }

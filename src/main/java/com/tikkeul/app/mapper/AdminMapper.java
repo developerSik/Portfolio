@@ -3,6 +3,7 @@ package com.tikkeul.app.mapper;
 
 import com.tikkeul.app.domain.dto.InquiryBoardDTO;
 import com.tikkeul.app.domain.dto.Pagination;
+import com.tikkeul.app.domain.dto.Search;
 import com.tikkeul.app.domain.vo.AnswerVO;
 import com.tikkeul.app.domain.vo.UserVO;
 import org.apache.ibatis.annotations.Mapper;
@@ -21,7 +22,7 @@ public interface AdminMapper {
     public void adminDeleteUser(Long id);
 
     //    관리자 페이지에서 문의 내역 전체 조회
-    public List<InquiryBoardDTO> adminSelectInquiryAll(Pagination pagination);
+    public List<InquiryBoardDTO> adminSelectInquiryAll(@Param("pagination") Pagination pagination, @Param("search") Search search);
 
     //    관리자 페이지에서 문의 내역 상세 조회
     public Optional<InquiryBoardDTO> adminSelectInquiry(Long id);
@@ -31,7 +32,7 @@ public interface AdminMapper {
 
 
     //    관리자페이지에서 문의 글 총 개수
-    public int selectCountOfInquiry();
+    public int selectCountOfInquiry(@Param("search") Search search);
 
 
 
