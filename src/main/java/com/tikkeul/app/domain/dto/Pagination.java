@@ -32,4 +32,5 @@ public class Pagination {
         this.next = endPage < realEnd;
     }
 
+
 }

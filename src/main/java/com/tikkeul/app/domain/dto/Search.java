@@ -11,11 +11,9 @@ import org.springframework.stereotype.Component;
 public class Search {
     String type;
     String keyword;
-    String order;
 
-
-    public String[] getTypes() {
+    public String[] getTypes(){
         return type.split("");
-    }
 
+    }
 }
