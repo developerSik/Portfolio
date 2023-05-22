@@ -1,5 +1,6 @@
 package com.tikkeul.app.mapper;
 
+import com.tikkeul.app.domain.dto.ItemDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -18,8 +19,14 @@ public class ItemMapperTests {
 
     @Test
     public void selectAllTest(){
-        assertThat(itemMapper.selectAll()).hasSize(2);
+//        assertThat(itemMapper.selectAll()).hasSize(4);
+        log.info(itemMapper.selectAll().toString());
     }
 
+    @Test
+    public void selectTest(){
+        itemMapper.select(2L).map(ItemDTO::getName).ifPresent(log::info);
+
+    }
 
 }

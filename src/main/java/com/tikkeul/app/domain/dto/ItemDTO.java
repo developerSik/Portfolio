@@ -21,7 +21,8 @@ public class ItemDTO {
     private String category;
     private String registerDate;
     private String updateDate;
-    private Long levelId;
+    private Long savingLevelId;
+    private String savingLevelName;
     private List<FileVO> files = new ArrayList<>();
     private List<Long> fileIdsForDelete = new ArrayList<>();
 }

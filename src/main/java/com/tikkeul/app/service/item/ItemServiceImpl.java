@@ -17,12 +17,12 @@ public class ItemServiceImpl implements ItemService {
 
 
     @Override
-    public List<ItemDTO> getList(Pagination pagination, Search search) {
-        return null;
+    public List<ItemDTO> getList() {
+        return itemDAO.findAll();
     }
 
     @Override
     public Optional<ItemDTO> read(Long id) {
-        return Optional.empty();
+        return itemDAO.findById(id);
     }
 }
