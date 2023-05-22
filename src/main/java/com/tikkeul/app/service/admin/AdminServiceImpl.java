@@ -7,6 +7,7 @@ import com.tikkeul.app.domain.dto.InquiryBoardDTO;
 import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.dto.Search;
 import com.tikkeul.app.domain.vo.AnswerVO;
+import com.tikkeul.app.domain.vo.ItemVO;
 import com.tikkeul.app.domain.vo.UserVO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -68,6 +69,16 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public Optional<DoranBoardDTO> adminReadDoranBoard(Long id) {
         return adminDAO.adminFindDoranBoardById(id);
+    }
+
+    @Override
+    public List<ItemVO> adminGetListItemAll(Pagination pagination, Search search) {
+        return adminDAO.adminFindItemAll(pagination, search);
+    }
+
+    @Override
+    public int getItemTotal(Search search) {
+        return adminDAO.findCountOfItem(search);
     }
 
 

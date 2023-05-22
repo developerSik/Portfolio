@@ -18,5 +18,5 @@ public class ItemVO {
     private String category;
     private String registerDate;
     private String updateDate;
-    private Long levelId;
+    private Long savinglevelId;
 }

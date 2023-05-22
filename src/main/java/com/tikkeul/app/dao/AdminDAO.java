@@ -5,6 +5,7 @@ import com.tikkeul.app.domain.dto.InquiryBoardDTO;
 import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.dto.Search;
 import com.tikkeul.app.domain.vo.AnswerVO;
+import com.tikkeul.app.domain.vo.ItemVO;
 import com.tikkeul.app.domain.vo.UserVO;
 import com.tikkeul.app.mapper.AdminMapper;
 import lombok.RequiredArgsConstructor;
@@ -70,5 +71,14 @@ public class AdminDAO {
         return adminMapper.adminSelectDoranBoard(id);
     }
 
+    /*상품*/
+//    관리자 페이지에서 상품 목록 조회
+    public List<ItemVO> adminFindItemAll(Pagination pagination, Search search){
+        return adminMapper.adminSelectItemAll(pagination, search);
+    }
+//  관리자 페이지에서 상품 총 개수
+    public int findCountOfItem(Search search){
+        return adminMapper.selectCountOfItem(search);
+    }
 
 }

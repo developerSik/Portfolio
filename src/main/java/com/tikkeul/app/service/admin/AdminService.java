@@ -5,6 +5,7 @@ import com.tikkeul.app.domain.dto.InquiryBoardDTO;
 import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.dto.Search;
 import com.tikkeul.app.domain.vo.AnswerVO;
+import com.tikkeul.app.domain.vo.ItemVO;
 import com.tikkeul.app.domain.vo.UserVO;
 
 import java.util.List;
@@ -43,6 +44,13 @@ public interface AdminService {
 
     //    관리자 페이지에서 도란보드 상세 조회
     public Optional<DoranBoardDTO> adminReadDoranBoard(Long id);
+
+    /*상품*/
+    //    관리자 페이지에서 상품 목록 조회
+    public List<ItemVO> adminGetListItemAll(Pagination pagination, Search search);
+
+    // 관리자 페이지에서 상품 총 개수
+    public int getItemTotal(Search search);
 
 
 

@@ -67,5 +67,14 @@ public class AdminMapperTests {
         adminMapper.adminSelectDoranBoard(2L).map(DoranBoardDTO::getContent).ifPresent(log::info);
     }
 
+    @Test
+    public void adminSelectItemAllTest(){
+//        log.info(adminMapper.adminSelectItemAll().toString());
+    }
+
+    @Test
+    public void adminDeleteInquiryTest(){
+        adminMapper.adminDeleteInquiry(7L);
+    }
 }
 

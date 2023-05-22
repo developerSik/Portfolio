@@ -56,4 +56,9 @@ public class AdminDaoTests {
         adminDAO.adminFindDoranBoardById(2L).map(DoranBoardDTO::getIdentification).ifPresent(log::info);
     }
 
+    @Test
+    public void adminFindItemAllTest(){
+//        log.info(adminDAO.adminFindItemAll().toString());
+    }
+
 }

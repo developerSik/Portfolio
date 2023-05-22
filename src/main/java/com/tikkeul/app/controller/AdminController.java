@@ -52,7 +52,7 @@ public class AdminController {
     @PostMapping("inquiry/write")
     public RedirectView write(AnswerVO answerVO){
         adminService.adminWriteAnswer(answerVO);
-        return new RedirectView("/inquiry/list");
+        return new RedirectView("/admin/inquiry/list");
     }
 
 //    도란 게시판
@@ -66,11 +66,18 @@ public class AdminController {
     @GetMapping("doranBoard/read")
     public void readDoranBoard(Long id, Model model){
         Optional<DoranBoardDTO> checkDoranBoardDTO = adminService.adminReadDoranBoard(id);
-//        택1
         if(checkDoranBoardDTO.isPresent()) {
             model.addAttribute("doranBoard", checkDoranBoardDTO.get());
         }
-//        checkDoranBoardDTO.ifPresent(doranBoardDTO -> model.addAttribute(doranBoardDTO)); 택2
+//        checkDoranBoardDTO.ifPresent(doranBoardDTO -> model.addAttribute(doranBoardDTO));
 //        model.addAttribute("doranBoard",adminService.adminReadDoranBoard(id));
     }
+
+    @GetMapping("item/list")
+    public void GoToItemList(Model model,Pagination pagination,Search search){
+        pagination.setTotal(adminService.getItemTotal(search));
+        pagination.progress();
+        model.addAttribute("items",adminService.adminGetListItemAll(pagination,search));
+    }
+
 }

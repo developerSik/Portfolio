@@ -45,6 +45,25 @@
             </trim>
         </if>
     </sql>
+    <!--상품 검색-->
+    <sql id="searchitem">
+        <if test="search.type != null and !search.type.equals('')">
+            <trim prefix="AND(" prefixOverrides="OR" suffix=")">
+                <foreach item="type" collection="search.types">
+                    <trim prefix="OR">
+                        <choose>
+                            <when test="type=='n'.toString()">
+                                NAME LIKE '%'||#{search.keyword}||'%'
+                            </when>
+                            <when test="type=='i'.toString()">
+                                ID LIKE '%'||#{search.keyword}||'%'
+                            </when>
+                        </choose>
+                    </trim>
+                </foreach>
+            </trim>
+        </if>
+    </sql>
     <!--   괸리자 유저 조회 -->
     <select id="adminSelectUserAll" resultType="userVO">
         SELECT ID, NAME , IDENTIFICATION, ADDRESS, PHONENUMBER, STATUS
@@ -80,6 +99,10 @@
         FROM USERS U JOIN INQUIRE_BOARD I
         ON I.USER_ID = U.ID AND I.ID = #{id}
     </select>
+    
+    <delete id="adminDeleteInquiry">
+        DELETE FROM INQUIRE_BOARD WHERE ID = #{id}
+    </delete>
 
     <!-- 관리자 문의 내역 답변 달기-->
     <insert id="adminInsertAnswer">
@@ -124,5 +147,37 @@
         SELECT D.ID, U.IDENTIFICATION, TITLE, CONTENT, REGISTERDATE, VIEWCOUNT
         FROM USERS U JOIN DORANBOARD D
         ON U.ID = D.USER_ID AND D.ID = #{id}
+    </select>
+
+    <!-- 관리자 제품 목록   -->
+    <select id="adminSelectItemAll" resultType="itemVO">
+        SELECT ID, ORIGIN_STOCK, SAVINGLEVEL_ID, NAME, PRICE
+        FROM ITEM
+        <![CDATA[
+        WHERE ROWNUM <= #{pagination.page} * #{pagination.rowCount}
+        ]]>
+        <include refid="searchitem"/>
+    </select>
+
+    <!-- 관리자 제품 목록 총 개수   -->
+    <select id="selectCountOfItem" resultType="_int">
+        SELECT COUNT(ID)
+        FROM ITEM
+        <if test="search.type != null and !search.type.equals('')">
+            <trim prefix="WHERE(" prefixOverrides="OR" suffix=")">
+                <foreach item="type" collection="search.types">
+                    <trim prefix="OR">
+                        <choose>
+                            <when test="type=='n'.toString()">
+                                NAME LIKE '%'||#{search.keyword}||'%'
+                            </when>
+                            <when test="type=='i'.toString()">
+                                ID LIKE '%'||#{search.keyword}||'%'
+                            </when>
+                        </choose>
+                    </trim>
+                </foreach>
+            </trim>
+        </if>
     </select>
 </mapper>

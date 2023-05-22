@@ -6,6 +6,7 @@ import com.tikkeul.app.domain.dto.InquiryBoardDTO;
 import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.dto.Search;
 import com.tikkeul.app.domain.vo.AnswerVO;
+import com.tikkeul.app.domain.vo.ItemVO;
 import com.tikkeul.app.domain.vo.UserVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -32,6 +33,9 @@ public interface AdminMapper {
     //   관리자 페이지에서 문의 답변
     public void adminInsertAnswer(AnswerVO answerVO);
 
+    //    관리자 페이지에서 문의 삭제
+    public void adminDeleteInquiry(Long id);
+
 
     //    관리자페이지에서 문의 글 총 개수
     public int selectCountOfInquiry(@Param("search") Search search);
@@ -43,7 +47,16 @@ public interface AdminMapper {
     //  관리자페이지에서 도란게시판 글 총 개수
     public int selectCountOfDoranBoard(@Param("search") Search search);
 
+    //    관리자페이지에서 도란게시판 상세 조회
     public Optional<DoranBoardDTO> adminSelectDoranBoard(Long id);
+
+    /*제품*/
+    //    관리자페이지에서 상품 목록 조회
+    public List<ItemVO> adminSelectItemAll(@Param("pagination") Pagination pagination, @Param("search") Search search);
+
+    //    관리자페이지에서 상품 총 개수
+    public int selectCountOfItem(@Param("search") Search search);
+
 
 
 
