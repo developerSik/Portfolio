@@ -4,9 +4,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
+
 @Data
 public class Pagination {
-    private Integer page;
+     private Integer page;
     private int rowCount;
     private int pageCount;
     private int startPage;

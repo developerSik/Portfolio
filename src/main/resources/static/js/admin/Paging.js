@@ -3,5 +3,5 @@ $("a.change-page").on("click", function(e){
     let page = $(this).attr("href");
     let type = $("select[name=type]").val();
     let keyword = $("input[name=keyword]").val();
-    location.href = `/admin/inquiry/list?page=${page}`;
+    location.href = `/admin/inquiry/list?page=${page}&type=${type}&keyword=${keyword}`;
 });

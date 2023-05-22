@@ -43,20 +43,20 @@ public class UserDAO {
 
 //    홍윤기의 작업공간
     //    아이디 중복검사
-    public Optional<UserVO> selectByUserId(String identification){
-        return userMapper.selectByUserId(identification);
+    public Optional<UserVO> findById(String identification){
+        return userMapper.selectById(identification);
     };
 
-    //    회원가입
-    public RedirectView insert(UserVO userVO){
+//    //    회원가입
+    public RedirectView save(UserVO userVO){
         userMapper.insert(userVO);
         return new RedirectView("/login");
     };
-
-    //    로그인
-    public Optional<Long> selectByUserIdAndUserPassword(@Param("id") String id, @Param("password") String password){
-        return userMapper.selectByUserIdAndUserPassword(id,password);
-    };
+//
+//    //    로그인
+//    public Optional<Long> selectByUserIdAndUserPassword(@Param("id") String id, @Param("password") String password){
+//        return userMapper.selectByUserIdAndUserPassword(id,password);
+//    };
 
 }
 

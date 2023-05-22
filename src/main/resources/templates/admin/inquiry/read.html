@@ -7,9 +7,15 @@
     <title>문의게시판목록</title>
     <link rel="stylesheet" type="text/css" href="/css/admin/admin.css">
     <link rel="stylesheet" type="text/css" href="/css/admin/admin-QnA-detail.css">
+    <link rel="stylesheet" type="text/css" href="/css/admin/modal.css">
 </head>
 <body>
 <main>
+    <div class="modal">
+        <div class="warn-modal">
+            <div id="content-wrap"></div>
+        </div>
+    </div>
     <div class="sidebar">
         <div class="logo-container">
             <img src="/image/Logo.png" class="admin-logo">
@@ -26,23 +32,23 @@
                            onclick="location.href='admin-main.html'">
                 </li>
                 <li class="management-menu-list">
-                    <input type="button" class="side-menu-button" value="회원목록"
+                    <input type="button" class="side-menu-button" value="회원 관리"
                            onclick="location.href='admin-member.html'">
                 </li>
                 <li class="management-menu-list">
-                    <input type="button" class="side-menu-button" value="프로그램목록"
+                    <input type="button" class="side-menu-button" value="프로그램 관리"
                            onclick="location.href='admin-program.html'">
                 </li>
                 <li class="management-menu-list">
-                    <input type="button" class="side-menu-button" value="상품관리"
+                    <input type="button" class="side-menu-button" value="상품 관리"
                            onclick="location.href='admin-product.html'">
                 </li>
                 <li class="management-menu-list">
-                    <input type="button" class="side-menu-button" value="신고내역"
+                    <input type="button" class="side-menu-button" value="도란 게시판 관리"
                            onclick="location.href='admin-report.html'">
                 </li>
                 <li class="management-menu-list">
-                    <input type="button" class="side-menu-button" value="문의게시판목록"
+                    <input type="button" class="side-menu-button" value="문의게시판 관리"
                            onclick="location.href='admin-QnA.html'">
                 </li>
             </ul>
@@ -55,55 +61,49 @@
         </div>
 
         <div class="QnA-main">
-            <form action="">
+            <form th:action="@{/admin/inquiry/write}" method="post" th:object="${answerVO}">
                 <div class="QnA-box">
-
                     <table class="table-contents">
                         <tr>
                             <td>문의 번호</td>
-                            <td th:text="${id}"></td>
+                            <td th:text="${inquiryBoard.id}"></td>
                         </tr>
                         <tr>
                             <td>이름</td>
-                            <td th:text="${name}"></td>
+                            <td th:text="${inquiryBoard.name}"></td>
                         </tr>
                         <tr>
                             <td>ID</td>
-                            <td th:text="${identification}"></td>
+                            <td th:text="${inquiryBoard.identification}"></td>
                         </tr>
                         <tr>
                             <td>작성일</td>
-                            <td th:text="${inquireDate}"></td>
+                            <td th:text="${inquiryBoard.inquireDate}"></td>
                         </tr>
                         <tr>
                             <td>문의내용</td>
-                            <td th:text="${inquireContent}"></td>
+                            <td th:text="${inquiryBoard.inquireContent}"></td>
                         </tr>
                         <tr>
                             <td>답변내용</td>
                             <td>
-                                <textarea class="summernote" name="editordata"></textarea>
+                                <textarea class="summernote" th:field="*{answerContent}"></textarea>
                             </td>
                         </tr>
                     </table>
                     <div class="button-box">
-                        <input type="button" name="report-list" value="문의게시판 목록"
-                               onClick="location.href='/admin/inquiry/list'"/>
-                        <input type="button" name="report-answer" value="답변 등록"/>
+                        <input type="button" name="report-list" value="문의게시판 목록" onClick="location.href='/admin/inquiry/list'"/>
+                        <input type="submit" name="report-answer" value="답변 등록"/>
                     </div>
                 </div>
             </form>
-
         </div>
-
-
     </section>
 </main>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script th:inline="javascript">
-    let id = [[${id}]];
-    console.log(id);
-    let name = [[${name}]];
-    console.log(name)
+    let inquiryBoard = [[${inquiryBoard}]];
 </script>
+<script src="/js/admin/write.js"></script>
 </html>

@@ -1,8 +1,9 @@
 package com.tikkeul.app.domain.dto;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.stereotype.Component;
+        import lombok.AllArgsConstructor;
+        import lombok.Data;
+        import lombok.NoArgsConstructor;
+        import org.springframework.stereotype.Component;
 
 @Component
 @Data
@@ -10,7 +11,9 @@ import org.springframework.stereotype.Component;
 public class Search {
     String type;
     String keyword;
-    String order;
 
-    public String[] getTypes() { return type.split(""); }
+    public String[] getTypes(){
+        return type.split("");
+
+    }
 }
