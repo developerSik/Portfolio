@@ -263,12 +263,10 @@
                         <div class="web-header-utils">
 
                             <div class="HeaderDesktop_user__3zGmM">
-                                <div th:if="${session.id == null}" class="User_container__bqVd2">
-                                    <button type="button" class="User_btnSign__1URTs" onclick="location.href='/join/login'" >로그인</button>
-                                    <button data-event="iam.signup" class="User_btnSign__1URTs" onclick="location.href='/join/join'">회원가입</button>
-                                </div>
-                                <div th:unless="${session.id != null}" class="User_container__bqVd2">
-                                    <button type="button" class="User_btnSign__1URTs" onclick="location.href='/join/logout'" >로그아웃</button>
+                                <div class="User_container__bqVd2">
+                                    <button th:if="${session.id == null}" type="button" class="User_btnSign__1URTs" onclick="location.href='/join/login'" >로그인</button>
+                                    <button th:if="${session.id == null}" data-event="iam.signup" class="User_btnSign__1URTs" onclick="location.href='/join/join'">회원가입</button>
+                                    <button th:if="${session.id != null}" type="button" class="User_btnSign__1URTs" onclick="location.href='/join/logout'" >로그아웃</button>
                                 </div>
                             </div>
 
@@ -323,7 +321,7 @@
     </main>
 </div>
 </body>
-
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="../../static/js/header/header.js"></script>
+
+<script src="/js/header/header.js"></script>
 </html>
