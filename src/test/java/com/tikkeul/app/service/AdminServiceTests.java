@@ -42,8 +42,13 @@ public class AdminServiceTests {
     @Test
     public void adminWriteAnswerTest(){
         AnswerVO answerVO = new AnswerVO();
-        answerVO.setAnswerContent("서비스테스트1");
+        answerVO.setAnswerContent("서비스테스트122");
         answerVO.setInquireId(5L);
         adminService.adminWriteAnswer(answerVO);
+    }
+
+    @Test
+    public void adminGetListDoranBoardAllTest(){
+//        assertThat(adminService.adminGetListDoranBoardAll());
     }
 }
