@@ -14,9 +14,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class UserDAO {
     private final UserMapper userMapper;
-
-
-
+    //  정상수의 작업공간
     //  관리자페이지에서 회원 리스트 조회
     public List<UserVO> adminFindUserAll(){
         return  userMapper.adminSelectUserAll();
@@ -29,17 +27,6 @@ public class UserDAO {
 
 
 
-//  정상수의 작업공간
-
-
-
-
-
-
-
-
-
-
 
 //    홍윤기의 작업공간
     //    아이디 중복검사
@@ -49,14 +36,14 @@ public class UserDAO {
 
 //    //    회원가입
     public RedirectView save(UserVO userVO){
+        userVO.setLevelId(0L);
         userMapper.insert(userVO);
         return new RedirectView("/login");
     };
-//
-//    //    로그인
-//    public Optional<Long> selectByUserIdAndUserPassword(@Param("id") String id, @Param("password") String password){
-//        return userMapper.selectByUserIdAndUserPassword(id,password);
-//    };
+
+    //    로그인
+    public Optional<Long> findByUserIdAndUserPassword( String identification, String password){
+        return userMapper.selectByUserIdAndUserPassword(identification,password);
+    };
 
 }
-
