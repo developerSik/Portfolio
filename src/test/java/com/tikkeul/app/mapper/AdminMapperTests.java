@@ -1,6 +1,7 @@
 package com.tikkeul.app.mapper;
 
 
+import com.tikkeul.app.domain.dto.DoranBoardDTO;
 import com.tikkeul.app.domain.dto.InquiryBoardDTO;
 import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.dto.Search;
@@ -56,6 +57,15 @@ public class AdminMapperTests {
         adminMapper.adminInsertAnswer(answerVO);
     }
 
+    @Test
+    public void adminSelectDoranBoardAllTest(){
+//        log.info(adminMapper.adminSelectDoranBoardAll().toString());
+    }
+
+    @Test
+    public void adminSelectDoranBoardTest(){
+        adminMapper.adminSelectDoranBoard(2L).map(DoranBoardDTO::getContent).ifPresent(log::info);
+    }
 
 }
 
