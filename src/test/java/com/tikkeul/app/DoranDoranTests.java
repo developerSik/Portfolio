@@ -24,12 +24,12 @@ public class DoranDoranTests {
     @Test
     public void insertTest() {
         DoranBoardVO doranBoardVO = new DoranBoardVO();
-        doranBoardVO.setId(7L);
-        doranBoardVO.setTitle("테스트 제목 7");
-        doranBoardVO.setContent("테스트 내용7");
-        doranBoardVO.setViewCount(7);
-        doranBoardVO.setUserId(7L);
-        doranBoardVO.setItemId(7L);
+        doranBoardVO.setId(8L);
+        doranBoardVO.setTitle("테스트 제목 8");
+        doranBoardVO.setContent("테스트 내용8");
+        doranBoardVO.setViewCount(8);
+        doranBoardVO.setUserId(8L);
+        doranBoardVO.setItemId(8L);
 
 
         doranBoardMapper.insert(doranBoardVO);
@@ -62,5 +62,9 @@ public class DoranDoranTests {
 //        assertThat(doranBoardMapper.selectAll()).hasSize(1);
     }
 
+/*    @Test
+    public void selectCountOfPost(){
+//        assertThat(postMapper.selectCountOfPost(new Search("t", "1"))).isEqualTo(2);
+    }*/
 
 }
