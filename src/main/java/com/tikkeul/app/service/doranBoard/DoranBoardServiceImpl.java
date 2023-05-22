@@ -30,15 +30,16 @@ public class DoranBoardServiceImpl implements DoranBoardService {
     public void write(DoranBoardVO doranBoardVO) {
         doranBoardDAO.save(doranBoardVO);
     }
+
     /*게시글 조회*/
     @Override
     public Optional<DoranBoardDTO> read(Long id) {
         return doranBoardDAO.findById(id);
     }
+
     /*게시글 수정*/
     @Override
     public void modify(DoranBoardDTO doranBoardDTO) {
-
         doranBoardDAO.setPostDTO(doranBoardDTO);
     }
     /*게시글 삭제*/
