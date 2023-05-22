@@ -2,8 +2,10 @@ package com.tikkeul.app.service.admin;
 
 import com.tikkeul.app.dao.AdminDAO;
 import com.tikkeul.app.dao.UserDAO;
+import com.tikkeul.app.domain.dto.DoranBoardDTO;
 import com.tikkeul.app.domain.dto.InquiryBoardDTO;
 import com.tikkeul.app.domain.dto.Pagination;
+import com.tikkeul.app.domain.dto.Search;
 import com.tikkeul.app.domain.vo.AnswerVO;
 import com.tikkeul.app.domain.vo.UserVO;
 import lombok.RequiredArgsConstructor;
@@ -20,7 +22,7 @@ import java.util.Optional;
 @Qualifier("admin") @Primary
 public class AdminServiceImpl implements AdminService {
     private final AdminDAO adminDAO;
-
+//  회원
     @Override
     public List<UserVO> adminGetListUserAll() {
         return adminDAO.adminFindUserAll();
@@ -31,9 +33,10 @@ public class AdminServiceImpl implements AdminService {
         adminDAO.adminDeleteUser(id);
     }
 
+//    문의
     @Override
-    public List<InquiryBoardDTO> adminGetListInquiryAll(Pagination pagination) {
-        return adminDAO.adminFindInquiryAll(pagination);
+    public List<InquiryBoardDTO> adminGetListInquiryAll(Pagination pagination, Search search) {
+        return adminDAO.adminFindInquiryAll(pagination, search);
     }
 
     @Override
@@ -42,14 +45,29 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public int getInquiryTotal() {
-        return adminDAO.FindCountOfInquiry();
-
+    public int getInquiryTotal(Search search) {
+        return adminDAO.findCountOfInquiry(search);
     }
 
     @Override
     public void adminWriteAnswer(AnswerVO answerVO) {
         adminDAO.adminSaveAnswer(answerVO);
+    }
+
+//    도란 게시판
+    @Override
+    public List<DoranBoardDTO> adminGetListDoranBoardAll(Pagination pagination, Search search) {
+        return adminDAO.adminFindDoranBoardAll(pagination, search);
+    }
+
+    @Override
+    public int getDoranBoardTotal(Search search) {
+        return adminDAO.findCountOfDoranBoard(search);
+    }
+
+    @Override
+    public Optional<DoranBoardDTO> adminReadDoranBoard(Long id) {
+        return adminDAO.adminFindDoranBoardById(id);
     }
 
 

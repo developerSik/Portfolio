@@ -1,6 +1,7 @@
 package com.tikkeul.app.dao;
 
 
+import com.tikkeul.app.domain.dto.DoranBoardDTO;
 import com.tikkeul.app.domain.dto.InquiryBoardDTO;
 import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.vo.AnswerVO;
@@ -40,9 +41,19 @@ public class AdminDaoTests {
     @Test
     public void adminSaveAnswerTest(){
         AnswerVO answerVO = new AnswerVO();
-        answerVO.setContent("테스트3");
-        answerVO.setInquiryBoardId(5L);
+        answerVO.setAnswerContent("테스트11");
+        answerVO.setInquireId(5L);
         adminDAO.adminSaveAnswer(answerVO);
+    }
+
+    @Test
+    public void adminFindDoranBoardAllTest(){
+//        log.info(adminDAO.adminFindDoranBoardAll().toString());
+    }
+
+    @Test
+    public void adminFindDoranBoardByIdTest(){
+        adminDAO.adminFindDoranBoardById(2L).map(DoranBoardDTO::getIdentification).ifPresent(log::info);
     }
 
 }

@@ -11,9 +11,9 @@ $(document).ready(function() {
                             <td>${user.id}</td>
                             <td>${user.name}</td>
                             <td>${user.identification}</td>
-                   
-                            <td>010-1234-1234</td>
-                            <td>aaa1234@gmail.com</td>
+                            <td>${user.address}</td>
+                            <td>${user.phoneNumber}</td>
+                            <td>${user.status}</td>
                         </tr>
 
         `
