@@ -59,7 +59,7 @@ iframe,img,video {
     vertical-align: top
 }
 
-img,video {
+header img,video {
     max-width: 50%;
     height: auto
 }
@@ -24660,7 +24660,7 @@ html.scroll-top .web-header,html.wadiz-app.scroll-top .web-header,html.wadiz-app
 .web-header .header-wrapper {
     position: relative;
     top: 0;
-    z-index: 9998;
+    z-index: 100;
     background-color: #fff;
     width: 100%;
     height: 56px;

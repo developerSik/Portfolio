@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 
 @Data
+
 public class Pagination {
      private Integer page;
     private int rowCount;
