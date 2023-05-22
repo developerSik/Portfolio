@@ -1,13 +1,16 @@
-package com.tikkeul.app.domain.vo;
+package com.tikkeul.app.domain.dto;
 
+import com.tikkeul.app.domain.vo.FileVO;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Component
 @Data
-@NoArgsConstructor
-public class ItemVO {
+
+public class ItemDTO {
     private Long id;
     private String name;
     private int price;
@@ -18,7 +21,8 @@ public class ItemVO {
     private String category;
     private String registerDate;
     private String updateDate;
-    private Long orderCount;
     private Long savingLevelId;
-
+    private String savingLevelName;
+    private List<FileVO> files = new ArrayList<>();
+    private List<Long> fileIdsForDelete = new ArrayList<>();
 }

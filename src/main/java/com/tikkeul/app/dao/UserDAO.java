@@ -7,12 +7,34 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.servlet.view.RedirectView;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
 public class UserDAO {
     private final UserMapper userMapper;
+
+
+
+    //  관리자페이지에서 회원 리스트 조회
+    public List<UserVO> adminFindUserAll(){
+        return  userMapper.adminSelectUserAll();
+    }
+
+    // 관리자페이지에서 회원 삭제
+    public void adminDeleteUser(Long id){
+        userMapper.adminDeleteUser(id);
+    }
+
+
+
+//  정상수의 작업공간
+
+
+
+
+
 
 
 
@@ -37,3 +59,4 @@ public class UserDAO {
 //    };
 
 }
+
