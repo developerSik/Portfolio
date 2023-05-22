@@ -16,20 +16,18 @@ public class UserDAO {
     private final UserMapper userMapper;
     //  정상수의 작업공간
     //  관리자페이지에서 회원 리스트 조회
-    public List<UserVO> adminFindUserAll(){
-        return  userMapper.adminSelectUserAll();
-    }
-
-    // 관리자페이지에서 회원 삭제
-    public void adminDeleteUser(Long id){
-        userMapper.adminDeleteUser(id);
-    }
-
-
+//    public List<UserVO> adminFindUserAll(){
+//        return  userMapper.adminSelectUserAll();
+//    }
+//
+//    // 관리자페이지에서 회원 삭제
+//    public void adminDeleteUser(Long id){
+//        userMapper.adminDeleteUser(id);
+//    }
 
 
-//    홍윤기의 작업공간
-    //    아이디 중복검사
+
+//    아이디 중복검사
     public Optional<UserVO> findById(String identification){
         return userMapper.selectById(identification);
     };
