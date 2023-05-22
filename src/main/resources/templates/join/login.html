@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html  lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="/css/Join/login.css">
+    <link rel="stylesheet" href="/css/modal/modal.css">
 
     <meta charset="UTF-8">
     <title>로그인</title>
 </head>
-<link rel="stylesheet" href="/css/Join/login.css">
     <body>
         <div id="page-container">
             <div class="web-header">
                 <header class="header-wrapper web-header-simple">
                     <div class="header-container">
                         <h1 class="wadiz-logo">
-                            <a th:href="@{/join/main}">
+                            <a th:href="@{/join/mainpage}">
                                 <img src="/image/Logo.png">
                             </a>
                         </h1>
@@ -25,10 +25,10 @@
                 <div class="user-sign-container">
                     <div class="wz container form-container form-login">
                         <h2 class="wz text display2">로그인</h2>
-                        <form th:action="@{/join/login}" class="wz form" th:object="${userVO}">
+                        <form  method="post" th:action="@{/join/login}" name="login" class="wz form" th:object="${userVO}">
                             <div class="field">
                                 <div id="emailwrap" class="wz input">
-                                    <input th:field="*{identification}"type="email" id="email" class="input-text" placeholder="이메일 입력" required>
+                                    <input th:field="*{identification}" method="post" type="email" id="email" class="input-text" placeholder="이메일 입력" required>
                                     <p id="pemail"></p>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@
                                     <a class="wz text" href="/web/waccount/find/pwd" data-event="iam.signin.goto.forgot">로그인 정보를 잊으셨나요?</a>
                                 </p>
                             </div>
-                            <button type="button" id="btnLogin" class="wz button primary block submit-button">로그인</button>
+                            <button type="button" id="btnLogin" class="wz button primary block submit-button" onclick="send()">로그인</button>
                         </form>
                         <div>
                             <button class="Button_button__3MO4n Button_lg__D7OVb Button_block__3npc4 SNSButtonList_kakaoButton__2lTDs SNSButtonList_spacer__38ac5" type="button">
@@ -56,7 +56,6 @@
                             </button>
                             <button class="Button_button__3MO4n Button_lg__D7OVb Button_block__3npc4 SNSButtonList_naverButton__1rzZ_ SNSButtonList_spacer__38ac5" type="submit">
                                 <span>
-                                    <div id="naver_id_login"></div>
                                     네이버로 시작하기
                                 </span>
 
@@ -73,7 +72,19 @@
                 </div>
             </main>
         </div>
+        <div class="modal">
+            <div class="warn-modal">
+                <div id="content-wrap"></div>
+            </div>
+        </div>
     </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="/js/Join/Login.js"></script>
+<script src="/js/modal/modal.js"></script>
+<script th:inline="javascript">
+    let check = [[${login}]];
+    if(check){
+        showWarnModal("<span>아이디 또는 비밀번호를</span><span>확인해주세요.</span>");
+    }
+</script>
 </html>

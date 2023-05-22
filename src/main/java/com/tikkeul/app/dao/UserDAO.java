@@ -4,6 +4,7 @@ import com.tikkeul.app.domain.vo.UserVO;
 import com.tikkeul.app.mapper.UserMapper;
 import lombok.RequiredArgsConstructor;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.servlet.view.RedirectView;
 
@@ -28,8 +29,8 @@ public class UserDAO {
     };
 
     //    로그인
-    public Optional<Long> selectByUserIdAndUserPassword(@Param("id") String id, @Param("password") String password){
-        return userMapper.selectByUserIdAndUserPassword(id,password);
+    public Optional<Long> findByUserIdAndUserPassword( String identification, String password){
+        return userMapper.selectByUserIdAndUserPassword(identification,password);
     };
 
 }

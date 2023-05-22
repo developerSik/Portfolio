@@ -51,13 +51,14 @@ public class JoinController {
 
     @PostMapping("login")
     public RedirectView login(String identification, String password, HttpSession session, RedirectAttributes redirectAttributes){
-        final Optional<Long> foundMember = joinService.login(identification, password);
-        if(foundMember.isPresent()){
-            session.setAttribute("id", foundMember.get());
-            return new RedirectView("/post/list");
+        log.info("들어옴");
+        final Optional<Long> foundUser = joinService.login(identification, password);
+        if(foundUser.isPresent()){
+            session.setAttribute("id", foundUser.get());
+            return new RedirectView("/join/mainpage");
         }
         redirectAttributes.addFlashAttribute("login", "fail");
-        return new RedirectView("/join/mainpage");
+        return new RedirectView("/join/login");
     }
 
     //    로그아웃
@@ -67,7 +68,8 @@ public class JoinController {
         return new RedirectView("/join/login");
     }
 
-
+    @GetMapping("mainpage")
+    public void goToMain(HttpSession session){;}
 
 
 

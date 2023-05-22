@@ -261,10 +261,14 @@
                             </li>
                         </ul>
                         <div class="web-header-utils">
+
                             <div class="HeaderDesktop_user__3zGmM">
-                                <div class="User_container__bqVd2">
-                                    <button type="button" class="User_btnSign__1URTs" onclick="location.href='../join/login.html'" >로그인</button>
-                                    <button data-event="iam.signup" class="User_btnSign__1URTs" onclick="location.href='../join/join.html'">회원가입</button>
+                                <div th:if="${session.id == null}" class="User_container__bqVd2">
+                                    <button type="button" class="User_btnSign__1URTs" onclick="location.href='/join/login'" >로그인</button>
+                                    <button data-event="iam.signup" class="User_btnSign__1URTs" onclick="location.href='/join/join'">회원가입</button>
+                                </div>
+                                <div th:unless="${session.id != null}" class="User_container__bqVd2">
+                                    <button type="button" class="User_btnSign__1URTs" onclick="location.href='/join/logout'" >로그아웃</button>
                                 </div>
                             </div>
 
@@ -293,7 +297,7 @@
                             </svg>
                         </button>
                         <button class="HeaderMobile_button__3V4yt HeaderMobile_home__1oUFL"><a class=""
-                                                                                               href="../join/mainpage.html">
+                                                                                               href="/join/mainpage">
                             <svg viewBox="0 0 40 40" focusable="false" role="presentation"
                                  class="withIcon_icon__3VTbq Button_icon__2Lds2" aria-hidden="true"
                                  style="width: 24px; height: 24px;">

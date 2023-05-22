@@ -22,7 +22,7 @@ public interface UserMapper {
 //
 //    //    로그인
     @Select("SELECT ID FROM USERS WHERE IDENTIFICATION = #{identification} AND PASSWORD = #{password}")
-    public  Optional<Long> selectByUserIdAndUserPassword(String id, String password);
+    public  Optional<Long> selectByUserIdAndUserPassword(@Param("identification") String id,@Param("password") String password);
 
 
 }

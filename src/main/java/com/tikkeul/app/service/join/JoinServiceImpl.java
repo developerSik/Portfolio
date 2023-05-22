@@ -23,14 +23,12 @@ public class JoinServiceImpl implements JoinService{
 
     @Override
     public void join(UserVO userVO) {
-
         log.info(userVO.toString());
         userDAO.save(userVO);
     }
 
     @Override
     public Optional<Long> login(String identification, String password) {
-        log.info("들어옴");
-        return userDAO.selectByUserIdAndUserPassword(identification,password);
+        return userDAO.findByUserIdAndUserPassword(identification,password);
     }
 }
