@@ -18,5 +18,6 @@ public class DoranBoardDTO {
     private Long itemId;
     private String name;
     private String status;
+    private String identification;
 
 }

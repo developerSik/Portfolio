@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleag.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
 <main>
     <div class="sidebar">
         <div class="logo-container">
-            <img src="../../../static/image/Logo.png" class="admin-logo">
+            <img src="/image/Logo.png" class="admin-logo">
         </div>
         <nav class="nav">
             <ul class="side-menu">
@@ -61,28 +61,27 @@
                 <table class="table-contents">
                     <tr>
                         <td>글 번호</td>
-                        <td></td>
+                        <td th:text="${doranBoard.id}"></td>
                     </tr>
                     <tr>
                         <td>ID</td>
-                        <td></td>
+                        <td th:text="${doranBoard.identification}"></td>
                     </tr>
                     <tr>
                         <td>제목</td>
-                        <td></td>
+                        <td th:text="${doranBoard.title}"></td>
                     </tr>
                     <tr>
                         <td class="doran-content">내용</td>
-                        <td class="doran-content"></td>
+                        <td class="doran-content" th:text="${doranBoard.content}"></td>
                     </tr>
                     <tr>
                         <td>작성일</td>
-                        <td></td>
+                        <td th:text="${doranBoard.registerDate}"></td>
                     </tr>
                     <tr>
                         <td>조회수</td>
-                        <td>
-                        </td>
+                        <td th:text="${doranBoard.viewCount}"></td>
                     </tr>
                 </table>
                 <div class="button-box">
@@ -100,4 +99,8 @@
 
 </main>
 </body>
+<script th:inline="javascript">
+    let doranBoard = [[${doranBoard}]];
+    console.log(doranBoard);
+</script>
 </html>
