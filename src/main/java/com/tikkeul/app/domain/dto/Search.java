@@ -14,6 +14,10 @@ public class Search {
 
     public String[] getTypes(){
         return type.split("");
+    }
 
+    public Search(String type, String keyword){
+        this.type = type;
+        this.keyword = keyword;
     }
 }

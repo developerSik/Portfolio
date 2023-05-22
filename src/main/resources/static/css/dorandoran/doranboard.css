@@ -244,11 +244,13 @@
     right: 0;
     top: 0;
     padding: 0;
-    width: 30px;
-    height: 34px;
+    width: 50px;
+    height: 32px;
     background: url(/resources/static/img/common/icon_gray_search.png) no-repeat center center;
     background-size: 14px 14px;
     border: none;
+    background-color: #dadce0;
+}
 }
 
 .wcommunity-best-list {
@@ -3008,13 +3010,10 @@ a.paging {
 }
 
 a.paging-checked {
-    color: rgb(235 124 120);
-    background: rgba(235, 124, 120, 0.1);
+    color: #6B95FC;
     font-weight: 700;
-    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 a.paging-move {
     margin: 0px 10px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
 }
