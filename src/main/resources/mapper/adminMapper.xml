@@ -64,10 +64,34 @@
             </trim>
         </if>
     </sql>
+    <!--유저 검색-->
+    <sql id="searchuser">
+        <if test="search.type != null and !search.type.equals('')">
+            <trim prefix="WHERE(" prefixOverrides="OR" suffix=")">
+                <foreach item="type" collection="search.types">
+                    <trim prefix="OR">
+                        <choose>
+                            <when test="type=='n'.toString()">
+                                NAME LIKE '%'||#{search.keyword}||'%'
+                            </when>
+                            <when test="type=='i'.toString()">
+                                IDENTIFICATION LIKE '%'||#{search.keyword}||'%'
+                            </when>
+                            <when test="type=='i'.toString()">
+                                STATUS LIKE '%'||#{search.keyword}||'%'
+                            </when>
+                        </choose>
+                    </trim>
+                </foreach>
+            </trim>
+        </if>
+    </sql>
+
     <!--   괸리자 유저 조회 -->
     <select id="adminSelectUserAll" resultType="userVO">
         SELECT ID, NAME , IDENTIFICATION, ADDRESS, PHONENUMBER, STATUS
         FROM USERS
+        <include refid="searchuser"/>
     </select>
 
     <!--  관리자페이지 유저 삭제  -->

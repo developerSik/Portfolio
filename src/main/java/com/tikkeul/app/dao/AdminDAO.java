@@ -24,8 +24,8 @@ public class AdminDAO {
     private final AdminMapper adminMapper;
 
     /*회원*/
-    public List<UserVO> adminFindUserAll(){
-        return adminMapper.adminSelectUserAll();
+    public List<UserVO> adminFindUserAll(Search search){
+        return adminMapper.adminSelectUserAll(search);
     }
 
     // 관리자페이지에서 회원 삭제

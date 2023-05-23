@@ -30,8 +30,8 @@ public class AdminController {
 
 //    회원
     @GetMapping("user/list")
-    public void list(Model model){
-        model.addAttribute("users", adminService.adminGetListUserAll());
+    public void GotoUserlist(Search search, Model model){
+        model.addAttribute("users", adminService.adminGetListUserAll(search));
     }
 
 //    문의

@@ -58,16 +58,17 @@
 
             <div class="member-box">
 
+                <form action="@{/admin/user/list}">
                 <div class="member-search-container">
-                    <form action="">
-                    <select>
-                        <option value="name">이름</option>
-                        <option value="id">ID</option>
-                        <option value="id">성별</option>
+
+                    <select name="type">
+                        <option value="n" th:selected="${search.type eq 'n'}">이름</option>
+                        <option value="i" th:selected="${search.type eq 'i'}">ID</option>
+                        <option value="s" th:selected="${search.type eq 's'}">계정상태</option>
                     </select>
-                    <input type="text" name="member-search" id="search"/>
-                    <input type="submit" class="member-search" value=""/>
-                    </form>
+                    <input type="text" name="keyword" id="search" th:value="${search.keyword}"/>
+                    <input type="submit" class="member-search"/>
+
                     <div>
                         <input type="button" class="member-modify" name="modify" value="수정"
                                onclick="location.href='admin-member-modify.html'"/>
@@ -75,6 +76,7 @@
                     </div>
 
                 </div>
+                </form>
                 <div class="table-content">
                     <table>
                         <tr>

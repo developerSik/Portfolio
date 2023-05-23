@@ -15,7 +15,7 @@ import java.util.Optional;
 public interface AdminService {
             /* 회원 */
     //    관리자페이지에서 회원 목록 조회
-    public List<UserVO> adminGetListUserAll();
+    public List<UserVO> adminGetListUserAll(Search search);
 
     // 관리자페이지에서 회원 삭제
     public void adminRemoveUser(Long id);
