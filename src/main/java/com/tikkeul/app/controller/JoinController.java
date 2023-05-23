@@ -27,6 +27,7 @@ public class JoinController {
 
     //    아이디 중복검사
     @GetMapping("check-id/{identification}")
+
     @ResponseBody
     public boolean checkId(@PathVariable String identification){
         return joinService.checkId(identification).isPresent();
@@ -65,7 +66,7 @@ public class JoinController {
     @GetMapping("logout")
     public RedirectView logout(HttpSession session){
         session.invalidate();
-        return new RedirectView("/join/login");
+        return new RedirectView("/join/mainpage");
     }
 
     @GetMapping("mainpage")
@@ -84,5 +85,6 @@ public class JoinController {
         System.out.println("인증코드 : " + code);
         return code;
     }
-
+    @GetMapping("findid")
+    public void goTofindid(){;}
 }

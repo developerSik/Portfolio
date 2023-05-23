@@ -23,7 +23,6 @@ public class JoinServiceImpl implements JoinService{
 
     @Override
     public void join(UserVO userVO) {
-        log.info(userVO.toString());
         userDAO.save(userVO);
     }
 
