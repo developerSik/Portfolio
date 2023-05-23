@@ -45,8 +45,8 @@ $("#password").on("keyup",function() {
 })
 
 
-let $id= $("#email");
-let $password= $("#password");
+let $id = $("#email");
+let $password = $("#password");
 
 function send(){
     if(!$id.val()){
