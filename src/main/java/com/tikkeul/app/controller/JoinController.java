@@ -85,5 +85,6 @@ public class JoinController {
         System.out.println("인증코드 : " + code);
         return code;
     }
-
+    @GetMapping("findid")
+    public void goTofindid(){;}
 }
