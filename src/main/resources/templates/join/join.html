@@ -6,6 +6,7 @@
 </head>
 <link rel="stylesheet" href="/css/Join/join.css">
 <link rel="stylesheet" href="/css/header/headerking.css">
+<link rel="stylesheet" href="/css/modal/modal.css">
 <body>
 <div id="page-container">
     <div class="web-header" th:replace="~{/header/header::.web-header}" >
@@ -16,7 +17,7 @@
         <div class="AccountContainer_container__PwFiE">
             <h2 class="AccountTitle_title__2gD-3">간편가입</h2>
             <div>
-                <button class="Button_button__3MO4n Button_lg__D7OVb Button_block__3npc4 SNSButtonList_kakaoButton__2lTDs SNSButtonList_spacer__38ac5" type="button">
+                <button class="Button_button__3MO4n Button_lg__D7OVb Button_block__3npc4 SNSButtonList_kakaoButton__2lTDs SNSButtonList_spacer__38ac5" onclick="location.href='https://kauth.kakao.com/oauth/authorize?client_id=98ad659e9ee57a8f915dfab301a25608&redirect_uri=http://localhost:10000/kakao/login&response_type=code\n';" type="button">
                     <span class="Button_children__raEW4">
                             <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__2KxnX SNSButtonList_kakaoIcon__1s6gw" aria-hidden="true">
                                 <path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-.96 4.96 5.44-3.6 2.4.16c6.96 0 12.64-4.48 12.64-10.08S22.96 4.56 16 4.64z"></path>
@@ -34,48 +35,42 @@
                 </button>
             </div>
         </div>
+
         <div class="SignUpIntroApp_divider__24Rgj"></div>
         <div class="AccountContainer_container__PwFiE SignUpIntroApp_signUpIntroEmailContainer__3sN5d">
             <h3 class="SignUpIntroApp_simpleSignUpTitle__3aC7M">이메일 간편가입</h3>
             <div class="EmailSignUpFormContainer_formField__1vy9Q">
                 <!--/*@thymesVar id="userVO" type=""*/-->
-                <form th:action="@{/join/mailConfirm}" name="join" method="post" th:object="${userVO}">
+                <form th:action="@{/join/join}" name="join" method="post" th:object="${userVO}">
                     <div class="EmailAuthField_emailAuthField__2E9P2">
                         <label class="EmailAuthField_fieldLabel__1jS_Z">이메일</label>
                         <div class="EmailAuthField_inputFieldContainer__1BgHY">
                             <div class="EmailAuthField_inputField__y3EHZ">
-                                <input th:field="*{identification}" id="email" placeholder="이메일 계정" type="email" class="Input_input__1bbbo Input_md__1Nsby">
-                                <p id="pemail"></p>
+                                <input th:field="*{identification}" id="email" name="memail" placeholder="이메일 계정" type="email" class="Input_input__1bbbo Input_md__1Nsby">
                             </div>
-                            <button class="Button_button__3MO4n Button_primary__29fd0 Button_contained__1kfgl Button_md__3TvVa Button_disabled__2II9A EmailAuthField_cta__1K3Hz" id="checkEmail" type="submit">
+                            <button class="Button_button__3MO4n Button_primary__29fd0 Button_contained__1kfgl Button_md__3TvVa Button_disabled__2II9A EmailAuthField_cta__1K3Hz" id="checkEmail" type="button">
                                 <span>인증하기</span>
                             </button>
-                            <button class="Button_button__3MO4n Button_secondary__2ECH- Button_md__3TvVa EmailAuthField_cta__1K3Hz return" type="submit">
+                            <button class="Button_button__3MO4n Button_secondary__2ECH- Button_md__3TvVa EmailAuthField_cta__1K3Hz return" type="button">
                                 <span>
                                     <span class="Button_children__raEW4">재전송
                                     </span>
                                 </span>
                             </button>
                         </div>
+                        <p id="pemail"></p>
                     </div>
-                </form>
-                <form th:action="@{/join/join}" name="join" method="post" th:object="${userVO}">
+                <div>
                 <div class="EmailAuthField_emailAuthField__2E9P2 EmailAuthField_showTimer__Z71HO">
                         <div class="EmailAuthField_inputFieldContainer__1BgHY">
                             <div class="EmailAuthField_inputField__y3EHZ">
-                                <input name="authCode" maxlength="6" placeholder="인증번호 입력" type="tel" class="Input_input__1bbbo Input_md__1Nsby Input_error__3XENr checkEmail" aria-invalid="true">
+                                <label for="memailconfirm" id="memailconfirmTxt"></label>
+                                <input name="authCode" id="memailconfirm" maxlength="8" placeholder="인증번호 입력" type="tel" class="Input_input__1bbbo Input_md__1Nsby Input_error__3XENr checkEmail" aria-invalid="true">
                             </div>
-                            <button class="Button_button__3MO4n Button_primary__29fd0 Button_contained__1kfgl Button_md__3TvVa Button_disabled__2II9A EmailAuthField_cta__1K3Hz checkEmail checkEmailbtn" type="submit">
-                                <span>
-                                    <span class="Button_children__raEW4">확인</span>
-                                </span>
-                            </button>
                         </div>
                     </div>
-                </form>
-                <form th:action="@{/join/join}" name="join" method="post" th:object="${userVO}">
+                </div>
                     <div class="TextField_textField__2k9OA TextField_md__2Z-6K EmailSignUpFormContainer_formField__1vy9Q">
-                        <input type="hidden" th:field="*{identification}">
                         <label>이름</label>
                         <div class="TextField_field__3gj8N">
                             <input  id="name" placeholder="이름 입력" th:field="*{name}" type="text" class="Input_input__1bbbo Input_md__1Nsby">
@@ -336,12 +331,15 @@
               </div>
           </main>
       </div>
+<div class="modal">
+    <div class="warn-modal">
+        <div id="content-wrap"></div>
+    </div>
+</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="/js/Join/Join.js"></script>
 <script src="/js/header/header.js"></script>
-<script>
-    let userId= [[${identification}]];
-</script>
+<script src="/js/modal/modal.js"></script>
 
 </html>

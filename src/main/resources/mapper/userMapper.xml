@@ -7,20 +7,31 @@
         FROM USERS
     </select>
 
-        <select id="selectById" resultType="userVO">
-        SELECT ID, IDENTIFICATION, PASSWORD, NAME, PHONENUMBER, ADDRESS, STATUS, ROLL, CREATEDDATE,PROFILEIMAGENAME, PROFILEIMAGESIZE, PROFILEIMAGEUUID, SAVINGLEVEL_ID
+    <select id="selectById" resultType="userVO">
+        SELECT ID,IDENTIFICATION, PASSWORD, NAME, PHONENUMBER, ADDRESS, STATUS,ROLL, CREATEDDATE, PROFILEIMAGENAME, PROFILEIMAGESIZE, PROFILEIMAGEUUID, SAVINGLEVEL_ID
         FROM USERS
+        WHERE IDENTIFICATION = #{identification}
 
     </select>
 
     <!--회원가입-->
     <insert id="insert">
-        INSERT INTO USERS
-        (ID, IDENTIFICATION, PASSWORD, NAME, ROLL)
-        VALUES(SEQ_USER.NEXTVAL, #{identification},#{password},#{name}, #{roll});
+        INSERT INTO USERS (ID, IDENTIFICATION, PASSWORD, NAME,SAVINGLEVEL_ID)
+        VALUES (SEQ_USER.NEXTVAL, #{identification}, #{password}, #{name}, #{levelId})
 
 
     </insert>
+
+    <insert id="insertkakao">
+        INSERT INTO USERS (ID, IDENTIFICATION, PASSWORD, NAME,REGISTERED_TYPE,SAVINGLEVEL_ID)
+        VALUES (SEQ_USER.NEXTVAL, #{identification}, #{password}, #{name},#{registeredType}, #{levelId})
+
+    </insert>
+    <update id="updatekakao">
+        UPDATE  USERS
+        SET REGISTERED_TYPE=#{registeredType}
+        WHERE IDENTIFICATION = #{identification}
+    </update>
 
 
 </mapper>

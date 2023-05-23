@@ -1,10 +1,12 @@
 package com.tikkeul.app.domain.dto;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
 @Data
+@NoArgsConstructor
 public class InquiryBoardDTO {
     private Long id;
     private String inquireType;
