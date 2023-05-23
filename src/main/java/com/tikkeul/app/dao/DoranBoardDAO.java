@@ -28,7 +28,7 @@ public class DoranBoardDAO {
         doranBoardMapper.insert(doranBoardVO);
     }
 
-    //    게시글 조회
+    //    게시글 상세보기
     public Optional<DoranBoardDTO> findById(Long id) {
         return doranBoardMapper.select(id);
     }

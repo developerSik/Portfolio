@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
+import java.util.Optional;
+
 @Controller
 @Slf4j
 @RequestMapping("/doranboard/*")
@@ -49,7 +51,11 @@ public class DoranBoardController {
     /*게시글 상세보기*/
     @GetMapping("dorandetail")
     public void read(Long id, Model model) {
-        model.addAttribute("doranboard", doranBoardService.read(id));
+        Optional<DoranBoardDTO> checkDoranBoardDTO = doranBoardService.read(id);
+        if(checkDoranBoardDTO.isPresent()){
+            model.addAttribute("doranboard", checkDoranBoardDTO.get());
+        }
+//        model.addAttribute("doranboard", doranBoardService.read(id));
     }
 
     /*게시글 수정*/
@@ -61,11 +67,11 @@ public class DoranBoardController {
     }
 
     /*게시글 삭제*/
-/*    @PostMapping("remove")
+    @PostMapping("remove")
     public RedirectView remove(Long id) {
         doranBoardService.remove(id);
         return new RedirectView("/doranboard/doranboard");
-    }*/
+    }
 
 
 }

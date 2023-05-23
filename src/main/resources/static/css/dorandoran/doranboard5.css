@@ -640,9 +640,9 @@
 }
 
 .wcommunity-detail-info .story-info p.title {
-    margin-bottom: 5px;
-    font-size: 16px;
-    line-height: 22px;
+    margin-bottom: 4px;
+    font-size: 24px;
+    line-height: 36px;
 }
 
 .wcommunity-detail-info .story-info p.info {
@@ -2625,7 +2625,6 @@
     /** 상세페이지 **/
     .wcommunity-detail-info {
         width: 650px;
-        padding: 0;
     }
 
     .wcommunity-detail-info .story-info {

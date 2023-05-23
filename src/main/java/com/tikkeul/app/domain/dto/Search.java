@@ -12,12 +12,9 @@ public class Search {
     String type;
     String keyword;
 
+
     public String[] getTypes(){
         return type.split("");
     }
 
-    public Search(String type, String keyword){
-        this.type = type;
-        this.keyword = keyword;
-    }
 }

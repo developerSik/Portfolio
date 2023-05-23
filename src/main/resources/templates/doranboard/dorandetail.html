@@ -205,12 +205,10 @@
             <div class="wcommunity-detail-info">
                 <div class="story-info">
                     <em class="category">도란도란</em>
-<!--                    <p class="title" th:value="${doranboard.title}">제목</p>-->
-<!--                    <p class="info">-->
-<!--                        <p class="editor" th:value="${doranboard.name}">이름</p>-->
-<!--                        <p class="date" th:value="${doranboard.registerDate}">시간</p>-->
-<!--                        <p id="topSympCount" class="symp"></p>-->
-<!--                    </p>-->
+                    <p class="title" th:text="${doranboard.title}">제목</p>
+                    <p class="editor" th:text="${doranboard.name}">이름</p>
+                    <p class="date" th:text="${doranboard.registerDate}">시간</p>
+                    <p id="topSympCount" class="symp"></p>
                 </div>
             </div>
 
@@ -218,8 +216,8 @@
             <div class="wcommunity-detail-content">
                 <div class="inner-contents">
                     <p><br></p>
-<!--                    <p th:value="${doranboard.content}">내용</p>-->
-                    <th:block th:text="${content}"></th:block>
+                    <p class="content" th:text="${doranboard.content}">내용</p>
+                    <!--                    <th:block th:text="${doranboard.content}"></th:block>-->
                 </div>
                 <div class="attach-list">
                     <ul>
@@ -280,17 +278,12 @@
                     <textarea placeholder="댓글을 입력하세요." id="commentCnt" name="contents"
                               style="overflow-y: hidden; height: 79px; resize: none;"></textarea>
                     <div class="btn-wrap">
-                        <button id="reply-button" type="button" class="btn-pd-blue" onclick="ajaxRegistComment()">댓글달기
+                        <button id="reply-button" type="button" class="btn-pd-blue" >댓글달기
                         </button>
                     </div>
                 </div>
-
-
                 <div class="comment-box">
-
                     <ul id="commentList">
-
-
                     </ul>
                 </div>
             </div>

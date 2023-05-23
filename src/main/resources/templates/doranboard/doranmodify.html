@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleag.org">
 <head>
     <meta charset="UTF-8">
     <title>doranwrite</title>
@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="/css/dorandoran/doranwrite3.css">
     <link rel="stylesheet" href="/css/dorandoran/doranwrite4.css">
     <link rel="stylesheet" href="/css/dorandoran/doranwrite5.css">
-    <link rel="stylesheet" href="../../static/css/dorandoran/doranwrite2.css">
+<!--    <link rel="stylesheet" href="../../static/css/dorandoran/doranwrite2.css">
     <link rel="stylesheet" href="../../static/css/dorandoran/doranwrite1.css">
     <link rel="stylesheet" href="../../static/css/dorandoran/doranwrite3.css">
     <link rel="stylesheet" href="../../static/css/dorandoran/doranwrite4.css">
-    <link rel="stylesheet" href="../../static/css/dorandoran/doranwrite5.css">
+    <link rel="stylesheet" href="../../static/css/dorandoran/doranwrite5.css">-->
     <!--   <link rel="stylesheet" href="/css/dorandoran/doranwrite.css">-->
 
 </head>
@@ -74,64 +74,16 @@
 <!--                        <option data-url="https://helpcenter.wadiz.kr/hc/ko/requests/new?ticket_form_id=6476663180185" value="6476663180185">스토어 서비스 문의하기</option>-->
 <!--                        <option data-url="https://helpcenter.wadiz.kr/hc/ko/requests/new?ticket_form_id=6476688975513" value="6476688975513">파이낸스 서비스 문의하기</option></select></div>-->
 
-                <div class="form-field string required request_anonymous_requester_email"><label for="request_anonymous_requester_email">제목</label>
-                    <input type="text" name="title" id="request_anonymous_requester_email" aria-required="true">
+                <div class="form-field string required request_anonymous_requester_email">
+                    <label for="request_anonymous_requester_email">제목</label>
+                    <input type="text" name="title" id="request_anonymous_requester_email" aria-required="true" th:text="${id.title}">
                 </div>
-
-
-
-
-<!--                <div class="form-field string  required  request_custom_fields_6760067845017">-->
-<!--                    <label id="request_custom_fields_6760067845017_label" for="request_custom_fields_6760067845017">문의자 유형</label>-->
-<!--                    <input type="hidden" name="request[custom_fields][6760067845017]" id="request_custom_fields_6760067845017" autocomplete="off" data-tagger="[{&quot;label&quot;:&quot;-&quot;,&quot;value&quot;:&quot;&quot;},{&quot;label&quot;:&quot;프로젝트를 개설한 메이커입니다.&quot;,&quot;value&quot;:&quot;펀딩메이커&quot;},{&quot;label&quot;:&quot;프로젝트에 참여한 서포터입니다.&quot;,&quot;value&quot;:&quot;펀딩서포터&quot;}]" aria-required="true" aria-labelledby="request_custom_fields_6760067845017_label" value=""><a class="nesty-input" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-controls="_6oi9y43ta" aria-required="true" aria-labelledby="request_custom_fields_6760067845017_label" style="max-width: 100%;">-</a>-->
-
-
-<!--                </div>-->
-
-
-
-                <div class="form-field string optional request_custom_fields_6477991452185" hidden="">
-                    <label id="request_custom_fields_6477991452185_label" for="request_custom_fields_6477991452185">와디즈 계정</label>
-                    <input type="text" name="request[custom_fields][6477991452185]" id="request_custom_fields_6477991452185" aria-required="false" aria-describedby="request_custom_fields_6477991452185_hint" aria-labelledby="request_custom_fields_6477991452185_label" disabled="">
-
-                    <p id="request_custom_fields_6477991452185_hint">와디즈 로그인 시 사용하시는 이메일 주소 (와디즈계정)을 알려주세요.</p>
-                </div>
-
-
-
-                <div class="form-field string optional request_custom_fields_6478000522777" hidden="">
-                    <label id="request_custom_fields_6478000522777_label" for="request_custom_fields_6478000522777">연락처</label>
-                    <input type="number" name="request[custom_fields][6478000522777]" id="request_custom_fields_6478000522777" step="1" aria-required="false" aria-describedby="request_custom_fields_6478000522777_hint" aria-labelledby="request_custom_fields_6478000522777_label" disabled="">
-
-                    <p id="request_custom_fields_6478000522777_hint">필요 시 상담 받으실 수 있는 연락처를 입력해주세요.</p>
-                </div>
-
-
-
-                <div class="form-field string optional request_custom_fields_6824739764505" hidden="">
-                    <label id="request_custom_fields_6824739764505_label" for="request_custom_fields_6824739764505">프로젝트 번호 </label>
-                    <input type="text" name="request[custom_fields][6824739764505]" id="request_custom_fields_6824739764505" aria-required="false" aria-describedby="request_custom_fields_6824739764505_hint" aria-labelledby="request_custom_fields_6824739764505_label" disabled="">
-
-                    <p id="request_custom_fields_6824739764505_hint">프로젝트 번호 또는 제목을 입력해주세요.
-                        ⚡프로젝트 번호 확인 방법 : 마이와디즈 &gt; 메이커스튜디오 &gt; 화면 왼쪽 상단 아래 숫자 5~6자리</p>
-                </div>
-
-
-
-                <div class="form-field string optional request_custom_fields_6477667492761" hidden="">
-                    <label id="request_custom_fields_6477667492761_label" for="request_custom_fields_6477667492761">결제 번호</label>
-                    <input type="text" name="request[custom_fields][6477667492761]" id="request_custom_fields_6477667492761" aria-required="false" aria-describedby="request_custom_fields_6477667492761_hint" aria-labelledby="request_custom_fields_6477667492761_label" disabled="">
-
-                    <p id="request_custom_fields_6477667492761_hint">마이와디즈 &gt; 펀딩 &gt; 결제번호 에서 결제 번호를 확인하실 수 있습니다.</p>
-                </div>
-
-
 
                 <div class="form-field text  required  request_description">
                     <label id="request_description_label">내용</label>
                     <textarea name="content" id="request_description_mimetype" aria-required="true" autocomplete="off"
                               aria-describedby="request_description_hint"
-                              aria-labelledby="request_description_label"></textarea>
+                              aria-labelledby="request_description_label" th:text="${id.title}">내용</textarea>
 
                     <p id="request_description_hint">궁금하신 내용을 상세하게 설명해주세요.
                     </p>

@@ -50,7 +50,7 @@ public class DoranDoranTests {
 
     @Test
     public void updateTest(){
-        doranBoardMapper.select(24L).ifPresent(DoranBoardDTO -> {
+        doranBoardMapper.select(61L).ifPresent(DoranBoardDTO -> {
             DoranBoardDTO.setContent("수정된 내용");
             doranBoardMapper.update(DoranBoardDTO);
         });
@@ -58,7 +58,7 @@ public class DoranDoranTests {
 
     @Test
     public void deleteTest(){
-        doranBoardMapper.delete(24L);
+        doranBoardMapper.delete(121L);
 //        assertThat(doranBoardMapper.selectAll()).hasSize(1);
     }
 
