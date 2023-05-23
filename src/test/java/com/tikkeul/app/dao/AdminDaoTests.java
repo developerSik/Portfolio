@@ -61,4 +61,9 @@ public class AdminDaoTests {
 //        log.info(adminDAO.adminFindItemAll().toString());
     }
 
+    @Test
+    public void adminDeleteInquiryTest(){
+        adminDAO.adminDeleteInquiry(6L);
+    }
+
 }

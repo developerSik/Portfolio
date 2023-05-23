@@ -55,7 +55,17 @@ public class AdminServiceImpl implements AdminService {
         adminDAO.adminSaveAnswer(answerVO);
     }
 
-//    도란 게시판
+    @Override
+    public void adminModifyInquiry(Long id) {
+        adminDAO.adminSetInquiry(id);
+    }
+
+    @Override
+    public void adminRemoveInquiry(Long id) {
+        adminDAO.adminDeleteInquiry(id);
+    }
+
+    //    도란 게시판
     @Override
     public List<DoranBoardDTO> adminGetListDoranBoardAll(Pagination pagination, Search search) {
         return adminDAO.adminFindDoranBoardAll(pagination, search);
@@ -69,6 +79,11 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public Optional<DoranBoardDTO> adminReadDoranBoard(Long id) {
         return adminDAO.adminFindDoranBoardById(id);
+    }
+
+    @Override
+    public void adminRemoveDoranBoard(Long id) {
+        adminDAO.adminDeleteDoranBoard(id);
     }
 
     @Override

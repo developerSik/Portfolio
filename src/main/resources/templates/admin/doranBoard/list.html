@@ -7,9 +7,17 @@
     <title>도란도란</title>
     <link rel="stylesheet" type="text/css" href="/css/admin/admin.css">
     <link rel="stylesheet" type="text/css" href="/css/admin/admin-dorandoran.css">
+    <link rel="stylesheet" type="text/css" href="/css/admin/modal.css">
+
 </head>
 <body>
 <main>
+    <div class="modal">
+        <div class="warn-modal">
+            <div id="content-wrap"></div>
+        </div>
+    </div>
+
     <div class="sidebar">
         <div class="logo-container">
             <img src="/image/Logo.png" class="admin-logo">
@@ -49,6 +57,7 @@
         </nav>
     </div>
 
+
     <section class="management-main-content">
         <div class="management-top">
             <div class="page-name">도란도란</div>
@@ -66,7 +75,7 @@
                         </select>
                         <input type="text" name="keyword" id="search" th:value="${search.keyword}"/>
                         <button type="submit" class="search"></button>
-                        <input type="button" class="delete" id="delete-button" name="delete" value="삭제"/>
+                        <input type="button" class="delete" id="delete-button" onclick="deleteDoranBoards(getSelectedDoranBoardIds())" value="삭제"/>
 
                     </div>
                 </form>
@@ -104,10 +113,11 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="/js/admin/checkbox.js"></script>
-<script src="/js/admin/delete-button.js"></script>
 <script th:inline="javascript">
     let doranBoards = [[${doranBoards}]]
+    let pagination = [[${pagination}]];
 </script>
 <script src="/js/admin/doranboardlist.js"></script>
+<script src="/js/admin/modal.js"></script>
 <script src="/js/admin/doranboardpaging.js"></script>
 </html>

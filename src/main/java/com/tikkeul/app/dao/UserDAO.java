@@ -24,7 +24,6 @@ public class UserDAO {
 
     // 관리자페이지에서 회원 삭제
     public void adminDeleteUser(Long id){
-        userMapper.adminDeleteUser(id);
     }
 
 

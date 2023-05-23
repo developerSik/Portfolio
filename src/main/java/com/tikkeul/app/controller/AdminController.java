@@ -11,11 +11,13 @@ import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 import java.util.Optional;
 
 
@@ -50,9 +52,17 @@ public class AdminController {
 
 
     @PostMapping("inquiry/write")
-    public RedirectView write(AnswerVO answerVO){
+    @Transactional(rollbackFor = Exception.class)
+    public RedirectView write(AnswerVO answerVO,Long id){
         adminService.adminWriteAnswer(answerVO);
+        adminService.adminModifyInquiry(id);
         return new RedirectView("/admin/inquiry/list");
+    }
+
+    @PostMapping("inquiry/delete")
+    @ResponseBody
+    public void removeInquiry(@RequestBody List<String> inquiryIds){
+        for (String inquiryId : inquiryIds) adminService.adminRemoveInquiry(Long.valueOf(inquiryId));
     }
 
 //    도란 게시판
@@ -71,6 +81,12 @@ public class AdminController {
         }
 //        checkDoranBoardDTO.ifPresent(doranBoardDTO -> model.addAttribute(doranBoardDTO));
 //        model.addAttribute("doranBoard",adminService.adminReadDoranBoard(id));
+    }
+
+    @PostMapping("doranBoard/delete")
+    @ResponseBody
+    public void removeDoranBoard(@RequestBody List<String> doranBoardIds){
+        for (String doranBoardId : doranBoardIds ) adminService.adminRemoveDoranBoard(Long.valueOf(doranBoardId));
     }
 
     @GetMapping("item/list")

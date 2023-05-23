@@ -63,6 +63,8 @@
         <div class="QnA-main">
             <form th:action="@{/admin/inquiry/write}" method="post" th:object="${answerVO}">
                 <input type="hidden" name="inquireId" th:value="${inquiryBoard.id}">
+                <input type="hidden" name="id" th:value="${inquiryBoard.id}">
+
                 <div class="QnA-box">
                     <table class="table-contents">
                         <tr>

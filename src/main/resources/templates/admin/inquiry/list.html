@@ -7,10 +7,16 @@
     <title>문의게시판목록</title>
     <link rel="stylesheet" type="text/css" href="/css/admin/admin.css">
     <link rel="stylesheet" type="text/css" href="/css/admin/admin-QnA.css">
+    <link rel="stylesheet" type="text/css" href="/css/admin/modal.css">
 
 </head>
 <body>
 <main>
+    <div class="modal">
+        <div class="warn-modal">
+            <div id="content-wrap"></div>
+        </div>
+    </div>
     <div class="sidebar">
         <div class="logo-container">
             <img src="/image/Logo.png" class="admin-logo">
@@ -67,7 +73,8 @@
                     </select>
                     <input type="text" name="keyword" id="search" th:value="${search.keyword}"/>
                     <button type="submit" class="search"></button>
-                    <input type="button" class="delete" id="delete-button" name="delete" value="삭제"/>
+                    <input type="button" class="delete" id="delete-button" value="삭제" onclick="deleteLectures(getSelectedLectureIds())"/>
+<!--                    <button class="delete" onclick="deleteLectures(getSelectedLectureIds())">삭제</button>-->
 
                 </div>
                 </form>
@@ -106,14 +113,11 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="/js/admin/checkbox.js"></script>
-<script src="/js/admin/delete-button.js"></script>
 <script th:inline="javascript">
     let inquirys = [[${inquirys}]];
     let pagination = [[${pagination}]];
-    console.log(pagination);
-    console.log((inquirys));
 </script>
 <script src="/js/admin/inquirylist.js"></script>
-<script src="/js/admin/Paging.js"></script>
 <script src="/js/admin/modal.js"></script>
+<script src="/js/admin/Paging.js"></script>
 </html>

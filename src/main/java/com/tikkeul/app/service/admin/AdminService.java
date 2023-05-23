@@ -34,6 +34,12 @@ public interface AdminService {
     //    관리자 페이지에서 문의 답변
     public void adminWriteAnswer(AnswerVO answerVO);
 
+    //    관리자 페이지에서 문의 답변 여부
+    public void adminModifyInquiry(Long id);
+
+    //  관리자 페이지에서 문의 삭제
+    public void adminRemoveInquiry(Long id);
+
 
         /*도란 게시판*/
     //    관리자 페이지에서 도란보드 목록 조회
@@ -44,6 +50,11 @@ public interface AdminService {
 
     //    관리자 페이지에서 도란보드 상세 조회
     public Optional<DoranBoardDTO> adminReadDoranBoard(Long id);
+
+    //    관리자 페이지에서 도란 보드 삭제
+    public void adminRemoveDoranBoard(Long id);
+
+
 
     /*상품*/
     //    관리자 페이지에서 상품 목록 조회

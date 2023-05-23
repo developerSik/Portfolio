@@ -74,7 +74,12 @@ public class AdminMapperTests {
 
     @Test
     public void adminDeleteInquiryTest(){
-        adminMapper.adminDeleteInquiry(7L);
+        adminMapper.adminDeleteInquiry(8L);
+    }
+
+    @Test
+    public void adminDeleteDoranBoardTest(){
+        adminMapper.adminDeleteDoranBoard(1L);
     }
 }
 
