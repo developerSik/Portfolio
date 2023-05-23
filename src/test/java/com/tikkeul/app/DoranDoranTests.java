@@ -45,7 +45,7 @@ public class DoranDoranTests {
 
     @Test
     public void selectTest() {
-        doranBoardMapper.select(24L).map(DoranBoardDTO::getName).ifPresent(log::info);
+        doranBoardMapper.select(1L).map(DoranBoardDTO::getContent).ifPresent(log::info);
     }
 
     @Test

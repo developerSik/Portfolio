@@ -28,13 +28,12 @@
 
 .wcommunity-wrap {
     color: #4a4a4a;
-    padding-bottom: 160px;
+    padding-bottom: 35px;
 }
 
 .wcommunity-wrap h3 {
     margin-bottom: 20px;
     font-size: 22px;
-    font-weight:
 }
 
 .wcommunity-wrap h3 em {
@@ -2124,6 +2123,7 @@
 }
 
     .wcommunity-wrap {
+        cursor: pointer;
     }
 
     .wcommunity-top .wcommunity-topmenu {
@@ -2990,4 +2990,7 @@
         padding: 10px;
         box-sizing: border-box !important;
     }
+}
+.wcommunity-webzine-list li{
+    cursor: pointer;
 }

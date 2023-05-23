@@ -26,5 +26,6 @@ public interface DoranBoardService {
 
     //    게시글 전체 개수 조회
     public int getTotal(Search search);
+
 }
 

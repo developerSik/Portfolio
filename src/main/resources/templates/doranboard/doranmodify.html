@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="/css/dorandoran/doranwrite3.css">
     <link rel="stylesheet" href="/css/dorandoran/doranwrite4.css">
     <link rel="stylesheet" href="/css/dorandoran/doranwrite5.css">
+    <link rel="stylesheet" href="../../static/css/dorandoran/doranwrite2.css">
+    <link rel="stylesheet" href="../../static/css/dorandoran/doranwrite1.css">
+    <link rel="stylesheet" href="../../static/css/dorandoran/doranwrite3.css">
+    <link rel="stylesheet" href="../../static/css/dorandoran/doranwrite4.css">
+    <link rel="stylesheet" href="../../static/css/dorandoran/doranwrite5.css">
     <!--   <link rel="stylesheet" href="/css/dorandoran/doranwrite.css">-->
 
 </head>
@@ -70,7 +75,7 @@
 <!--                        <option data-url="https://helpcenter.wadiz.kr/hc/ko/requests/new?ticket_form_id=6476688975513" value="6476688975513">파이낸스 서비스 문의하기</option></select></div>-->
 
                 <div class="form-field string required request_anonymous_requester_email"><label for="request_anonymous_requester_email">제목</label>
-                    <input type="text" name="request[anonymous_requester_email]" id="request_anonymous_requester_email" aria-required="true">
+                    <input type="text" name="title" id="request_anonymous_requester_email" aria-required="true">
                 </div>
 
 
@@ -123,8 +128,10 @@
 
 
                 <div class="form-field text  required  request_description">
-                    <label id="request_description_label" for="request_description">내용</label>
-                    <textarea name="request[description]" id="request_description" aria-required="true" aria-describedby="request_description_hint" aria-labelledby="request_description_label"></textarea><input type="hidden" name="request[description_mimetype]" id="request_description_mimetype" value="text/plain" style="display: none;" autocomplete="off">
+                    <label id="request_description_label">내용</label>
+                    <textarea name="content" id="request_description_mimetype" aria-required="true" autocomplete="off"
+                              aria-describedby="request_description_hint"
+                              aria-labelledby="request_description_label"></textarea>
 
                     <p id="request_description_hint">궁금하신 내용을 상세하게 설명해주세요.
                     </p>

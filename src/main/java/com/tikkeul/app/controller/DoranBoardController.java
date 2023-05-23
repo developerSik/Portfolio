@@ -31,7 +31,7 @@ public class DoranBoardController {
         pagination.setTotal(doranBoardService.getTotal(search));
         pagination.progress();
         model.addAttribute("doranboards", doranBoardService.getList(pagination, search));
-        
+
     }
 
     /*게시글 추가*/
@@ -46,8 +46,8 @@ public class DoranBoardController {
         return new RedirectView("/doranboard/doranboard");
     }
 
-    /*게시글 조회*/
-    @GetMapping("read")
+    /*게시글 상세보기*/
+    @GetMapping("dorandetail")
     public void read(Long id, Model model) {
         model.addAttribute("doranboard", doranBoardService.read(id));
     }
@@ -57,15 +57,15 @@ public class DoranBoardController {
     public RedirectView modify(DoranBoardDTO doranBoardDTO, RedirectAttributes redirectAttributes) {
         doranBoardService.modify(doranBoardDTO);
         redirectAttributes.addAttribute("id", doranBoardDTO.getId());
-        return new RedirectView("/doranboard/doranmodify");
+        return new RedirectView("/doranboard/doranboard");
     }
 
     /*게시글 삭제*/
-    @PostMapping("remove")
+/*    @PostMapping("remove")
     public RedirectView remove(Long id) {
         doranBoardService.remove(id);
         return new RedirectView("/doranboard/doranboard");
-    }
+    }*/
 
 
 }
