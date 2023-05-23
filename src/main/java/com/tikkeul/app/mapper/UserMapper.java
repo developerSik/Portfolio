@@ -1,7 +1,6 @@
 package com.tikkeul.app.mapper;
 
 import com.tikkeul.app.domain.vo.UserVO;
-import org.apache.catalina.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -17,12 +16,15 @@ public interface UserMapper {
     //    아이디 중복검사
     public Optional<UserVO> selectById(String identification);
 
-//    //    회원가입
+//        회원가입
     public void insert(UserVO userVO);
+
+//        카카오 회원가입
+    public void insertkakao(UserVO userVO);
 //
-//    //    로그인
+//        로그인
     @Select("SELECT ID FROM USERS WHERE IDENTIFICATION = #{identification} AND PASSWORD = #{password}")
     public  Optional<Long> selectByUserIdAndUserPassword(@Param("identification") String id,@Param("password") String password);
 
-
+    public void updatekakao(String identification,String registeredType);
 }
