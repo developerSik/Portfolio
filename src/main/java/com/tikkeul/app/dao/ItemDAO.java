@@ -19,9 +19,8 @@ public class ItemDAO {
         return itemMapper.selectAll();
     }
 
-//    열매샵 제품 상세 보기 : itemdetails.html
+//    열매샵 제품 상세 보기 : readDetail.html
     public Optional<ItemDTO> findById(Long id){
         return itemMapper.select(id);
     }
-
 }

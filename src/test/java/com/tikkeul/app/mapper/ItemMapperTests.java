@@ -25,8 +25,6 @@ public class ItemMapperTests {
 
     @Test
     public void selectTest(){
-        itemMapper.select(2L).map(ItemDTO::getName).ifPresent(log::info);
-
+        itemMapper.select(2L).ifPresent(i->log.info(i.toString()));
     }
-
 }

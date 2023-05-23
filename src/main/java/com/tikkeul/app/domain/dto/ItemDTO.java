@@ -23,6 +23,7 @@ public class ItemDTO {
     private String updateDate;
     private Long savingLevelId;
     private String savingLevelName;
+    private Long countOfUser;
     private List<FileVO> files = new ArrayList<>();
     private List<Long> fileIdsForDelete = new ArrayList<>();
 }
