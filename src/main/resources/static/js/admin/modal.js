@@ -13,3 +13,4 @@ $("div.modal").on("click", function(){
         $("div.modal").fadeOut(500);
     }
 });
+

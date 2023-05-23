@@ -20,4 +20,5 @@ public class ItemVO {
     private String updateDate;
     private Long orderCount;
     private Long savingLevelId;
+
 }

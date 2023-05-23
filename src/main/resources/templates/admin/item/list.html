@@ -4,23 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>문의게시판목록</title>
+    <title>상품관리</title>
     <link rel="stylesheet" type="text/css" href="/css/admin/admin.css">
-    <link rel="stylesheet" type="text/css" href="/css/admin/admin-QnA.css">
-    <link rel="stylesheet" type="text/css" href="/css/admin/modal.css">
-
+    <link rel="stylesheet" type="text/css" href="/css/admin/admin-product.css">
 </head>
-<body>
+
 <main>
-    <div class="modal">
-        <div class="warn-modal">
-            <div id="content-wrap"></div>
-        </div>
-    </div>
+    <body>
     <div class="sidebar">
         <div class="logo-container">
             <img src="/image/Logo.png" class="admin-logo">
         </div>
+
         <nav class="nav">
             <ul class="side-menu">
                 <li class="site-shortcut">
@@ -33,11 +28,11 @@
                            onclick="location.href='admin-main.html'">
                 </li>
                 <li class="management-menu-list">
-                    <input type="button" class="side-menu-button" value="회원 관리"
+                    <input type="button" class="side-menu-button" value="회원목록"
                            onclick="location.href='admin-member.html'">
                 </li>
                 <li class="management-menu-list">
-                    <input type="button" class="side-menu-button" value="프로그램 관리"
+                    <input type="button" class="side-menu-button" value="프로그램목록"
                            onclick="location.href='admin-program.html'">
                 </li>
                 <li class="management-menu-list">
@@ -45,12 +40,12 @@
                            onclick="location.href='admin-product.html'">
                 </li>
                 <li class="management-menu-list">
-                    <input type="button" class="side-menu-button" value="도란도란 게시판 관리"
-                           onclick="location.href='/admin/doranBoard/list'">
+                    <input type="button" class="side-menu-button" value="신고내역"
+                           onclick="location.href='admin-report.html'">
                 </li>
                 <li class="management-menu-list">
-                    <input type="button" class="side-menu-button" value="문의게시판 관리"
-                           onclick="location.href='/admin/inquiry/list'">
+                    <input type="button" class="side-menu-button" value="문의게시판목록"
+                           onclick="location.href='admin-QnA.html'">
                 </li>
             </ul>
         </nav>
@@ -58,24 +53,25 @@
 
     <section class="management-main-content">
         <div class="management-top">
-            <div class="page-name">문의게시판목록</div>
+            <div class="page-name">상품관리</div>
         </div>
 
-        <div class="QnA-main">
+        <div class="product-main">
 
-            <div class="QnA-box">
-                <form th:action="@{/admin/inquiry/list}">
+            <div class="product-box">
+                <form th:action="@{/admin/item/list}">
                 <div class="search-container">
                     <select name="type">
-                        <option value="c" th:selected="${search.type eq 'c'}">내용</option>
-                        <option value="n" th:selected="${search.type eq 'n'}">이름</option>
-                        <option value="i" th:selected="${search.type eq 'i'}">ID</option>
+                        <option value="n" th:selected="${search.type eq 'n'}" >상품명</option>
+                        <option value="i" th:selected="${search.type eq 'i'}">상품번호</option>
                     </select>
                     <input type="text" name="keyword" id="search" th:value="${search.keyword}"/>
                     <button type="submit" class="search"></button>
-                    <input type="button" class="delete" id="delete-button" value="삭제" onclick="deleteLectures(getSelectedLectureIds())"/>
-<!--                    <button class="delete" onclick="deleteLectures(getSelectedLectureIds())">삭제</button>-->
-
+                    <div>
+                        <input type="button" class="registration" name="registration" value="등록"
+                               onclick="location.href='admin-product-registration.html'"/>
+                        <input type="button" class="delete" id="delete-button" name="delete" value="삭제"/>
+                    </div>
                 </div>
                 </form>
 
@@ -83,16 +79,13 @@
                     <table>
                         <tr>
                             <th><input type="checkbox"  class="all"/></th>
-                            <th>문의 번호</th>
-                            <th>이름</th>
-                            <th>ID</th>
-                            <th>문의 내용</th>
-                            <th>작성일</th>
-                            <th>진행 상황</th>
+                            <th>상품 번호</th>
+                             <th>수량</th>
+                            <th>레벨</th>
+                            <th>상품명</th>
+                            <th>가격</th>
                         </tr>
                         <tr class="tr"></tr>
-
-
                     </table>
                     <div id="paging-wrap">
                         <a th:if="${pagination.prev}" th:href="${pagination.startPage - 1}" class="change-page paging paging-move">
@@ -109,15 +102,15 @@
             </div>
         </div>
     </section>
-</main>
 </body>
+</main>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="/js/admin/checkbox.js"></script>
+<script src="/js/admin/delete-button.js"></script>
 <script th:inline="javascript">
-    let inquirys = [[${inquirys}]];
+    let items = [[${items}]];
     let pagination = [[${pagination}]];
 </script>
-<script src="/js/admin/inquirylist.js"></script>
-<script src="/js/admin/modal.js"></script>
-<script src="/js/admin/Paging.js"></script>
+<script src="/js/admin/itemlist.js"></script>
+<script src="/js/admin/itempaging.js"></script>
 </html>

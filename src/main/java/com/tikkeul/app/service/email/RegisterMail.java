@@ -89,7 +89,6 @@ public class RegisterMail implements MailServiceInter {
     // 그리고 bean 으로 등록해둔 javaMail 객체를 사용해서 이메일 send!!
     @Override
     public String sendSimpleMessage(String to) throws Exception {
-        log.info("들어옴");
         ePw = createKey(); // 랜덤 인증번호 생성
 
         // TODO Auto-generated method stub

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 
 @Data
+
 public class Pagination {
      private Integer page;
     private int rowCount;
@@ -28,7 +29,7 @@ public class Pagination {
         if (realEnd < endPage) {
             endPage = realEnd == 0 ? 1 : realEnd;
         }
-
+        this.prev = startPage > 1;
         this.next = endPage < realEnd;
     }
 }
