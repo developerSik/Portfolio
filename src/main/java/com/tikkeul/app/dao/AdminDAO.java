@@ -5,6 +5,7 @@ import com.tikkeul.app.domain.dto.InquiryBoardDTO;
 import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.dto.Search;
 import com.tikkeul.app.domain.vo.AnswerVO;
+import com.tikkeul.app.domain.vo.ItemVO;
 import com.tikkeul.app.domain.vo.UserVO;
 import com.tikkeul.app.mapper.AdminMapper;
 import lombok.RequiredArgsConstructor;
@@ -54,6 +55,17 @@ public class AdminDAO {
             adminMapper.adminInsertAnswer(answerVO);
     }
 
+    //  관리자 페이지에서 문의 답변 여부
+    public void adminSetInquiry(Long id){
+        adminMapper.adminUpdateInquiry(id);
+    }
+
+    //    관리자 페이지에서 문의 삭제
+    public void adminDeleteInquiry(Long id){
+        adminMapper.adminDeleteInquiry(id);
+    }
+
+    /*----------------------------------------------------------------------------------*/
     /*도란 게시판*/
     //    관리자 페이지에서 도란보드 목록 조회
     public List<DoranBoardDTO> adminFindDoranBoardAll(Pagination pagination, Search search){
@@ -65,10 +77,25 @@ public class AdminDAO {
         return adminMapper.selectCountOfDoranBoard(search);
     }
 
-//    관리자 페이지에서 도란 보드 상세조회
+    //    관리자 페이지에서 도란 보드 상세조회
     public Optional<DoranBoardDTO> adminFindDoranBoardById(Long id){
         return adminMapper.adminSelectDoranBoard(id);
     }
 
+    //    관리자 페이지에서 도란 보드 삭제
+    public void adminDeleteDoranBoard(Long id){
+        adminMapper.adminDeleteDoranBoard(id);
+    }
+
+    /*----------------------------------------------------------------------------------*/
+    /*상품*/
+    //    관리자 페이지에서 상품 목록 조회
+    public List<ItemVO> adminFindItemAll(Pagination pagination, Search search){
+        return adminMapper.adminSelectItemAll(pagination, search);
+    }
+//  관리자 페이지에서 상품 총 개수
+    public int findCountOfItem(Search search){
+        return adminMapper.selectCountOfItem(search);
+    }
 
 }
