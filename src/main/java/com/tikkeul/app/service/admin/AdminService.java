@@ -21,8 +21,11 @@ public interface AdminService {
     public int getUserTotal(Search search);
 
 
-    // 관리자페이지에서 회원 삭제
-    public void adminRemoveUser(Long id);
+    // 관리자페이지에서 회원 전환
+    public void adminModifyUserNormal(Long id);
+
+    // 관리자페이지에서 회원 수정
+    public void adminModifyUser(Long id);
 
 
 

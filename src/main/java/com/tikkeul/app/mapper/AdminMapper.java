@@ -23,8 +23,11 @@ public interface AdminMapper {
     //  관리자페이지에서 회원 총 수
     public int adminCountOfUser(@Param("search") Search search);
 
-    // 관리자페이지에서 회원 삭제
-    public void adminDeleteUser(Long id);
+    //  관리자페이지에서 회원 수정
+     public void adminUpdateUser(Long id);
+
+    // 관리자페이지에서 회원 전환
+    public void adminChangeUser(Long id);
 
     /*문의*/
     //    관리자 페이지에서 문의 내역 전체 조회

@@ -36,8 +36,13 @@ public class AdminDAO {
     }
 
     // 관리자페이지에서 회원 삭제
-    public void adminDeleteUser(Long id){
-         adminMapper.adminDeleteUser(id);
+    public void adminChangeUser(Long id){
+         adminMapper.adminChangeUser(id);
+    }
+
+    // 관리자페이지에서 회원 수정
+    public void adminSetUser(Long id){
+        adminMapper.adminUpdateUser(id);
     }
 
     /* 문의 */

@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpSession;
@@ -34,6 +35,18 @@ public class AdminController {
         pagination.setTotal(adminService.getUserTotal(search));
         pagination.progress();
         model.addAttribute("users", adminService.adminGetListUserAll(pagination,search));
+    }
+
+    @PostMapping("user/modify")
+    @ResponseBody
+    public void modifyUser(@RequestBody List<String> userIds){
+        for (String userId : userIds) adminService.adminModifyUser(Long.valueOf(userId));
+    }
+
+    @PostMapping("user/modifyNormal")
+    @ResponseBody
+    public void modifyUserNormal(@RequestBody List<String> userIds){
+        for (String userId : userIds) adminService.adminModifyUserNormal(Long.valueOf(userId));
     }
 
 //    문의

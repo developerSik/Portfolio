@@ -132,11 +132,19 @@
         </if>
     </select>
 
-    <!--  관리자페이지 유저 삭제  -->
-    <delete id="adminDeleteUser">
-        DELETE FROM USERS WHERE ID = #{id}
-    </delete>
+    <!--관리자페이지에서 유저 수정-->
+    <update id="adminUpdateUser">
+        UPDATE USERS
+        SET STATUS = '휴먼 계정'
+        WHERE ID = #{id}
+    </update>
 
+    <!--  관리자페이지 유저 전환  -->
+    <update id="adminChangeUser">
+        UPDATE USERS
+        SET STATUS = '일반 계정'
+        WHERE ID = #{id}
+    </update>
     <!--    관리자 문의 내역 전체 조회 -->
     <select id="adminSelectInquiryAll" resultType="inquiryBoardDTO">
     SELECT  I.ID, NAME, IDENTIFICATION, INQUIRE_CONTENT, INQUIRE_DATE, I.STATUS, I.USER_ID
@@ -226,7 +234,7 @@
 
     <!-- 관리자 도란 게시판 삭제   -->
     <delete id="adminDeleteDoranBoard">
-        DELETE FROM DORANBOARD WHERE ID = #{id}f
+        DELETE FROM DORANBOARD WHERE ID = #{id}
     </delete>
 
     <!-- 관리자 제품 목록   -->
