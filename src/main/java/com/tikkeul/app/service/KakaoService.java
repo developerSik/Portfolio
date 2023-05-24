@@ -74,7 +74,7 @@ public class KakaoService {
         return access_Token;
     }
 
-    public void getKakaoInfo(String token) throws Exception {
+    public UserVO getKakaoInfo(String token) throws Exception {
 
         String reqURL = "https://kapi.kakao.com/v2/user/me";
 
@@ -115,21 +115,17 @@ public class KakaoService {
             log.info("id : " + id);
             log.info("email : " + email);
             log.info("nickname : " + nickname);
-            if(userDAO.findById(email).isPresent()) {
-                String identification = email;
-                userDAO.updatekakao(identification,"KAKAO");
-            }else{
                 UserVO userVO = new UserVO();
                 userVO.setIdentification(email);
                 userVO.setPassword(String.valueOf(id));
                 userVO.setName(nickname);
-                userDAO.saveaskakao(userVO);
-            }
+                userVO.setRegisteredType("KAKAO");
             br.close();
-
+            return userVO;
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return null;
     }
 
     public void logoutKakao(String token){
