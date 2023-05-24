@@ -65,9 +65,10 @@
     </select>
 
     <!--게시글 수정-->
-    <update id="update">
+    <update id="update" parameterType="com.tikkeul.app.domain.dto.DoranBoardDTO">
         UPDATE DORANBOARD
-        SET TITLE = #{title}, CONTENT =  #{content}, UPDATEDATE = SYSDATE
+        SET TITLE = #{title},
+        CONTENT = #{content},
         WHERE ID = #{id}
       </update>
 

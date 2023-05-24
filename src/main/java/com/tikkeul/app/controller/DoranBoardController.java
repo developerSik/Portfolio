@@ -59,10 +59,15 @@ public class DoranBoardController {
     /*게시글 수정*/
     @GetMapping("doranmodify")
     public RedirectView modify(DoranBoardDTO doranBoardDTO, RedirectAttributes redirectAttributes) {
+        if (doranBoardDTO.getTitle() == null) {
+            doranBoardDTO.setTitle("");  // 빈 문자열로 설정
+        }
         doranBoardService.modify(doranBoardDTO);
         redirectAttributes.addAttribute("id", doranBoardDTO.getId());
         return new RedirectView("/doranboard/doranmodify");
     }
+
+
 
     /*게시글 삭제*/
     @GetMapping("remove")
@@ -70,6 +75,8 @@ public class DoranBoardController {
         doranBoardService.remove(id);
         return new RedirectView("/doranboard/doranboard");
     }
+
+
 
 
 }

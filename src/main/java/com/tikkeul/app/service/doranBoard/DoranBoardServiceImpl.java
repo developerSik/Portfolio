@@ -54,4 +54,5 @@ public class DoranBoardServiceImpl implements DoranBoardService {
     public int getTotal(Search search) {
         return doranBoardDAO.findCountOfPost(search);
     }
+    
 }

@@ -27,5 +27,19 @@ public interface DoranBoardService {
     //    게시글 전체 개수 조회
     public int getTotal(Search search);
 
+
+
+
+    default DoranBoardDTO toDTO(DoranBoardVO doranBoardVO) {
+        DoranBoardDTO doranBoardDTO = new DoranBoardDTO();
+        doranBoardDTO.setId(doranBoardVO.getId());
+        doranBoardDTO.setTitle(doranBoardVO.getTitle());
+        doranBoardDTO.setViewCount(doranBoardVO.getViewCount());
+        doranBoardDTO.setRegisterDate(doranBoardVO.getRegisterDate());
+        doranBoardDTO.setUpdateDate(doranBoardVO.getUpdateDate());
+        doranBoardDTO.setUserId(doranBoardVO.getUserId());
+        doranBoardDTO.setItemId(doranBoardVO.getItemId());
+        return doranBoardDTO;
+    }
 }
 

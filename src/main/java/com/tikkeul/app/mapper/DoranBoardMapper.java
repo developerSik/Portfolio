@@ -23,9 +23,10 @@ public interface DoranBoardMapper {
     public Optional<DoranBoardDTO> select(Long Id);
 
 //    게시글 수정
-    public void update(DoranBoardDTO doranBoardDTO);
+    public void update(@Param("doranBoardDTO") DoranBoardDTO doranBoardDTO, @Param("content") String content);
 
-//    게시글 삭제
+
+    //    게시글 삭제
     public void delete(Long id);
 
 //    게시글 총 개수
