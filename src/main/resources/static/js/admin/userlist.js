@@ -4,7 +4,7 @@ $(document).ready(function() {
     users.forEach(user => {
         text +=
             `
-                        <tr class="tr">
+                        <tr class="tr" location.href="">
                             <td>
                             <input type="checkbox" name="table-row" class="term"/>
                             </td>

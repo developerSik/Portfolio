@@ -9,6 +9,7 @@ import com.tikkeul.app.domain.vo.ItemVO;
 import com.tikkeul.app.domain.vo.UserVO;
 import com.tikkeul.app.mapper.AdminMapper;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -18,14 +19,20 @@ import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
+@Slf4j
 public class AdminDAO {
 
     @Autowired
     private final AdminMapper adminMapper;
 
     /*회원*/
-    public List<UserVO> adminFindUserAll(Search search){
-        return adminMapper.adminSelectUserAll(search);
+    public List<UserVO> adminFindUserAll(Pagination pagination, Search search){
+        return adminMapper.adminSelectUserAll(pagination, search);
+    }
+
+    // 관리자페이지 회원 총 수
+    public int findCountOfUser(Search search){
+        return adminMapper.adminCountOfUser(search);
     }
 
     // 관리자페이지에서 회원 삭제

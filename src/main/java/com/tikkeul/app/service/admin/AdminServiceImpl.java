@@ -25,8 +25,13 @@ public class AdminServiceImpl implements AdminService {
     private final AdminDAO adminDAO;
 //  회원
     @Override
-    public List<UserVO> adminGetListUserAll(Search search) {
-        return adminDAO.adminFindUserAll(search);
+    public List<UserVO> adminGetListUserAll(Pagination pagination, Search search) {
+        return adminDAO.adminFindUserAll(pagination, search);
+    }
+
+    @Override
+    public int getUserTotal(Search search) {
+        return adminDAO.findCountOfUser(search);
     }
 
     @Override

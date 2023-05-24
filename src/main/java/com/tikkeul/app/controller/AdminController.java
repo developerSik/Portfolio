@@ -30,8 +30,10 @@ public class AdminController {
 
 //    회원
     @GetMapping("user/list")
-    public void GotoUserlist(Search search, Model model){
-        model.addAttribute("users", adminService.adminGetListUserAll(search));
+    public void GotoUserlist(Pagination pagination,Search search, Model model){
+        pagination.setTotal(adminService.getUserTotal(search));
+        pagination.progress();
+        model.addAttribute("users", adminService.adminGetListUserAll(pagination,search));
     }
 
 //    문의

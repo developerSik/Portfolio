@@ -58,16 +58,15 @@
 
             <div class="member-box">
 
-                <form action="@{/admin/user/list}">
+                <form th:action="@{/admin/user/list}">
                 <div class="member-search-container">
-
                     <select name="type">
                         <option value="n" th:selected="${search.type eq 'n'}">이름</option>
                         <option value="i" th:selected="${search.type eq 'i'}">ID</option>
                         <option value="s" th:selected="${search.type eq 's'}">계정상태</option>
                     </select>
                     <input type="text" name="keyword" id="search" th:value="${search.keyword}"/>
-                    <input type="submit" class="member-search"/>
+                    <button type="submit" class="search"></button>
 
                     <div>
                         <input type="button" class="member-modify" name="modify" value="수정"
@@ -101,23 +100,30 @@
 <!--                            <td>aaa1234@gmail.com</td>-->
 <!--                        </tr>-->
                     </table>
-                    <p class="pages">
-                        < 1 2 3 4 5 >
-                    </p>
-
+                    <div id="paging-wrap">
+                        <a th:if="${pagination.prev}" th:href="${pagination.startPage - 1}" class="change-page paging paging-move">
+                            <img src="/image/prev.png" width="15px"></a>
+                        <th:block th:each="page:${#numbers.sequence(pagination.startPage, pagination.endPage)}">
+                            <a th:if="${page eq pagination.page}" class="paging paging-checked" th:text="${page}"></a>
+                            <a th:unless="${page eq pagination.page}" th:href="${page}" class="change-page paging" th:text="${page}"></a>
+                        </th:block>
+                        <a th:if="${pagination.next}" th:href="${pagination.endPage + 1}" class="change-page paging paging-move">
+                            <img src="/image/next.png" width="15px"></a>
+                        <div></div>
+                    </div>
                 </div>
             </div>
-
+        </div>
     </section>
 </main>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="/js/admin/checkbox.js"></script>
-<script src="/js/admin/delete-button.js"></script>
 <script th:inline="javascript">
     let users = [[${users}]];
-    console.log(users);
+    let pagination = [[${pagination}]];
 </script>
 <script src="/js/admin/userlist.js"></script>
+<script src="/js/admin/userpaging.js"></script>
 
 </html>

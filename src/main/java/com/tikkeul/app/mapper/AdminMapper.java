@@ -18,7 +18,10 @@ import java.util.Optional;
 public interface AdminMapper {
     /*회원*/
     //  관리자페이지에서 회원 리스트 조회
-    public List<UserVO> adminSelectUserAll(Search search);
+    public List<UserVO> adminSelectUserAll(@Param("pagination") Pagination pagination, @Param("search") Search search);
+
+    //  관리자페이지에서 회원 총 수
+    public int adminCountOfUser(@Param("search") Search search);
 
     // 관리자페이지에서 회원 삭제
     public void adminDeleteUser(Long id);

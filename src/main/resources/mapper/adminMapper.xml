@@ -67,7 +67,7 @@
     <!--유저 검색-->
     <sql id="searchuser">
         <if test="search.type != null and !search.type.equals('')">
-            <trim prefix="WHERE(" prefixOverrides="OR" suffix=")">
+            <trim prefix="AND(" prefixOverrides="OR" suffix=")">
                 <foreach item="type" collection="search.types">
                     <trim prefix="OR">
                         <choose>
@@ -77,7 +77,7 @@
                             <when test="type=='i'.toString()">
                                 IDENTIFICATION LIKE '%'||#{search.keyword}||'%'
                             </when>
-                            <when test="type=='i'.toString()">
+                            <when test="type=='s'.toString()">
                                 STATUS LIKE '%'||#{search.keyword}||'%'
                             </when>
                         </choose>
@@ -89,9 +89,47 @@
 
     <!--   괸리자 유저 조회 -->
     <select id="adminSelectUserAll" resultType="userVO">
-        SELECT ID, NAME , IDENTIFICATION, ADDRESS, PHONENUMBER, STATUS
-        FROM USERS
+        SELECT U.ID, NAME , IDENTIFICATION, ADDRESS, PHONENUMBER, STATUS
+        FROM
+        (
+            SELECT ROWNUM R, ID, NAME, IDENTIFICATION, ADDRESS, PHONENUMBER, STATUS
+            FROM USERS
+        <![CDATA[
+            WHERE ROWNUM <= #{pagination.page} * #{pagination.rowCount}
+            ]]>
         <include refid="searchuser"/>
+        ORDER BY ID
+        )
+        <![CDATA[
+        U WHERE R > (#{pagination.page} - 1) * #{pagination.rowCount}
+        ]]>
+
+
+    </select>
+    
+    <!-- 관리자 페이지 회원 총 수   -->
+    <select id="adminCountOfUser" resultType="_int">
+        SELECT COUNT(ID)
+        FROM USERS
+        <if test="search.type != null and !search.type.equals('')">
+            <trim prefix="WHERE(" prefixOverrides="OR" suffix=")">
+                <foreach item="type" collection="search.types">
+                    <trim prefix="OR">
+                        <choose>
+                            <when test="type=='n'.toString()">
+                                NAME LIKE '%'||#{search.keyword}||'%'
+                            </when>
+                            <when test="type=='i'.toString()">
+                                IDENTIFICATION LIKE '%'||#{search.keyword}||'%'
+                            </when>
+                            <when test="type=='s'.toString()">
+                                STATUS LIKE '%'||#{search.keyword}||'%'
+                            </when>
+                        </choose>
+                    </trim>
+                </foreach>
+            </trim>
+        </if>
     </select>
 
     <!--  관리자페이지 유저 삭제  -->
@@ -188,7 +226,7 @@
 
     <!-- 관리자 도란 게시판 삭제   -->
     <delete id="adminDeleteDoranBoard">
-        DELETE FROM DORANBOARD WHERE ID = #{id}
+        DELETE FROM DORANBOARD WHERE ID = #{id}f
     </delete>
 
     <!-- 관리자 제품 목록   -->
