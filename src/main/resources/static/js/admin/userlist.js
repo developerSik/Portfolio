@@ -6,7 +6,7 @@ $(document).ready(function() {
             `
                         <tr class="tr" location.href="">
                             <td>
-                            <input type="checkbox" name="table-row" class="userCheckbox" value="${user.id}"/>
+                            <input type="checkbox" name="check" class="userCheckbox" value="${user.id}"/>
                             </td>
                             <td>${user.id}</td>
                             <td>${user.name}</td>

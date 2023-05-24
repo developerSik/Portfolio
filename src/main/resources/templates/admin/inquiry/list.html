@@ -82,7 +82,7 @@
                 <div class="table-content">
                     <table>
                         <tr>
-                            <th><input type="checkbox"  class="all"/></th>
+                            <th><input type="checkbox" id="allSelect" class="all"/></th>
                             <th>문의 번호</th>
                             <th>이름</th>
                             <th>ID</th>
@@ -112,7 +112,6 @@
 </main>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="/js/admin/checkbox.js"></script>
 <script th:inline="javascript">
     let inquirys = [[${inquirys}]];
     let pagination = [[${pagination}]];
@@ -120,4 +119,5 @@
 <script src="/js/admin/inquirylist.js"></script>
 <script src="/js/admin/modal.js"></script>
 <script src="/js/admin/Paging.js"></script>
+<script src="/js/admin/allcheckbox.js"></script>
 </html>
