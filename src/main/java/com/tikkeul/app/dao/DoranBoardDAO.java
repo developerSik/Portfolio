@@ -35,8 +35,9 @@ public class DoranBoardDAO {
 
     //    게시글 수정
     public void setPostDTO(DoranBoardDTO doranBoardDTO) {
-        doranBoardMapper.update(doranBoardDTO, doranBoardDTO.getContent());
+        doranBoardMapper.update(doranBoardDTO);
     }
+
 
 
     //    게시글 삭제

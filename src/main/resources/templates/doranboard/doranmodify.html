@@ -25,19 +25,12 @@
                 <ol class="breadcrumbs">
 
                     <li title="도움말 센터">
-
                         <a href="/hc/ko">도란도란</a>
-
                     </li>
-
                     <li title="문의 등록">
-
                         글 수정하기
-
                     </li>
-
                 </ol>
-
                 <div class="search-container">
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12"
                          class="search-icon">
@@ -66,14 +59,14 @@
                   accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓" autocomplete="off">
                 <div class="form-field string required request_anonymous_requester_email">
                     <label>제목</label>
-                    <input type="text" name="title" aria-required="true" th:value="${doranboard.title}">
+                    <input type="text" name="title" aria-required="true" th:text="${doranboard.title}">
                 </div>
 
                 <div class="form-field text  required  request_description">
                     <label id="request_description_label">내용</label>
                     <textarea name="content" id="request_description_mimetype" aria-required="true" autocomplete="off"
                               aria-describedby="request_description_hint"
-                              aria-labelledby="request_description_label" th:text="${doranboard.title}">내용</textarea>
+                              aria-labelledby="request_description_label" th:text="${doranboard.content}">내용</textarea>
                     <p id="request_description_hint">궁금하신 내용을 상세하게 설명해주세요.
                     </p>
                 </div>

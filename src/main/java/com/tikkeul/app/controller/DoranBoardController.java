@@ -59,14 +59,12 @@ public class DoranBoardController {
     /*게시글 수정*/
     @GetMapping("doranmodify")
     public RedirectView modify(DoranBoardDTO doranBoardDTO, RedirectAttributes redirectAttributes) {
-        if (doranBoardDTO.getTitle() == null) {
-            doranBoardDTO.setTitle("");  // 빈 문자열로 설정
-        }
         doranBoardService.modify(doranBoardDTO);
-        redirectAttributes.addAttribute("id", doranBoardDTO.getId());
+        redirectAttributes.addAttribute("id", doranBoardDTO.getId())
+                .addAttribute("Title", doranBoardDTO.getTitle())
+                .addAttribute("Content", doranBoardDTO.getContent());
         return new RedirectView("/doranboard/doranmodify");
     }
-
 
 
     /*게시글 삭제*/
