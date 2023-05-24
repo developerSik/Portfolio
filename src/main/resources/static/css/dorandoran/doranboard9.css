@@ -132,3 +132,9 @@ body {
 .content{
     font-size: 16px;
 }
+.active{
+    text-align: right;
+}
+.change{
+    margin-right: 10px;
+}

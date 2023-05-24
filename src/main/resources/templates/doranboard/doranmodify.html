@@ -75,8 +75,8 @@
 <!--                        <option data-url="https://helpcenter.wadiz.kr/hc/ko/requests/new?ticket_form_id=6476688975513" value="6476688975513">파이낸스 서비스 문의하기</option></select></div>-->
 
                 <div class="form-field string required request_anonymous_requester_email">
-                    <label for="request_anonymous_requester_email">제목</label>
-                    <input type="text" name="title" id="request_anonymous_requester_email" aria-required="true" th:text="${id.title}">
+                    <label>제목</label>
+                    <input type="text" name="title"  aria-required="true" th:value="${id.title}">
                 </div>
 
                 <div class="form-field text  required  request_description">
