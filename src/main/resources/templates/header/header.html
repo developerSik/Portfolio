@@ -264,10 +264,9 @@
 
                             <div class="HeaderDesktop_user__3zGmM">
                                 <div class="User_container__bqVd2">
-                                    <button th:if="${session.id == null && session.token== null}" type="button" class="User_btnSign__1URTs" onclick="location.href='/join/login'" >로그인</button>
-                                    <button th:if="${session.id == null && session.token== null}" data-event="iam.signup" class="User_btnSign__1URTs" onclick="location.href='/join/join'">회원가입</button>
-                                    <button th:if="${session.id != null && session.token== null}" type="button" class="User_btnSign__1URTs" onclick="location.href='/join/logout'" >로그아웃</button>
-                                    <button th:if="${session.id == null && session.token != null}" type="button" class="User_btnSign__1URTs" onclick="location.href='/kakao/logout'" >로그아웃</button>
+                                    <button th:if="${session.id == null}" type="button" class="User_btnSign__1URTs" onclick="location.href='/join/login'" >로그인</button>
+                                    <button th:if="${session.id == null}" data-event="iam.signup" class="User_btnSign__1URTs" onclick="location.href='/join/join'">회원가입</button>
+                                    <button th:if="${session.id != null}" type="button" class="User_btnSign__1URTs" onclick="location.href='/join/logout'" >로그아웃</button>
                                 </div>
                             </div>
 
