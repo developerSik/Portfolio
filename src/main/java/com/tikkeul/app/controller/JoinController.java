@@ -4,6 +4,7 @@ import com.tikkeul.app.domain.vo.UserVO;
 import com.tikkeul.app.mapper.UserMapper;
 import com.tikkeul.app.service.email.RegisterMail;
 import com.tikkeul.app.service.join.JoinService;
+import com.tikkeul.app.service.login.LoginService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -11,7 +12,12 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
 import java.util.Optional;
 
 @Controller
@@ -27,7 +33,6 @@ public class JoinController {
 
     //    아이디 중복검사
     @GetMapping("check-id/{identification}")
-
     @ResponseBody
     public boolean checkId(@PathVariable String identification){
         return joinService.checkId(identification).isPresent();
@@ -40,6 +45,7 @@ public class JoinController {
     //        회원가입
     @PostMapping("join")
     public RedirectView join(UserVO userVO) {
+        userVO.setRegisteredType("NORMAL");
         joinService.join(userVO);
         return new RedirectView("/join/login");
     };
@@ -85,6 +91,12 @@ public class JoinController {
         System.out.println("인증코드 : " + code);
         return code;
     }
+//   아이디 찾기
     @GetMapping("findid")
-    public void goTofindid(){;}
+    public void goTofindid(HttpSession session){;}
+
+
+
+
+
 }
