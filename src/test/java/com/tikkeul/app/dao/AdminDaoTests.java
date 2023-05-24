@@ -4,6 +4,7 @@ package com.tikkeul.app.dao;
 import com.tikkeul.app.domain.dto.DoranBoardDTO;
 import com.tikkeul.app.domain.dto.InquiryBoardDTO;
 import com.tikkeul.app.domain.dto.Pagination;
+import com.tikkeul.app.domain.dto.Search;
 import com.tikkeul.app.domain.vo.AnswerVO;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
@@ -18,9 +19,9 @@ public class AdminDaoTests {
     private AdminDAO adminDAO;
 
     @Test
-    public void adminFindUserAllTest(){
+    public void adminFindUserAllTest(Search search){
 //        assertThat(adminDAO.adminSelectUserAll()).hasSize(2);
-        log.info(adminDAO.adminFindUserAll().toString());
+        log.info(adminDAO.adminFindUserAll(search).toString());
     }
 
     @Test

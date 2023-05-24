@@ -21,9 +21,9 @@ public class AdminMapperTests {
     private AdminMapper adminMapper;
 
     @Test
-    public void adminSelectUserAllTest(){
+    public void adminSelectUserAllTest(Search search){
 //        assertThat(adminMapper.adminSelectUserAll()).hasSize(2);
-        log.info(adminMapper.adminSelectUserAll().toString());
+        log.info(adminMapper.adminSelectUserAll(search).toString());
     }
 
     @Test
