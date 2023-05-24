@@ -10,9 +10,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
@@ -63,11 +61,11 @@ public class DoranBoardController {
     public RedirectView modify(DoranBoardDTO doranBoardDTO, RedirectAttributes redirectAttributes) {
         doranBoardService.modify(doranBoardDTO);
         redirectAttributes.addAttribute("id", doranBoardDTO.getId());
-        return new RedirectView("/doranboard/doranboard");
+        return new RedirectView("/doranboard/doranmodify");
     }
 
     /*게시글 삭제*/
-    @PostMapping("remove")
+    @GetMapping("remove")
     public RedirectView remove(Long id) {
         doranBoardService.remove(id);
         return new RedirectView("/doranboard/doranboard");
