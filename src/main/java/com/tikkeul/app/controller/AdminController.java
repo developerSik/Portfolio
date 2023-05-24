@@ -11,11 +11,14 @@ import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 import java.util.Optional;
 
 
@@ -28,8 +31,22 @@ public class AdminController {
 
 //    회원
     @GetMapping("user/list")
-    public void list(Model model){
-        model.addAttribute("users", adminService.adminGetListUserAll());
+    public void GotoUserlist(Pagination pagination,Search search, Model model){
+        pagination.setTotal(adminService.getUserTotal(search));
+        pagination.progress();
+        model.addAttribute("users", adminService.adminGetListUserAll(pagination,search));
+    }
+
+    @PostMapping("user/modify")
+    @ResponseBody
+    public void modifyUser(@RequestBody List<String> userIds){
+        for (String userId : userIds) adminService.adminModifyUser(Long.valueOf(userId));
+    }
+
+    @PostMapping("user/modifyNormal")
+    @ResponseBody
+    public void modifyUserNormal(@RequestBody List<String> userIds){
+        for (String userId : userIds) adminService.adminModifyUserNormal(Long.valueOf(userId));
     }
 
 //    문의
@@ -50,9 +67,17 @@ public class AdminController {
 
 
     @PostMapping("inquiry/write")
-    public RedirectView write(AnswerVO answerVO){
+    @Transactional(rollbackFor = Exception.class)
+    public RedirectView write(AnswerVO answerVO,Long id){
         adminService.adminWriteAnswer(answerVO);
-        return new RedirectView("/inquiry/list");
+        adminService.adminModifyInquiry(id);
+        return new RedirectView("/admin/inquiry/list");
+    }
+
+    @PostMapping("inquiry/delete")
+    @ResponseBody
+    public void removeInquiry(@RequestBody List<String> inquiryIds){
+        for (String inquiryId : inquiryIds) adminService.adminRemoveInquiry(Long.valueOf(inquiryId));
     }
 
 //    도란 게시판
@@ -66,11 +91,24 @@ public class AdminController {
     @GetMapping("doranBoard/read")
     public void readDoranBoard(Long id, Model model){
         Optional<DoranBoardDTO> checkDoranBoardDTO = adminService.adminReadDoranBoard(id);
-//        택1
         if(checkDoranBoardDTO.isPresent()) {
             model.addAttribute("doranBoard", checkDoranBoardDTO.get());
         }
-//        checkDoranBoardDTO.ifPresent(doranBoardDTO -> model.addAttribute(doranBoardDTO)); 택2
+//        checkDoranBoardDTO.ifPresent(doranBoardDTO -> model.addAttribute(doranBoardDTO));
 //        model.addAttribute("doranBoard",adminService.adminReadDoranBoard(id));
     }
+
+    @PostMapping("doranBoard/delete")
+    @ResponseBody
+    public void removeDoranBoard(@RequestBody List<String> doranBoardIds){
+        for (String doranBoardId : doranBoardIds ) adminService.adminRemoveDoranBoard(Long.valueOf(doranBoardId));
+    }
+
+    @GetMapping("item/list")
+    public void GoToItemList(Model model,Pagination pagination,Search search){
+        pagination.setTotal(adminService.getItemTotal(search));
+        pagination.progress();
+        model.addAttribute("items",adminService.adminGetListItemAll(pagination,search));
+    }
+
 }

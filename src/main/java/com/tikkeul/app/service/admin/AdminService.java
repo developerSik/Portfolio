@@ -5,6 +5,7 @@ import com.tikkeul.app.domain.dto.InquiryBoardDTO;
 import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.dto.Search;
 import com.tikkeul.app.domain.vo.AnswerVO;
+import com.tikkeul.app.domain.vo.ItemVO;
 import com.tikkeul.app.domain.vo.UserVO;
 
 import java.util.List;
@@ -14,10 +15,18 @@ import java.util.Optional;
 public interface AdminService {
             /* 회원 */
     //    관리자페이지에서 회원 목록 조회
-    public List<UserVO> adminGetListUserAll();
+    public List<UserVO> adminGetListUserAll(Pagination pagination, Search search);
 
-    // 관리자페이지에서 회원 삭제
-    public void adminRemoveUser(Long id);
+    //    관리자 페이지에서 회원 총 수
+    public int getUserTotal(Search search);
+
+
+    // 관리자페이지에서 회원 전환
+    public void adminModifyUserNormal(Long id);
+
+    // 관리자페이지에서 회원 수정
+    public void adminModifyUser(Long id);
+
 
 
          /*문의 내역*/
@@ -33,6 +42,12 @@ public interface AdminService {
     //    관리자 페이지에서 문의 답변
     public void adminWriteAnswer(AnswerVO answerVO);
 
+    //    관리자 페이지에서 문의 답변 여부
+    public void adminModifyInquiry(Long id);
+
+    //  관리자 페이지에서 문의 삭제
+    public void adminRemoveInquiry(Long id);
+
 
         /*도란 게시판*/
     //    관리자 페이지에서 도란보드 목록 조회
@@ -43,6 +58,18 @@ public interface AdminService {
 
     //    관리자 페이지에서 도란보드 상세 조회
     public Optional<DoranBoardDTO> adminReadDoranBoard(Long id);
+
+    //    관리자 페이지에서 도란 보드 삭제
+    public void adminRemoveDoranBoard(Long id);
+
+
+
+    /*상품*/
+    //    관리자 페이지에서 상품 목록 조회
+    public List<ItemVO> adminGetListItemAll(Pagination pagination, Search search);
+
+    // 관리자 페이지에서 상품 총 개수
+    public int getItemTotal(Search search);
 
 
 

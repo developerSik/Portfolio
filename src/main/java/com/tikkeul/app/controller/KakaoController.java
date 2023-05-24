@@ -72,3 +72,4 @@ public class KakaoController {
         return new RedirectView("/join/login");
     }
 }
+

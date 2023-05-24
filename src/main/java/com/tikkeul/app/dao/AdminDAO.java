@@ -5,9 +5,11 @@ import com.tikkeul.app.domain.dto.InquiryBoardDTO;
 import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.dto.Search;
 import com.tikkeul.app.domain.vo.AnswerVO;
+import com.tikkeul.app.domain.vo.ItemVO;
 import com.tikkeul.app.domain.vo.UserVO;
 import com.tikkeul.app.mapper.AdminMapper;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -17,19 +19,30 @@ import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
+@Slf4j
 public class AdminDAO {
 
     @Autowired
     private final AdminMapper adminMapper;
 
     /*회원*/
-    public List<UserVO> adminFindUserAll(){
-        return adminMapper.adminSelectUserAll();
+    public List<UserVO> adminFindUserAll(Pagination pagination, Search search){
+        return adminMapper.adminSelectUserAll(pagination, search);
+    }
+
+    // 관리자페이지 회원 총 수
+    public int findCountOfUser(Search search){
+        return adminMapper.adminCountOfUser(search);
     }
 
     // 관리자페이지에서 회원 삭제
-    public void adminDeleteUser(Long id){
-         adminMapper.adminDeleteUser(id);
+    public void adminChangeUser(Long id){
+         adminMapper.adminChangeUser(id);
+    }
+
+    // 관리자페이지에서 회원 수정
+    public void adminSetUser(Long id){
+        adminMapper.adminUpdateUser(id);
     }
 
     /* 문의 */
@@ -54,6 +67,17 @@ public class AdminDAO {
             adminMapper.adminInsertAnswer(answerVO);
     }
 
+    //  관리자 페이지에서 문의 답변 여부
+    public void adminSetInquiry(Long id){
+        adminMapper.adminUpdateInquiry(id);
+    }
+
+    //    관리자 페이지에서 문의 삭제
+    public void adminDeleteInquiry(Long id){
+        adminMapper.adminDeleteInquiry(id);
+    }
+
+    /*----------------------------------------------------------------------------------*/
     /*도란 게시판*/
     //    관리자 페이지에서 도란보드 목록 조회
     public List<DoranBoardDTO> adminFindDoranBoardAll(Pagination pagination, Search search){
@@ -65,10 +89,25 @@ public class AdminDAO {
         return adminMapper.selectCountOfDoranBoard(search);
     }
 
-//    관리자 페이지에서 도란 보드 상세조회
+    //    관리자 페이지에서 도란 보드 상세조회
     public Optional<DoranBoardDTO> adminFindDoranBoardById(Long id){
         return adminMapper.adminSelectDoranBoard(id);
     }
 
+    //    관리자 페이지에서 도란 보드 삭제
+    public void adminDeleteDoranBoard(Long id){
+        adminMapper.adminDeleteDoranBoard(id);
+    }
+
+    /*----------------------------------------------------------------------------------*/
+    /*상품*/
+    //    관리자 페이지에서 상품 목록 조회
+    public List<ItemVO> adminFindItemAll(Pagination pagination, Search search){
+        return adminMapper.adminSelectItemAll(pagination, search);
+    }
+//  관리자 페이지에서 상품 총 개수
+    public int findCountOfItem(Search search){
+        return adminMapper.selectCountOfItem(search);
+    }
 
 }
