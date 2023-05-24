@@ -2,6 +2,7 @@ package com.tikkeul.app.service;
 
 
 import com.tikkeul.app.domain.dto.InquiryBoardDTO;
+import com.tikkeul.app.domain.dto.Search;
 import com.tikkeul.app.domain.vo.AnswerVO;
 import com.tikkeul.app.service.admin.AdminService;
 import lombok.extern.slf4j.Slf4j;
@@ -19,8 +20,8 @@ public class AdminServiceTests {
     private AdminService adminService;
 
     @Test
-    public void adminFindUserAllTest(){
-        assertThat(adminService.adminGetListUserAll()).isNotNull();
+    public void adminFindUserAllTest(Search search){
+        assertThat(adminService.adminGetListUserAll(search)).isNotNull();
 //        log.info(adminService.adminGetListUserAll().toString());
     }
 

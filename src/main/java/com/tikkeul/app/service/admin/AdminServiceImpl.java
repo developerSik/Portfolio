@@ -10,6 +10,7 @@ import com.tikkeul.app.domain.vo.AnswerVO;
 import com.tikkeul.app.domain.vo.ItemVO;
 import com.tikkeul.app.domain.vo.UserVO;
 import lombok.RequiredArgsConstructor;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
@@ -25,16 +26,27 @@ public class AdminServiceImpl implements AdminService {
     private final AdminDAO adminDAO;
 //  회원
     @Override
-    public List<UserVO> adminGetListUserAll() {
-        return adminDAO.adminFindUserAll();
+    public List<UserVO> adminGetListUserAll(Pagination pagination, Search search) {
+        return adminDAO.adminFindUserAll(pagination, search);
     }
 
     @Override
-    public void adminRemoveUser(Long id) {
-        adminDAO.adminDeleteUser(id);
+    public int getUserTotal(Search search) {
+        return adminDAO.findCountOfUser(search);
     }
 
-//    문의
+    @Override
+    public void adminModifyUserNormal(Long id) {
+        adminDAO.adminChangeUser(id);
+    }
+
+    @Override
+    public void adminModifyUser(Long id) {
+        adminDAO.adminSetUser(id);
+    }
+
+
+    //    문의
     @Override
     public List<InquiryBoardDTO> adminGetListInquiryAll(Pagination pagination, Search search) {
         return adminDAO.adminFindInquiryAll(pagination, search);
