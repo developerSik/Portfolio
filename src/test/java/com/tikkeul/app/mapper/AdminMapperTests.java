@@ -20,11 +20,12 @@ public class AdminMapperTests {
     @Autowired
     private AdminMapper adminMapper;
 
-    @Test
-    public void adminSelectUserAllTest(Search search){
+//    @Test
+//    public void adminSelectUserAllTest(Search search){
 //        assertThat(adminMapper.adminSelectUserAll()).hasSize(2);
 //        log.info(adminMapper.adminSelectUserAll(search).toString());
-    }
+
+//    }
 
     @Test
     public void adminDeleteUserTest(){
@@ -49,6 +50,7 @@ public class AdminMapperTests {
 //        adminMapper.adminSelectInquiry(5L).map(InquiryBoardDTO::getName).ifPresent(log::info);
     }
 
+
     @Test
     public void adminInsertAnswerTest(){
         AnswerVO answerVO = new AnswerVO();
@@ -62,10 +64,12 @@ public class AdminMapperTests {
 //        log.info(adminMapper.adminSelectDoranBoardAll().toString());
     }
 
+
     @Test
     public void adminSelectDoranBoardTest(){
 //        adminMapper.adminSelectDoranBoard(2L).map(DoranBoardDTO::getContent).ifPresent(log::info);
     }
+
 
     @Test
     public void adminSelectItemAllTest(){
