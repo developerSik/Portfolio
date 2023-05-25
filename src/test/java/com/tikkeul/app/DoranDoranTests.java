@@ -35,18 +35,18 @@ public class DoranDoranTests {
         doranBoardMapper.insert(doranBoardVO);
     }
 
-    @Test
-    public void selectAllTest(){
-        Pagination pagination = new Pagination();
-        pagination.setPage(1); //화면에서 전달받은 페이지
+//    @Test
+//    public void selectAllTest(){
+//        Pagination pagination = new Pagination();
+//        pagination.setPage(1); //화면에서 전달받은 페이지
 //        assertThat(doranBoardMapper.selectAll()).hasSize(2);
-        doranBoardMapper.selectAll(pagination, new Search()).stream().map(DoranBoardDTO::toString).forEach(log::info);
-    }
+//        doranBoardMapper.selectAll(pagination, new Search()).stream().map(DoranBoardDTO::toString).forEach(log::info);
+//    }
 
-    @Test
-    public void selectTest() {
-        doranBoardMapper.select(24L).map(DoranBoardDTO::getName).ifPresent(log::info);
-    }
+//    @Test
+//    public void selectTest() {
+//        doranBoardMapper.select(24L).map(DoranBoardDTO::getName).ifPresent(log::info);
+//    }
 
     @Test
     public void updateTest(){

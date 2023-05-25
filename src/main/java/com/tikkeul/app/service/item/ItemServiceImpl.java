@@ -2,6 +2,7 @@ package com.tikkeul.app.service.item;
 
 import com.tikkeul.app.dao.ItemDAO;
 import com.tikkeul.app.domain.dto.ItemDTO;
+import com.tikkeul.app.domain.dto.OrderDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -22,5 +23,11 @@ public class ItemServiceImpl implements ItemService {
     @Override
     public Optional<ItemDTO> readDetail(Long id) {
         return itemDAO.findById(id);
+    }
+
+//    제품 후기 후, 별점
+    @Override
+    public Optional<OrderDTO> readReviw(Long id) {
+        return itemDAO.findReview(id);
     }
 }

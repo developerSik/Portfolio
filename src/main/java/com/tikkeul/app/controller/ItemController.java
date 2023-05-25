@@ -28,7 +28,9 @@ public class ItemController {
 //    열매샵 제품 상세 보기 : readDetail.html
     @GetMapping("readDetail")
     public void readDetail(Long id, Model model){
-        Model item = model.addAttribute("item", itemService.readDetail(id));
+        log.info("itemController readDetail()");
+        model.addAttribute("item", itemService.readDetail(id).get());
+        model.addAttribute("review", itemService.readReviw(id).get());
     }
 
 
