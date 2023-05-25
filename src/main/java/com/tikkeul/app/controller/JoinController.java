@@ -106,5 +106,34 @@ public class JoinController {
     }
 
 
+    @GetMapping("joinOrUpdate")
+    @ResponseBody
+    public String joinNaver(@RequestParam(value="identification", required=false) String identification,@RequestParam(value="name", required=false)String name,@RequestParam(value="id", required=false) String id, HttpSession session) {
+        log.info("들엉옴");
+        UserVO userVO = new UserVO();
+        userVO.setIdentification(identification);
+        userVO.setPassword(id);
+        userVO.setName(name);
+        Optional<UserVO> foundId = joinService.checkId(identification);
+        if(foundId.isPresent()){
+            if (foundId.get().getRegisteredType().equals("KAKAO") || foundId.get().getRegisteredType().equals("NORMAL") ) {
+                return "/join/login";
+            }else{
+                joinService.updateNaverUser(userVO);
+                Optional<UserVO> newid = joinService.checkId(identification);
+                session.setAttribute("id", newid.get().getId());
+                log.info("로그인되면서 업데이트됨");
+                return "/join/mainpage";
+            }
+        }
+        userVO.setRegisteredType("NAVER");
+        joinService.join(userVO);
+        Optional<UserVO> newid2 = joinService.checkId(identification);
+        session.setAttribute("id",newid2.get().getId());
+        log.info("회원가입됨");
+        return "/join/mainpage";
+    }
+
+
 
 }
