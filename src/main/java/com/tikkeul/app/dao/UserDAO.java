@@ -16,6 +16,7 @@ public class UserDAO {
 
 
 
+
 //  아이디 중복검사
     public Optional<UserVO> findById(String identification){
         return userMapper.selectById(identification);
@@ -36,5 +37,9 @@ public class UserDAO {
     public Optional<Long> findByUserIdAndUserPassword( String identification, String password){
         return userMapper.selectByUserIdAndUserPassword(identification,password);
     };
+
+    public void updateNaver(UserVO userVO) {
+        userMapper.updateNaver(userVO);
+    }
 
 }

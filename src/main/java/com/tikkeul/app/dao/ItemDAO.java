@@ -1,6 +1,7 @@
 package com.tikkeul.app.dao;
 
 import com.tikkeul.app.domain.dto.ItemDTO;
+import com.tikkeul.app.domain.dto.OrderDTO;
 import com.tikkeul.app.mapper.ItemMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
@@ -19,9 +20,13 @@ public class ItemDAO {
         return itemMapper.selectAll();
     }
 
-//    열매샵 제품 상세 보기 : itemdetails.html
+//    열매샵 제품 상세 보기 : readDetail.html
     public Optional<ItemDTO> findById(Long id){
         return itemMapper.select(id);
     }
 
+//    제품 후기 수, 별점
+    public Optional<OrderDTO> findReview(Long id) {
+        return itemMapper.selectReview(id);
+    }
 }

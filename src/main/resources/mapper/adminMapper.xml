@@ -239,12 +239,20 @@
 
     <!-- 관리자 제품 목록   -->
     <select id="adminSelectItemAll" resultType="itemVO">
-        SELECT ID, ORIGIN_STOCK, SAVINGLEVEL_ID, NAME, PRICE
-        FROM ITEM
+        SELECT I.ID, ORIGIN_STOCK, SAVINGLEVEL_ID, NAME, PRICE
+        FROM
+        (
+            SELECT ROWNUM R, ID, ORIGIN_STOCK, SAVINGLEVEL_ID, NAME, PRICE
+            FROM ITEM
         <![CDATA[
-        WHERE ROWNUM <= #{pagination.page} * #{pagination.rowCount}
+            WHERE ROWNUM <= #{pagination.page} * #{pagination.rowCount}
         ]]>
         <include refid="searchitem"/>
+        ORDER BY ID
+        )
+        <![CDATA[
+        I WHERE R > (#{pagination.page} - 1) * #{pagination.rowCount}
+        ]]>
     </select>
 
     <!-- 관리자 제품 목록 총 개수   -->

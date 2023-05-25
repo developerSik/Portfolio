@@ -5,8 +5,10 @@ import com.tikkeul.app.domain.dto.InquiryBoardDTO;
 import com.tikkeul.app.domain.dto.Pagination;
 import com.tikkeul.app.domain.dto.Search;
 import com.tikkeul.app.domain.vo.AnswerVO;
+import com.tikkeul.app.domain.vo.SavingLevelVO;
 import com.tikkeul.app.domain.vo.UserVO;
 import com.tikkeul.app.service.admin.AdminService;
+import com.tikkeul.app.service.program.ProgramService;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -28,6 +30,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class AdminController {
     private final AdminService adminService;
+    private final ProgramService programService;
 
 //    회원
     @GetMapping("user/list")
@@ -109,6 +112,16 @@ public class AdminController {
         pagination.setTotal(adminService.getItemTotal(search));
         pagination.progress();
         model.addAttribute("items",adminService.adminGetListItemAll(pagination,search));
+    }
+
+    /* 프로그램*/
+    @GetMapping("program/write")
+    public void GoToSavingLevelWriteForm(SavingLevelVO savingLevelVO){;}
+
+    @PostMapping("program/write")
+    public RedirectView writeSavingLevel(SavingLevelVO savingLevelVO){
+        programService.writeSavingLevel(savingLevelVO);
+        return new RedirectView("/admin/program/list");
     }
 
 }
