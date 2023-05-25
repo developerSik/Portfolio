@@ -1,8 +1,7 @@
 package com.tikkeul.app.mapper;
 
-import com.tikkeul.app.domain.dto.ItemDTO;
+import com.tikkeul.app.domain.dto.OrderDTO;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -25,8 +24,11 @@ public class ItemMapperTests {
 
     @Test
     public void selectTest(){
-        itemMapper.select(2L).map(ItemDTO::getName).ifPresent(log::info);
-
+        itemMapper.select(1L).ifPresent(i->log.info(i.toString()));
     }
 
+    @Test
+    public void selectReviewTest(){
+        itemMapper.selectReview(1L).map(OrderDTO::getContent).ifPresent(log::info);
+    }
 }
