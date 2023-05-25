@@ -50,12 +50,12 @@ public class JoinController {
         return new RedirectView("/join/login");
     };
 
-
+//  로그인으로 이동
     @GetMapping("login")
     public void gotoLogin(UserVO userVO){;}
 
 
-
+//  로그인
     @PostMapping("login")
     public RedirectView login(String identification, String password, HttpSession session, RedirectAttributes redirectAttributes){
         log.info("들어옴");
@@ -75,6 +75,7 @@ public class JoinController {
         return new RedirectView("/join/mainpage");
     }
 
+//    메인페이지로 이동
     @GetMapping("mainpage")
     public void goToMain(HttpSession session){;}
 
@@ -95,7 +96,14 @@ public class JoinController {
     @GetMapping("findid")
     public void goTofindid(HttpSession session){;}
 
-
+    @GetMapping("changePW")
+    public void goToChangePassword(){
+        ;
+    }
+    @GetMapping("findPW")
+    public void goToFindPassword(){
+        ;
+    }
 
 
 
