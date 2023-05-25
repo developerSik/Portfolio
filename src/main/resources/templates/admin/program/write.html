@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleag.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,50 +55,48 @@
             <div class="page-name">프로그램 등록</div>
         </div>
         <div class="registration-main">
+            <form th:action="@{/admin/program/write}" method="post" th:object="${savingLevelVO}">
+                <div class="registration-box">
 
-            <div class="registration-box">
-
-                <table class="table-contents">
-                    <tr>
-                        <td>번호</td>
-                        <td>
-                            <input type="text" name="" value="" class="registration-input">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>레벨</td>
-                        <td>
-                            <input type="text" name="" value="" class="registration-input">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>프로그램명</td>
-                        <td>
-                            <input type="text" name="" value="" class="registration-input">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>상세설명</td>
-                        <td>
-                            <textarea name="" id="" cols="30" rows="10" class="registration-detail"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>인원수</td>
-                        <td>
-                            <input type="text" name="" value="" class="registration-input">
-                        </td>
-                    </tr>
-                </table>
-                <div class="button-box">
-                    <input type="button" name="report-list" value="프로그램목록"
-                           onClick="location.href='admin-program.html'"/>
-                    <input type="button" name="report-answer" value="등록완료" onclick="'"/>
+                    <table class="table-contents">
+                        <tr>
+                            <td>레벨</td>
+                            <td>
+                                <input th:field="*{name}" type="text" name="" value="" class="registration-input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>목표 금액</td>
+                            <td>
+                                <input th:field="*{goalMoney}" type="text" name="" value="" class="registration-input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>일일 저축 금액</td>
+                            <td>
+                                <input th:field="*{dailyMoney}" type="text" name="" value="" class="registration-input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>썸네일 이미지</td>
+                            <td>
+                                <input type="file" class="registration-detail">
+                            </td>
+                        </tr>
+                            <td>상세 이미지</td>
+                            <td>
+                                <input type="file" class="registration-detail">
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="button-box">
+                        <input type="button" name="report-list" value="프로그램목록"
+                               onClick="location.href='admin-program.html'"/>
+                        <input type="submit" value="등록완료"/>
+                    </div>
                 </div>
-
-
-            </div>
-
+            </form>
+        </div>
     </section>
 
 </main>
