@@ -47,7 +47,7 @@
 <!--게시글/ 추가 숫자 아이디 강제 입력-->
     <insert id="insert">
         INSERT INTO DORANBOARD(ID, TITLE, CONTENT, VIEWCOUNT,USER_ID, ITEM_ID )
-        VALUES(SEQ_POST.NEXTVAL, #{title}, #{content}, #{viewCount},2,2)
+        VALUES(SEQ_POST.NEXTVAL, #{title}, #{content}, 2,2,2)
     </insert>
 
 <!--

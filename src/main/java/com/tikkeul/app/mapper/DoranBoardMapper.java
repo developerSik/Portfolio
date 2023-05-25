@@ -22,8 +22,8 @@ public interface DoranBoardMapper {
 //    게시글 상세보기
     public Optional<DoranBoardDTO> select(Long Id);
 
-//    게시글 수정
-    public void update(DoranBoardDTO doranBoardDTO);
+//  게시글 수정
+    public void update(DoranBoardVO doranBoardVO);
 
 //    게시글 삭제
     public void delete(Long id);

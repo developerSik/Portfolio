@@ -47,22 +47,22 @@ public class DoranBoardController {
     }
 
     /*게시글 상세보기*/
-    @GetMapping("dorandetail")
-    public void read(Long id, Model model) {
-        Optional<DoranBoardDTO> checkDoranBoardDTO = doranBoardService.read(id);
-        if(checkDoranBoardDTO.isPresent()){
-            model.addAttribute("doranboard", checkDoranBoardDTO.get());
-        }
-//        model.addAttribute("doranboard", doranBoardService.read(id));
+    @GetMapping(value = {"dorandetail", "doranmodify"})
+    public void read(Long id, Pagination pagination, Search search, Model model){
+        model.addAttribute("doranboard", doranBoardService.read(id).get());
     }
 
     /*게시글 수정*/
-    @GetMapping("doranmodify")
-    public RedirectView modify(DoranBoardDTO doranBoardDTO, RedirectAttributes redirectAttributes) {
-        doranBoardService.modify(doranBoardDTO);
-        redirectAttributes.addAttribute("id", doranBoardDTO.getId());
-        return new RedirectView("/doranboard/doranmodify");
+    @PostMapping("doranmodify")
+    public RedirectView modify(DoranBoardVO doranBoardVO, RedirectAttributes redirectAttributes){
+        log.info(doranBoardVO.toString());
+        doranBoardService.modify(doranBoardVO);
+        redirectAttributes.addAttribute("id", doranBoardVO.getId());
+        return new RedirectView("/doranboard/doranboard");
     }
+
+
+
 
     /*게시글 삭제*/
     @GetMapping("remove")
@@ -70,6 +70,8 @@ public class DoranBoardController {
         doranBoardService.remove(id);
         return new RedirectView("/doranboard/doranboard");
     }
+
+
 
 
 }
