@@ -1,6 +1,8 @@
 package com.tikkeul.app.service.join;
 
 import com.tikkeul.app.domain.vo.UserVO;
+import org.apache.catalina.User;
+
 import java.util.Optional;
 
 public interface JoinService {
@@ -12,4 +14,9 @@ public interface JoinService {
 
     //    로그인
     public Optional<Long> login(String identification, String password);
+    //   카카오 회원가입
+
+
+    //        카카오회원 업데이트
+    public void updateKakaoUser(Optional<UserVO> kakaoUser);
 }

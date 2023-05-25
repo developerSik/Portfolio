@@ -24,7 +24,7 @@
             <ul class="side-menu">
                 <li class="site-shortcut">
                     <input type="button" class="side-menu-button" value="사이트 바로가기"
-                           onclick="location.href='../mypage/main.html'">
+                           onclick="location.href='/join/mainpage'">
                 </li>
                 <div class="management-title">사이트 관리</div>
                 <li class="management-menu-list">
@@ -41,7 +41,7 @@
                 </li>
                 <li class="management-menu-list">
                     <input type="button" class="side-menu-button" value="상품관리"
-                           onclick="location.href='admin-product.html'">
+                           onclick="location.href='/admin/item/list'">
                 </li>
                 <li class="management-menu-list">
                     <input type="button" class="side-menu-button" value="도란도란 게시판 관리"
@@ -84,7 +84,7 @@
                     <table>
                         <tr>
                             <thead>
-                            <th><input type="checkbox" class="all"/></th>
+                            <th><input type="checkbox" id="allSelect" class="all"/></th>
                             <th>회원 번호</th>
                             <th>이름</th>
                             <th>ID</th>
@@ -134,6 +134,7 @@
 <script src="/js/admin/userlist.js"></script>
 <script src="/js/admin/userpaging.js"></script>
 <script src="/js/admin/modal.js"></script>
+<script src="/js/admin/allcheckbox.js"></script>
 
 
 </html>

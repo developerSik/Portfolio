@@ -4,7 +4,8 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <link rel="stylesheet" href="/css/Join/login.css">
     <link rel="stylesheet" href="/css/modal/modal.css">
-
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <meta charset="UTF-8">
     <title>로그인</title>
 </head>
@@ -56,12 +57,14 @@
                             </button>
                             <button class="Button_button__3MO4n Button_lg__D7OVb Button_block__3npc4 SNSButtonList_naverButton__1rzZ_ SNSButtonList_spacer__38ac5" type="submit">
                                 <span>
+                                    <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="withIcon_icon__2KxnX SNSButtonList_naverIcon__3TjPM" aria-hidden="true">
+                                        <path d="M19.52 5.76v10.32L12.48 5.76H4.8v20.48h7.68V15.92l7.12 10.32h7.6V5.76z"></path>
+                                    </svg>
                                     네이버로 시작하기
                                 </span>
 
                             </button>
-
-
+                            <div id="naver_id_login"></div>
                             <div class="bottom-message">
                                 <p>아직 와디즈 계정이 없나요?
                                     <a th:href="@{/join/join}">회원가입</a>
@@ -86,5 +89,15 @@
     if(check){
         showWarnModal("<span>아이디 또는 비밀번호를</span><span>확인해주세요.</span>");
     }
+
 </script>
+<script type="text/javascript">
+    var naver_id_login = new naver_id_login("ny2peuJ25fyfAu4Z7mI9", "http://localhost:10000/login/oauth2/code/naver");
+    var state = naver_id_login.getUniqState();
+    naver_id_login.setButton("white", 2,40);
+    naver_id_login.setDomain(".service.com");
+    naver_id_login.setState(state);
+    naver_id_login.init_naver_id_login();
+</script>
+<!-- 네이버아디디로로그인 Callback페이지 처리 Script -->
 </html>

@@ -24,30 +24,32 @@ public class AdminMapperTests {
 //    public void adminSelectUserAllTest(Search search){
 //        assertThat(adminMapper.adminSelectUserAll()).hasSize(2);
 //        log.info(adminMapper.adminSelectUserAll(search).toString());
+
 //    }
 
-//    @Test
-//    public void adminDeleteUserTest(){
+    @Test
+    public void adminDeleteUserTest(){
 //        adminMapper.adminDeleteUser(12L);
-//    }
+    }
 
-//    @Test
-//    public void adminSelectAllinquiry(){
+    @Test
+    public void adminSelectAllinquiry(){
 //        Pagination pagination = new Pagination();
-//        assertThat(adminMapper.adminSelectInquiryAll()).hasSize(2);
+////        assertThat(adminMapper.adminSelectInquiryAll()).hasSize(2);
 //        pagination.setPage(1);
 //        adminMapper.adminSelectInquiryAll(pagination, new Search()).stream().map(InquiryBoardDTO::toString).forEach(log::info);
-//    }
+    }
 
-//    @Test
-//    public void selectCountOfInquiryTest(){
+    @Test
+    public void selectCountOfInquiryTest(){
 //        assertThat(adminMapper.selectCountOfInquiry(new Search())).isEqualTo(63);
-//    }
+    }
 
-//    @Test
-//    public void adminSelectInquiryTest(){
+    @Test
+    public void adminSelectInquiryTest(){
 //        adminMapper.adminSelectInquiry(5L).map(InquiryBoardDTO::getName).ifPresent(log::info);
-//    }
+    }
+
 
     @Test
     public void adminInsertAnswerTest(){
@@ -62,10 +64,12 @@ public class AdminMapperTests {
 //        log.info(adminMapper.adminSelectDoranBoardAll().toString());
     }
 
-//    @Test
-//    public void adminSelectDoranBoardTest(){
+
+    @Test
+    public void adminSelectDoranBoardTest(){
 //        adminMapper.adminSelectDoranBoard(2L).map(DoranBoardDTO::getContent).ifPresent(log::info);
-//    }
+    }
+
 
     @Test
     public void adminSelectItemAllTest(){

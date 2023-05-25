@@ -30,8 +30,6 @@ public class DoranDoranTests {
         doranBoardVO.setViewCount(8);
         doranBoardVO.setUserId(8L);
         doranBoardVO.setItemId(8L);
-
-
         doranBoardMapper.insert(doranBoardVO);
     }
 

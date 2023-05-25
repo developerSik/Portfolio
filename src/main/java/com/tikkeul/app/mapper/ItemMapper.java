@@ -17,6 +17,36 @@ public interface ItemMapper {
 //    열매샵 제품 상세 보기 : readDetail.html
     public Optional<ItemDTO> select(Long id);
 
+
 //    후기 가져오기
     public Optional<OrderDTO> selectReview(Long id);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    관리자가 상품 등록
+    public void insertItem(ItemDTO itemDTO);
+
+}
+

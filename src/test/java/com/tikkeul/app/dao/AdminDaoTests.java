@@ -22,12 +22,13 @@ public class AdminDaoTests {
 //    public void adminFindUserAllTest(Search search){
 //        assertThat(adminDAO.adminSelectUserAll()).hasSize(2);
 //        log.info(adminDAO.adminFindUserAll(search).toString());
+
 //    }
 
-//    @Test
-//    public void adminDeleteUserTest(){
+    @Test
+    public void adminDeleteUserTest(){
 //        adminDAO.adminDeleteUser(20L);
-//    }
+    }
 
     @Test
     public void adminFindInquiryBoardTest(){

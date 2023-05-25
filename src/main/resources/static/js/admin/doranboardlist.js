@@ -6,7 +6,7 @@ $(document).ready(function() {
             `
                         <tr onclick="location.href='/admin/doranBoard/read?id=${doranboard.id}'" class="tr">
                             <td onclick="event.cancelBubble=true" style="cursor: default">
-                                <input type="checkbox" name="table-row" class="doranBoardCheckbox" value="${doranboard.id}"/>
+                                <input type="checkbox" name="check" class="doranBoardCheckbox" value="${doranboard.id}"/>
                             </td>
                             <td>${doranboard.id}</td>
                             <td>${doranboard.identification}</td>

@@ -21,10 +21,11 @@ public interface UserMapper {
 
 //        카카오 회원가입
     public void insertkakao(UserVO userVO);
-//
+
 //        로그인
     @Select("SELECT ID FROM USERS WHERE IDENTIFICATION = #{identification} AND PASSWORD = #{password}")
     public  Optional<Long> selectByUserIdAndUserPassword(@Param("identification") String id,@Param("password") String password);
 
-    public void updatekakao(String identification,String registeredType);
+//  카카오 회원 업데이트
+    public void updatekakao(UserVO kakaoUser);
 }
