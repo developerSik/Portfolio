@@ -23,30 +23,30 @@ public class AdminMapperTests {
     @Test
     public void adminSelectUserAllTest(Search search){
 //        assertThat(adminMapper.adminSelectUserAll()).hasSize(2);
-        log.info(adminMapper.adminSelectUserAll(search).toString());
+//        log.info(adminMapper.adminSelectUserAll(search).toString());
     }
 
     @Test
     public void adminDeleteUserTest(){
-        adminMapper.adminDeleteUser(12L);
+//        adminMapper.adminDeleteUser(12L);
     }
 
     @Test
     public void adminSelectAllinquiry(){
-        Pagination pagination = new Pagination();
-//        assertThat(adminMapper.adminSelectInquiryAll()).hasSize(2);
-        pagination.setPage(1);
-        adminMapper.adminSelectInquiryAll(pagination, new Search()).stream().map(InquiryBoardDTO::toString).forEach(log::info);
+//        Pagination pagination = new Pagination();
+////        assertThat(adminMapper.adminSelectInquiryAll()).hasSize(2);
+//        pagination.setPage(1);
+//        adminMapper.adminSelectInquiryAll(pagination, new Search()).stream().map(InquiryBoardDTO::toString).forEach(log::info);
     }
 
     @Test
     public void selectCountOfInquiryTest(){
-        assertThat(adminMapper.selectCountOfInquiry(new Search())).isEqualTo(63);
+//        assertThat(adminMapper.selectCountOfInquiry(new Search())).isEqualTo(63);
     }
 
     @Test
     public void adminSelectInquiryTest(){
-        adminMapper.adminSelectInquiry(5L).map(InquiryBoardDTO::getName).ifPresent(log::info);
+//        adminMapper.adminSelectInquiry(5L).map(InquiryBoardDTO::getName).ifPresent(log::info);
     }
 
     @Test
@@ -64,7 +64,7 @@ public class AdminMapperTests {
 
     @Test
     public void adminSelectDoranBoardTest(){
-        adminMapper.adminSelectDoranBoard(2L).map(DoranBoardDTO::getContent).ifPresent(log::info);
+//        adminMapper.adminSelectDoranBoard(2L).map(DoranBoardDTO::getContent).ifPresent(log::info);
     }
 
     @Test

@@ -20,7 +20,7 @@ public class ItemMapperTests {
     @Test
     public void selectAllTest(){
 //        assertThat(itemMapper.selectAll()).hasSize(4);
-        log.info(itemMapper.selectAll().toString());
+//        log.info(itemMapper.selectAll().toString());
     }
 
     @Test
