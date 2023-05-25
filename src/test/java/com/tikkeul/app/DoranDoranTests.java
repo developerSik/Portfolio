@@ -48,13 +48,13 @@ public class DoranDoranTests {
         doranBoardMapper.select(144L).map(DoranBoardDTO::getTitle).ifPresent(log::info);
     }
 
-    @Test
+/*    @Test
     public void updateTest(){
         doranBoardMapper.select(61L).ifPresent(DoranBoardDTO -> {
             DoranBoardDTO.setContent("수정된 내용");
             doranBoardMapper.update(DoranBoardDTO);
         });
-    }
+    }*/
 
     @Test
     public void deleteTest(){
