@@ -7,10 +7,20 @@ let page = 1;
 /*=======================================================================*/
 let replyService = (function(){
 
-
-    function remove(replyId, callback){
+    function getList(callback){
         $.ajax({
-            url: `/replies/${replyId}`,
+            url: `/doranboard/doranboard/155/${page}`,
+            success: function(replies){
+                if(callback){
+                    callback(replies);
+                }
+            }
+        });
+    }
+
+    function remove(id, callback){
+        $.ajax({
+            url: `/doranboard/${id}`,
             type: `DELETE`,
             success: function(){
                 if(callback){
@@ -20,10 +30,11 @@ let replyService = (function(){
         });
     }
 
-    function write(replyContent, callback){
+    function write(content, callback){
         $.ajax({
-            url: `/replies/write`,
+            url: `/doranboard/dorandetail ?id=155`,
             type: `post`,
+            data: JSON.stringify({doranBoardId: this.doranBoardId, content: content}),
             contentType: "application/json;charset=utf-8",
             success: function(){
                 if(callback){
@@ -35,7 +46,7 @@ let replyService = (function(){
 
     function modify(reply, callback){
         $.ajax({
-            url: "/replies/modify",
+            url: "/doranboard/doranmodify?id=155",
             type: "put",
             data: JSON.stringify(reply),
             contentType: "application/json;charset=utf-8",
@@ -48,13 +59,14 @@ let replyService = (function(){
     }
 
 
-    return {remove: remove, write: write, modify: modify};
+    return {getList: getList, remove: remove, write: write, modify: modify};
 })();
 
 
 /*=======================================================================*/
 /*이벤트, DOM, Ajax*/
 /*=======================================================================*/
+replyService.getList(showList);
 
 function showList(replies){
     let text = ``;
@@ -63,21 +75,20 @@ function showList(replies){
                     <div>
                         <section class="content-container">
                             <div class="profile">
-                                <div><img src="/images/reply_profile.png" width="15px"></div>
-                                <h6 class="writer">${reply.name}</h6>
+                                <h6 class="writer">${reply.id}</h6>
                             </div>
-                            <h4 class="title">${reply.replyContent}</h4>
+                            <h4 class="title">${reply.content}</h4>
                             <section class="reply-update-wrap">
                                 <textarea cols="30" rows="1" placeholder="내 댓글"></textarea>
                                 <div class="button-wrap">
-                                    <button class="update-done" data-reply-id="${reply.id}">작성완료</button>
+                                    <button class="update-done" >작성완료</button>
                                     <button class="cancel">취소</button>
                                 </div>
                             </section>
-                            <h6 clss="board-info">
-                                <span class="date">${elapsedTime(reply.replyRegisterDate)}</span>
+                            <h6 class="board-info">
+                                <span class="date">${reply.registerDate}</span>
                             `
-        if(userId == reply.userId) {
+        if(true) {
             text += `
                     <span class="date">·</span>
                     <span class="update">수정</span>
@@ -99,6 +110,7 @@ $(window).scroll(function(){
     //if ($(window).scrollTop() == $(document).height() - $(window).height()) {
     if (Math.ceil(window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
         page++;
+        replyService.getList(showList)
     }
 });
 /*=======================================================================*/
@@ -131,6 +143,7 @@ $writeButton.on("click", function(){
     replyService.write($writeTextarea.val(), function(){
         $("#replies-wrap ul").html("");
         page = 0;
+        replyService.getList(showList);
     });
 });
 
@@ -157,6 +170,7 @@ $ul.on("click", ".update-done", function(){
     replyService.modify(reply, function(){
         $("#replies-wrap ul").html("");
         page = 0;
+        replyService.getList(showList);
     });
 });
 
@@ -183,6 +197,7 @@ $ul.on("click", ".delete", function(){
     replyService.remove(replyId, function(){
         $("#replies-wrap ul").html("");
         page = 0;
+        replyService.getList(showList);
     });
 });
 

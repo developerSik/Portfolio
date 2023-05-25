@@ -19,7 +19,7 @@ public interface DoranBoardService {
     public Optional<DoranBoardDTO> read(Long id);
 
     //    게시글 수정
-    public void modify(DoranBoardDTO doranBoardDTO);
+    public void modify(DoranBoardVO doranBoardVO);
 
     //    게시글 삭제
     public void remove(Long id);

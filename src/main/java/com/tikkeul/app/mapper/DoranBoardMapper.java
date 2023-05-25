@@ -23,7 +23,7 @@ public interface DoranBoardMapper {
     public Optional<DoranBoardDTO> select(Long Id);
 
 //  게시글 수정
-    public void update(DoranBoardDTO doranBoardDTO);
+    public void update(DoranBoardVO doranBoardVO);
 
 //    게시글 삭제
     public void delete(Long id);

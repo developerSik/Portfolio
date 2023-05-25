@@ -25,7 +25,7 @@
                 <ol class="breadcrumbs">
 
                     <li title="도움말 센터">
-                        <a href="/hc/ko">도란도란</a>
+                        <a th:href="@{/doranboard/doranboard}">도란도란</a>
                     </li>
                     <li title="문의 등록">
                         글 수정하기
@@ -55,20 +55,18 @@
 
 
         <div id="main-content" class="form">
-            <form id="new_request" class="request-form" data-form="" data-form-type="request" action="/hc/ko/requests"
-                  accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓" autocomplete="off">
+            <form th:action="@{/doranboard/doranmodify}" method="post" name="modifyForm" th:object="${doranboard}">
+                <input type="hidden" name ="id" th:field="*{id}">
                 <div class="form-field string required request_anonymous_requester_email">
-                    <label>제목</label>
-                    <input type="text" name="title" aria-required="true" th:text="${doranboard.title}">
+                    <label >제목</label>
+                    <textarea rows="1"  maxlength="30" onkeypress="blockEnter()" onkeyup="checkLength(this, 30)" type="text" name="title" th:field="*{title}"></textarea>
                 </div>
 
                 <div class="form-field text  required  request_description">
                     <label id="request_description_label">내용</label>
                     <textarea name="content" id="request_description_mimetype" aria-required="true" autocomplete="off"
                               aria-describedby="request_description_hint"
-                              aria-labelledby="request_description_label" th:text="${doranboard.content}">내용</textarea>
-                    <p id="request_description_hint">궁금하신 내용을 상세하게 설명해주세요.
-                    </p>
+                              aria-labelledby="request_description_label" style="height: 134px;" th:field="*{content}">내용</textarea>
                 </div>
                 <script data-conditional-fields="[{&quot;parent_field_id&quot;:&quot;request_custom_fields_6760067845017&quot;,&quot;value&quot;:&quot;펀딩서포터&quot;,&quot;child_fields&quot;:[{&quot;id&quot;:&quot;request_custom_fields_6477991452185&quot;,&quot;is_required&quot;:true},{&quot;id&quot;:&quot;request_custom_fields_6478000522777&quot;,&quot;is_required&quot;:true},{&quot;id&quot;:&quot;request_custom_fields_6477667492761&quot;,&quot;is_required&quot;:false},{&quot;id&quot;:&quot;request_custom_fields_8959218269849&quot;,&quot;is_required&quot;:true}]},{&quot;parent_field_id&quot;:&quot;request_custom_fields_6760067845017&quot;,&quot;value&quot;:&quot;펀딩메이커&quot;,&quot;child_fields&quot;:[{&quot;id&quot;:&quot;request_custom_fields_6824920025625&quot;,&quot;is_required&quot;:true},{&quot;id&quot;:&quot;request_custom_fields_6477991452185&quot;,&quot;is_required&quot;:true},{&quot;id&quot;:&quot;request_custom_fields_6478000522777&quot;,&quot;is_required&quot;:true},{&quot;id&quot;:&quot;request_custom_fields_6824739764505&quot;,&quot;is_required&quot;:false}]}]"></script>
 
@@ -127,4 +125,8 @@
     </div>
 </main>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/js/modal/modal.js"></script>
+<script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
+<script src="/js/doranboard/modify.js"></script>
 </html>
