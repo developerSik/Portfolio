@@ -6,11 +6,11 @@ $(document).ready(function() {
             `
                         <tr class="tr">
                             <td>
-                            <input type="checkbox" name="table-row" class="term"/>
+                            <input type="checkbox" name="check" class="term"/>
                             </td>
                             <td>${item.id}</td>
                             <td>${item.originStock}</td>
-                            <td>${item.savinglevelId}</td>
+                            <td>${item.savingLevelId}</td>
                             <td>${item.name}</td>
                             <td>${item.price}</td>
                         </tr>

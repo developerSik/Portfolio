@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleag.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>상품관리</title>
-    <link rel="stylesheet" type="text/css" href="../../static/css/admin/admin.css">
-    <link rel="stylesheet" type="text/css" href="../../static/css/admin/admin-product-detail.css">
+    <title>프로그램목록</title>
+    <link rel="stylesheet" type="text/css" href="/css/admin/admin.css">
+    <link rel="stylesheet" type="text/css" href="/css/admin/admin-program-registration.css">
 </head>
 <body>
 <main>
@@ -52,52 +52,53 @@
 
     <section class="management-main-content">
         <div class="management-top">
-            <div class="page-name">상품 상세보기</div>
+            <div class="page-name">프로그램 등록</div>
         </div>
+        <div class="registration-main">
+            <form th:action="@{/admin/program/write}" method="post" th:object="${savingLevelVO}">
+                <div class="registration-box">
 
-        <div class="detail-main">
-
-            <div class="detail-box">
-
-                <table class="table-contents">
-                    <tr>
-                        <td>상품번호</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>수량</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>레벨</td>
-                        <td></td>
-                    <tr>
-                        <td>상품명</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>가격</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>썸네일 이미지</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>상세 이미지</td>
-                        <td></td>
-                    </tr>
-                </table>
-                <div class="button-box">
-                    <input type="button" name="report-list" value="상품목록" onClick="location.href='admin-product.html'"/>
-                    <input type="button" name="report-answer" value="수정"
-                           onclick="location.href='admin-product-modify.html'"/>
+                    <table class="table-contents">
+                        <tr>
+                            <td>레벨</td>
+                            <td>
+                                <input th:field="*{name}" type="text" name="" value="" class="registration-input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>목표 금액</td>
+                            <td>
+                                <input th:field="*{goalMoney}" type="text" name="" value="" class="registration-input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>일일 저축 금액</td>
+                            <td>
+                                <input th:field="*{dailyMoney}" type="text" name="" value="" class="registration-input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>썸네일 이미지</td>
+                            <td>
+                                <input type="file" class="registration-detail">
+                            </td>
+                        </tr>
+                            <td>상세 이미지</td>
+                            <td>
+                                <input type="file" class="registration-detail">
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="button-box">
+                        <input type="button" name="report-list" value="프로그램목록"
+                               onClick="location.href='admin-program.html'"/>
+                        <input type="submit" value="등록완료"/>
+                    </div>
                 </div>
-
-
-            </div>
-
+            </form>
+        </div>
     </section>
+
 </main>
 </body>
 </html>

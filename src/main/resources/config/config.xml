@@ -20,5 +20,6 @@
         <typeAlias type="com.tikkeul.app.domain.vo.UserVO" alias="userVO"/>
         <typeAlias type="com.tikkeul.app.domain.dto.InquiryBoardDTO" alias="inquiryBoardDTO"/>
         <typeAlias type="com.tikkeul.app.domain.dto.ItemDTO" alias="itemDTO"/>
+        <typeAlias type="com.tikkeul.app.domain.dto.OrderDTO" alias="orderDTO"/>
     </typeAliases>
 </configuration>
