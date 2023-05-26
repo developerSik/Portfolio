@@ -8,6 +8,6 @@
        ON f.ID = it.ID JOIN ITEM i
        ON i.ID = it.ITEM_ID
        WHERE i.ID = #{id}
-   </select>-->
+   </select>
 
 </mapper>

@@ -34,7 +34,7 @@ public class AdminController {
 
 //    회원
     @GetMapping("user/list")
-    public void GotoUserlist(Pagination pagination,Search search, Model model){
+    public void goToUserlist(Pagination pagination,Search search, Model model){
         pagination.setTotal(adminService.getUserTotal(search));
         pagination.progress();
         model.addAttribute("users", adminService.adminGetListUserAll(pagination,search));
@@ -54,7 +54,7 @@ public class AdminController {
 
 //    문의
     @GetMapping("inquiry/list")
-    public void GoToinquirylist(Pagination pagination, Search search, Model model) {
+    public void goToinquirylist(Pagination pagination, Search search, Model model) {
         pagination.setTotal(adminService.getInquiryTotal(search));
         pagination.progress();
         model.addAttribute("inquirys", adminService.adminGetListInquiryAll(pagination, search));
@@ -85,7 +85,7 @@ public class AdminController {
 
 //    도란 게시판
     @GetMapping("doranBoard/list")
-    public void GoToDoranBoardList(Pagination pagination, Search search, Model model){
+    public void goToDoranBoardList(Pagination pagination, Search search, Model model){
         pagination.setTotal(adminService.getDoranBoardTotal(search));
         pagination.progress();
         model.addAttribute("doranBoards", adminService.adminGetListDoranBoardAll(pagination, search));
@@ -108,7 +108,7 @@ public class AdminController {
     }
 
     @GetMapping("item/list")
-    public void GoToItemList(Model model,Pagination pagination,Search search){
+    public void goToItemList(Model model,Pagination pagination,Search search){
         pagination.setTotal(adminService.getItemTotal(search));
         pagination.progress();
         model.addAttribute("items",adminService.adminGetListItemAll(pagination,search));
@@ -116,12 +116,17 @@ public class AdminController {
 
     /* 프로그램*/
     @GetMapping("program/write")
-    public void GoToSavingLevelWriteForm(SavingLevelVO savingLevelVO){;}
+    public void goToSavingLevelWriteForm(SavingLevelVO savingLevelVO){;}
 
     @PostMapping("program/write")
     public RedirectView writeSavingLevel(SavingLevelVO savingLevelVO){
         programService.writeSavingLevel(savingLevelVO);
         return new RedirectView("/admin/program/list");
+    }
+
+    @GetMapping("program/list")
+    public void goToProgramList(Model model){
+        model.addAttribute("programs",programService.getSavingLevelAll());
     }
 
 }

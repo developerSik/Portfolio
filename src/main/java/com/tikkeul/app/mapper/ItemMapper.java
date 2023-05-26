@@ -45,8 +45,3 @@ public interface ItemMapper {
 
 
 
-//    관리자가 상품 등록
-    public void insertItem(ItemDTO itemDTO);
-
-}
-

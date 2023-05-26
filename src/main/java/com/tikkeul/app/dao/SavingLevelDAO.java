@@ -6,6 +6,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 @RequiredArgsConstructor
 public class SavingLevelDAO {
@@ -14,6 +16,9 @@ public class SavingLevelDAO {
 
     public void saveSavingLevel(SavingLevelVO savingLevelVO){
         savingLevelMapper.insertSavingLevel(savingLevelVO);
+    }
 
+    public List<SavingLevelVO> FindSavingLevelAll(){
+        return savingLevelMapper.admminSelectSavingLevelAll();
     }
 }

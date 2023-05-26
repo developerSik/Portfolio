@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 @Qualifier("program") @Primary
@@ -18,5 +20,10 @@ public class ProgramServiceImpl implements ProgramService{
     public void writeSavingLevel(SavingLevelVO savingLevelVO) {
         savingLevelDAO.saveSavingLevel(savingLevelVO);
 
+    }
+
+    @Override
+    public List<SavingLevelVO> getSavingLevelAll() {
+        return savingLevelDAO.FindSavingLevelAll();
     }
 }

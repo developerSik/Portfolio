@@ -6,4 +6,9 @@
         VALUES(SEQ_SAVINGLEVEL.NEXTVAL, #{name}, #{goalMoney}, #{dailyMoney})
     </insert>
 
+    <select id="admminSelectSavingLevelAll" resultType="savingLevelVO">
+        SELECT ID, NAME, GOAL_MONEY, DAILY_MONEY
+        FROM SAVINGLEVEL
+    </select>
+
 </mapper>
