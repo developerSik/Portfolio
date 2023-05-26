@@ -1,9 +1,6 @@
 package com.tikkeul.app.controller;
 
-import com.tikkeul.app.domain.dto.DoranBoardDTO;
-import com.tikkeul.app.domain.dto.InquiryBoardDTO;
-import com.tikkeul.app.domain.dto.Pagination;
-import com.tikkeul.app.domain.dto.Search;
+import com.tikkeul.app.domain.dto.*;
 import com.tikkeul.app.domain.vo.AnswerVO;
 import com.tikkeul.app.domain.vo.SavingLevelVO;
 import com.tikkeul.app.domain.vo.UserVO;
@@ -116,11 +113,11 @@ public class AdminController {
 
     /* 프로그램*/
     @GetMapping("program/write")
-    public void goToSavingLevelWriteForm(SavingLevelVO savingLevelVO){;}
+    public void goToSavingLevelWriteForm(SavingLevelDTO savingLevelDTO){;}
 
     @PostMapping("program/write")
-    public RedirectView writeSavingLevel(SavingLevelVO savingLevelVO){
-        programService.writeSavingLevel(savingLevelVO);
+    public RedirectView writeSavingLevel(SavingLevelDTO savingLevelDTO){
+        programService.writeSavingLevel(savingLevelDTO);
         return new RedirectView("/admin/program/list");
     }
 

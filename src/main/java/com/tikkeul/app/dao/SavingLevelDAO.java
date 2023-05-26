@@ -1,5 +1,6 @@
 package com.tikkeul.app.dao;
 
+import com.tikkeul.app.domain.dto.SavingLevelDTO;
 import com.tikkeul.app.domain.vo.SavingLevelVO;
 import com.tikkeul.app.mapper.SavingLevelMapper;
 import lombok.RequiredArgsConstructor;
@@ -14,8 +15,8 @@ public class SavingLevelDAO {
     private final SavingLevelMapper savingLevelMapper;
 
 
-    public void saveSavingLevel(SavingLevelVO savingLevelVO){
-        savingLevelMapper.insertSavingLevel(savingLevelVO);
+    public void saveSavingLevel(SavingLevelDTO savingLevelDTO){
+        savingLevelMapper.insertSavingLevel(savingLevelDTO);
     }
 
     public List<SavingLevelVO> FindSavingLevelAll(){
