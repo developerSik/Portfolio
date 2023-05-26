@@ -29,7 +29,7 @@ public class MyBatisConfiguration {
         return new HikariDataSource(hikariConfig());
     }
 
-  /*  @Bean
+    @Bean
     public SqlSessionFactory sqlSessionFactory() throws IOException {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource());
@@ -43,7 +43,7 @@ public class MyBatisConfiguration {
             e.printStackTrace();
         }
         return null;
-    }*/
+    }
 }
 
 
