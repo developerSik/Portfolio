@@ -9,6 +9,7 @@ import com.tikkeul.app.service.program.ProgramService;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
@@ -126,4 +127,30 @@ public class AdminController {
         model.addAttribute("programs",programService.getSavingLevelAll());
     }
 
+    @GetMapping(value = {"program/detail","program/modify"})
+    public void detail(Long id, Model model){
+        SavingLevelDTO savingLevelDTO = programService.getSavingLevel(id);
+        model.addAttribute("savingLevels", savingLevelDTO);
+    }
+
+    @PostMapping("program/modify")
+    public RedirectView modify(SavingLevelDTO savingLevelDTO, RedirectAttributes redirectAttributes){
+        programService.modify(savingLevelDTO);
+        redirectAttributes.addAttribute("id", savingLevelDTO.getId());
+        return new RedirectView("/admin/program/detail");
+    }
+
+    @PostMapping("program/delete")
+    public void removeProgram(@RequestBody List<String> programIds){
+        for (String programId : programIds) programService.removeSavingLevel(Long.valueOf(programId));
+    }
+
+    /*메인 페이지*/
+    @GetMapping("main")
+    public void goToMain(Model model){
+        model.addAttribute("mainusers",adminService.adminMainGetUser());
+        model.addAttribute("mainsavinglevels",adminService.adminMainGetSavingLevel());
+        model.addAttribute("mainitems",adminService.adminMainGetItem());
+        model.addAttribute("maininquirys",adminService.adminMainGetInquiry());
+    }
 }

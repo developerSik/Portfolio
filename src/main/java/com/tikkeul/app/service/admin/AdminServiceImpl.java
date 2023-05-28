@@ -2,12 +2,10 @@ package com.tikkeul.app.service.admin;
 
 import com.tikkeul.app.dao.AdminDAO;
 import com.tikkeul.app.dao.UserDAO;
-import com.tikkeul.app.domain.dto.DoranBoardDTO;
-import com.tikkeul.app.domain.dto.InquiryBoardDTO;
-import com.tikkeul.app.domain.dto.Pagination;
-import com.tikkeul.app.domain.dto.Search;
+import com.tikkeul.app.domain.dto.*;
 import com.tikkeul.app.domain.vo.AnswerVO;
 import com.tikkeul.app.domain.vo.ItemVO;
+import com.tikkeul.app.domain.vo.SavingLevelVO;
 import com.tikkeul.app.domain.vo.UserVO;
 import lombok.RequiredArgsConstructor;
 import org.apache.catalina.User;
@@ -106,6 +104,26 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public int getItemTotal(Search search) {
         return adminDAO.findCountOfItem(search);
+    }
+
+    @Override
+    public List<UserVO> adminMainGetUser() {
+        return adminDAO.adminMainFindUser();
+    }
+
+    @Override
+    public List<SavingLevelVO> adminMainGetSavingLevel() {
+        return adminDAO.adminMainFindSavingLevel();
+    }
+
+    @Override
+    public List<ItemDTO> adminMainGetItem() {
+        return adminDAO.adminMainFindItem();
+    }
+
+    @Override
+    public List<InquiryBoardDTO> adminMainGetInquiry() {
+        return adminDAO.adminMainFindInquiry();
     }
 
 

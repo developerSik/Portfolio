@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
@@ -19,7 +20,19 @@ public class SavingLevelDAO {
         savingLevelMapper.insertSavingLevel(savingLevelDTO);
     }
 
-    public List<SavingLevelVO> FindSavingLevelAll(){
-        return savingLevelMapper.admminSelectSavingLevelAll();
+    public List<SavingLevelVO> findSavingLevelAll(){
+        return savingLevelMapper.adminSelectSavingLevelAll();
+    }
+
+    public Optional<SavingLevelDTO>  findSavingLevel(Long id){
+        return savingLevelMapper.adminSelectSavingLevel(id);
+    }
+
+    public void setSavingLevelDTO(SavingLevelDTO savingLevelDTO){
+        savingLevelMapper.adminUpdateSavingLevel(savingLevelDTO);
+    }
+
+    public void deleteSavingLevel(Long id){
+        savingLevelMapper.adminDeleteSavingLevel(id);
     }
 }

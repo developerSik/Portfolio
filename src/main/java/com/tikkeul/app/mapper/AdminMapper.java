@@ -1,13 +1,8 @@
 package com.tikkeul.app.mapper;
 
 
-import com.tikkeul.app.domain.dto.DoranBoardDTO;
-import com.tikkeul.app.domain.dto.InquiryBoardDTO;
-import com.tikkeul.app.domain.dto.Pagination;
-import com.tikkeul.app.domain.dto.Search;
-import com.tikkeul.app.domain.vo.AnswerVO;
-import com.tikkeul.app.domain.vo.ItemVO;
-import com.tikkeul.app.domain.vo.UserVO;
+import com.tikkeul.app.domain.dto.*;
+import com.tikkeul.app.domain.vo.*;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -67,6 +62,15 @@ public interface AdminMapper {
 
     //    관리자페이지에서 상품 총 개수
     public int selectCountOfItem(@Param("search") Search search);
+
+    /*메인 페이지*/
+    public List<UserVO> adminMainSelectUser();
+
+    public List<SavingLevelVO> adminMainSelectSavingLevel();
+
+    public List<ItemDTO> adminMainSelectItem();
+
+    public List<InquiryBoardDTO> adminMainSelectInquiry();
 
 
 

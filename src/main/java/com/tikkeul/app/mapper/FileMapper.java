@@ -43,8 +43,11 @@ public interface FileMapper {
 
 
 
-
+    public List<SavingLevelFileDTO> savingLevelSelectlAll(Long savinglevelId);
 
     public void insert(SavingLevelFileDTO fileVO);
+
+    public void savingLevelDelete(Long id);
+
 
 }

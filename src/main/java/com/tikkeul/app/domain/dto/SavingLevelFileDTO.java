@@ -8,9 +8,9 @@ import org.springframework.stereotype.Component;
 public class SavingLevelFileDTO {
     private Long id;
     private Long savinglevelId;
-    private Long size;
+    private Long fileSize;
     private String originName;
     private String uuid;
-    private String path;
+    private String filePath;
     private String fileType;
 }
