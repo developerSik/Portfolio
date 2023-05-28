@@ -1,6 +1,8 @@
 package com.tikkeul.app.dao;
 
+import com.tikkeul.app.domain.dto.ItemFileDTO;
 import com.tikkeul.app.domain.dto.SavingLevelFileDTO;
+import com.tikkeul.app.domain.vo.ItemFileVO;
 import com.tikkeul.app.mapper.FileMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -29,5 +31,9 @@ public class FileDAO {
 
     public void savingLevelDelete(Long id){
         fileMapper.savingLevelDelete(id);
+    }
+
+    public void saveItem(ItemFileDTO itemFileDTO){
+        fileMapper.insertItem(itemFileDTO);
     }
 }

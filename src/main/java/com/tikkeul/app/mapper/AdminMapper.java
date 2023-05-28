@@ -58,7 +58,7 @@ public interface AdminMapper {
     public void adminDeleteDoranBoard(Long id);
     /*제품*/
     //    관리자페이지에서 상품 목록 조회
-    public List<ItemVO> adminSelectItemAll(@Param("pagination") Pagination pagination, @Param("search") Search search);
+    public List<ItemDTO> adminSelectItemAll(@Param("pagination") Pagination pagination, @Param("search") Search search);
 
     //    관리자페이지에서 상품 총 개수
     public int selectCountOfItem(@Param("search") Search search);

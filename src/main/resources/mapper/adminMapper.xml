@@ -238,7 +238,7 @@
     </delete>
 
     <!-- 관리자 제품 목록   -->
-    <select id="adminSelectItemAll" resultType="itemVO">
+    <select id="adminSelectItemAll" resultType="itemDTO">
         SELECT I.ID, ORIGIN_STOCK, SAVINGLEVEL_ID, NAME, PRICE
         FROM
         (

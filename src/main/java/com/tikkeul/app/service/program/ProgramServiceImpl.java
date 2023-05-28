@@ -35,7 +35,6 @@ public class ProgramServiceImpl implements ProgramService{
             savingLevelDTO.getFiles().get(i).setSavinglevelId(savingLevelDTO.getId());
             savingLevelDTO.getFiles().get(i).setFileType(i == 0 ? FileType.REPRESENTATIVE.name() : FileType.NON_REPRESENTATIVE.name());
             fileDAO.save(savingLevelDTO.getFiles().get(i));
-            log.info(savingLevelDTO.getFiles().get(i).toString());
         }
         savingLevelDTO.getFiles().forEach(savingLevelFileDTO ->
         { SavingLevelFileVO savingLevelFileVO = new SavingLevelFileVO();
@@ -83,9 +82,14 @@ public class ProgramServiceImpl implements ProgramService{
     }
 
     @Override
-//    @Transactional(rollbackFor = Exception.class)
+    @Transactional(rollbackFor = Exception.class)
     public void removeSavingLevel(Long id) {
-            savingLevelDAO.deleteSavingLevel(id);
+            SavingLevelDTO savingLevelDTO = savingLevelDAO.findSavingLevel(id).get();
+            fileDAO.savingLevelFindAll(id).forEach(savingLevelFileDTO ->
+                    fileDAO.savingLevelDelete(savingLevelFileDTO.getId()));
+                savingLevelDAO.deleteSavingLevel(id);
+                savingLevelFileDAO.delete(id);
+
 //            fileDAO.savingLevelDelete(id);
     }
 }

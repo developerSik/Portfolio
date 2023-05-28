@@ -11,5 +11,5 @@
         DELETE FROM SAVINGLEVELFILE
         WHERE SAVINGLEVEL_ID = #{savinglevelId}
     </delete>
-    
+
 </mapper>

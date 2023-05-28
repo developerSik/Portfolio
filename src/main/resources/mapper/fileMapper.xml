@@ -19,6 +19,15 @@
         VALUES(#{id}, #{fileSize}, #{originName}, #{uuid}, #{fileType}, #{filePath})
     </insert>
 
+    <insert id="insertItem">
+        <selectKey keyProperty="id" order="BEFORE" resultType="Long">
+            SELECT SEQ_FILES.NEXTVAL FROM DUAL
+        </selectKey>
+        INSERT INTO FILES
+        (ID, FILE_SIZE, ORIGIN_NAME, UUID, FILE_TYPE, FILE_PATH)
+        VALUES(#{id}, #{fileSize}, #{originName}, #{uuid}, #{fileType}, #{filePath})
+    </insert>
+
     <select id="savingLevelSelectlAll" resultType="savingLevelFileDTO">
         SELECT F.ID, F.FILE_PATH, F.UUID, F.ORIGIN_NAME, F.FILE_SIZE, FILE_TYPE, SAVINGLEVEL_ID
         FROM FILES F JOIN SAVINGLEVELFILE S

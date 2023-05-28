@@ -97,7 +97,7 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public List<ItemVO> adminGetListItemAll(Pagination pagination, Search search) {
+    public List<ItemDTO> adminGetListItemAll(Pagination pagination, Search search) {
         return adminDAO.adminFindItemAll(pagination, search);
     }
 

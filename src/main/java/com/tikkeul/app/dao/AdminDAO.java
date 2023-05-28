@@ -100,7 +100,7 @@ public class AdminDAO {
     /*----------------------------------------------------------------------------------*/
     /*상품*/
     //    관리자 페이지에서 상품 목록 조회
-    public List<ItemVO> adminFindItemAll(Pagination pagination, Search search){
+    public List<ItemDTO> adminFindItemAll(Pagination pagination, Search search){
         return adminMapper.adminSelectItemAll(pagination, search);
     }
 //  관리자 페이지에서 상품 총 개수

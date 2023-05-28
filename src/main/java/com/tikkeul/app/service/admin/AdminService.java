@@ -65,7 +65,7 @@ public interface AdminService {
 
     /*상품*/
     //    관리자 페이지에서 상품 목록 조회
-    public List<ItemVO> adminGetListItemAll(Pagination pagination, Search search);
+    public List<ItemDTO> adminGetListItemAll(Pagination pagination, Search search);
 
     // 관리자 페이지에서 상품 총 개수
     public int getItemTotal(Search search);
