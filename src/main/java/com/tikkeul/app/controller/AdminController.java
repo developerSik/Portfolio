@@ -118,6 +118,7 @@ public class AdminController {
     @GetMapping("item/write")
     public void goToItemWriteForm(ItemDTO itemDTO){;}
 
+    
     @PostMapping("item/write")
     public RedirectView writeItem(ItemDTO itemDTO){
         itemService.writeItem(itemDTO);
