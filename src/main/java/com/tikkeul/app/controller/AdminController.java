@@ -121,6 +121,7 @@ public class AdminController {
     @PostMapping("item/write")
     public RedirectView writeItem(ItemDTO itemDTO){
         itemService.writeItem(itemDTO);
+
         return new RedirectView("/admin/item/list");
     }
 
