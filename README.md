@@ -43,4 +43,8 @@ STEP3. 열매샵과 레벨제도를 통해 저축을 통해 자신이 목표한 
 <h2>4. ERD</h2>
 <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/81303136/243064087-67b8f7e5-6806-4dbe-9d52-d4badb1a694d.png"  style = "width: 80%; height : 480">
 
+<h2>5. 담당 업무</h2>
+5-1 프론트엔드<br>
+<img src="https://github.com/developerSik/Portfolio/assets/129861070/3677a519-e63d-483a-b059-b0ee03ab7b52" style = "width: 90%">
+
 
