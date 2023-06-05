@@ -4,4 +4,4 @@
 
 <h2>1. 기획 의도</h2>
 
-
+<img src="https://github.com/developerSik/Portfolio/assets/129861070/3cc35d2b-c90a-4836-9442-5a7ccd840f80" style = "width: 80%; height : 480">
