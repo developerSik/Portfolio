@@ -19,3 +19,28 @@ STEP2. 저축 목표를 달성하여 해당 레벨을 끝 마친 사람들은 �
 STEP3. 열매샵과 레벨제도를 통해 저축을 통해 자신이 목표한 것을 이룰수 있다는 성취감을 주고 더 나아가 올바른 소비 문화를 이끄는 기대 효과를 바라 볼 수 있다.
 
 
+<h2>3. 프로젝트 사용 툴</h2>
+- Java<br>
+- Java Script<br>
+- tomcat<br>
+- jQuery<br>
+- MyBatis<br>
+- Spring Boot<br>
+- Oracle<br>
+- Visual Studio Code<br>
+- Intelij<br>
+- DBeaver<br>
+- Sourcetree<br>
+- git, github<br>
+- JSON<br>
+- Ajax<br>
+- JDK 11.0.15<br>
+- Naver DEVELOPER API<br>
+- Kakao DEVELOPER API<br>
+- Toast API
+
+
+<h2>4. ERD</h2>
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/81303136/243064087-67b8f7e5-6806-4dbe-9d52-d4badb1a694d.png"  style = "width: 80%; height : 480">
+
+
