@@ -44,13 +44,12 @@ STEP3. 열매샵과 레벨제도를 통해 저축을 통해 자신이 목표한 
 <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/81303136/243064087-67b8f7e5-6806-4dbe-9d52-d4badb1a694d.png"  style = "width: 80%; height : 480">
 
 <h2>5. 담당 업무</h2>
-5-1 프론트엔드<br>
+5-1 퍼블리싱<br>
 <img src="https://github.com/developerSik/Portfolio/assets/129861070/923ea623-b3d4-45e6-937c-c8589931e9cb" style = "width: 90%">
 
 ▶ 회원가입 
 - 이메일 인증
 - 가입 약관 동의
-- 간편가입(카카오, 네이버)
 
 ▶ 아이디, 비밀번호 찾기
 - 아이디 가입 여부 확인
