@@ -45,7 +45,7 @@ STEP3. <br>열매샵과 레벨제도를 통해 저축을 통해 자신이 목표
 
 <h2>5. 담당 업무</h2>
 5-1 퍼블리싱<br>
-<img src="https://github.com/developerSik/Portfolio/assets/129861070/923ea623-b3d4-45e6-937c-c8589931e9cb" style = "width: 90%">
+<img src="https://github.com/developerSik/Tikkeul/assets/129861070/a07b613d-b72b-47e9-957c-ab6af00a2259" style = "width: 90%">
 
 ▶ 회원가입 
 - 이메일 인증
